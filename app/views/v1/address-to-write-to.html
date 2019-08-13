@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="/v1/address">Back</a>
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v1/confirmation" method="post">
 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -56,6 +57,8 @@
         </div>
       
       </fieldset>
+
+        <button class="govuk-button">Continue</button>
 
     </div>
   </div>
