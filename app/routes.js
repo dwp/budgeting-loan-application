@@ -11,10 +11,10 @@ router.post('/v2/address-to-write-to', function (req, res) {
   
     let differentAddress = req.session.data['different-address']
   
-    if (differentAddress === 'false') {
-      res.redirect('/v2/confirmation')
-    } else {
+    if (differentAddress === 'yes') {
       res.redirect('/v2/address-to-write-to')
+    } else {
+      res.redirect('/v2/confirmation')
     }
   })
 
