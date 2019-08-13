@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  <a class="govuk-back-link" href="#">Back</a>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            What is your address?
+            What address should we write to about your loan application?
           </h1>
         </legend>
       
@@ -56,32 +56,6 @@
         </div>
       
       </fieldset>
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="different-address-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            <h1 class="govuk-fieldset__heading">
-              Should we send letters about your application to a different address?
-            </h1>
-          </legend>
-          <div class="govuk-radios govuk-radios--inline">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="different-address-1" name="different-address" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="different-address-2">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="different-address-2" name="different-address" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="different-address-2">
-                No
-              </label>
-            </div>
-          </div>
-        </fieldset>
-      </div>
-
-
 
     </div>
   </div>
