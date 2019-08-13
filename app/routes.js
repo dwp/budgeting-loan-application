@@ -19,6 +19,23 @@ router.post('/v1/address-to-write-to', function (req, res) {
     }
   })
 
+
+router.post('/v1/if-appointee', function (req, res) {
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+  
+    let differentAddress = req.session.data['if-loan-for-you']
+  
+    if (differentAddress === 'yes') {
+      res.redirect('/v1/address')
+    } else {
+      res.redirect('/v1/if-appointee')
+    }
+  })
+
+
+
 // Branching
 router.post('/v2/address-to-write-to', function (req, res) {
     // Get the answer from session data
