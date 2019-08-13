@@ -51,4 +51,18 @@ router.post('/v2/address-to-write-to', function (req, res) {
     }
   })
 
+  router.post('/v2/if-appointee', function (req, res) {
+    // Get the answer from session data
+    // The name between the quotes is the same as the 'name' attribute on the input elements
+    // However in JavaScript we can't use hyphens in variable names
+  
+    let differentAddress = req.session.data['if-loan-for-you']
+  
+    if (differentAddress === 'yes') {
+      res.redirect('/v2/address')
+    } else {
+      res.redirect('/v2/if-appointee')
+    }
+  })
+
 module.exports = router
