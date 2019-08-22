@@ -9,12 +9,14 @@
 
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 
-{{ govukPhaseBanner({
-  tag: {
-    text: "Testing only"
-  },
-  html: 'Messages will not be sent and no data is saved.'
-}) }}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 
 {% endblock %}
 
@@ -23,7 +25,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v1/address" method="post">
+      <form class="form" action="/v4/address" method="post">
 
       <h1 class="govuk-heading-xl">
         Fill in the rest of the form using their details

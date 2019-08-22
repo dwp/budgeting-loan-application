@@ -8,12 +8,14 @@
 
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 
-{{ govukPhaseBanner({
-  tag: {
-    text: "Testing only"
-  },
-  html: 'Messages will not be sent and no data is saved.'
-}) }}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 
 {% endblock %}
 
@@ -22,7 +24,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v1/interruption-card" method="post">
+      <form class="form" action="/v5/interruption-card" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">

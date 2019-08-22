@@ -1,10 +1,20 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Question page
+  Address
 {% endblock %}
 
 {% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
 {% endblock %}
 
 {% block content %}

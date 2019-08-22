@@ -6,14 +6,14 @@
 
 {% block beforeContent %}
 
-{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
 
-{{ govukPhaseBanner({
-  tag: {
-    text: "Testing only"
-  },
-  html: 'Messages will not be sent and no data is saved.'
-}) }}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 
 {% endblock %}
 
@@ -22,7 +22,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v1/confirmation" method="post">
+      <form class="form" action="/v4/check-your-answers" method="post">
 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
