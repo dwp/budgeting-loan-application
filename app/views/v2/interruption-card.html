@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v1/address" method="post">
+
+      <h1 class="govuk-heading-xl">
+        Fill in the rest of the form using their details
+      </h1>
+
+     <p>For example, when asked for 'Your address' put the address of the person you're applying on behalf of.</p>
+
+     <button class="govuk-button">Continue</button>
+
+    </div>
+  </div>
+
+
+{% endblock %}
