@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Universal Credit - Budgeting Loans - GOV.UK
+  Employment and Support Allowance - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -18,26 +18,31 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
             <h1 class="govuk-fieldset__heading">
-              Do you get Universal Credit?
+              Have you got either of these benefits in the last 6 months?
             </h1>
           </legend>
-          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>income-based Jobseeker’s Allowance</li>
+            <li>Income Support</li>
+          </ul>
+
+          <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="social-fund-debt-1" name="social-fund-debt" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="social-fund-debt-1">
+              <input class="govuk-radios__input" id="radio-inline-1" name="radio-inline" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="radio-inline-1">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="social-fund-debt-2" name="social-fund-debt" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="social-fund-debt-2">
+              <input class="govuk-radios__input" id="radio-inline-2" name="radio-inline" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="radio-inline-2">
                 No
               </label>
             </div>
         </fieldset>
       </div>
 
-        <button class="govuk-button">Continue</button>
+      <button class="govuk-button">Continue</button>
 
       </form>
 
