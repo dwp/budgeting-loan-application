@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Savings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/as-is/savings-details" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you and your savings have combined savings of more than £1,000 (£2,000 if either of you are 63 or over)?
+            </h1>
+          </legend>
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item govuk-radios--inline">
+              <input class="govuk-radios__input" id="savings-1" name="savings" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="savings-1">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="savings-2" name="savings" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="savings-2">
+                No
+              </label>
+            </div>
+        </fieldset>
+      </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
