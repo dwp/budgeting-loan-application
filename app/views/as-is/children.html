@@ -15,30 +15,43 @@
       <form class="form" action="/as-is/loan-amount" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="child-benefit-hint">
+
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you or your partner get Child Benefit?
+                  Do you or your partner get Child Benefit?
               </h1>
             </legend>
-            <div class="govuk-radios govuk-radios--inline">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="child-benefit" name="child-benefit" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="child-benefit">
-                  Yes
-                </label>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="child-benefit-1" name="child-benefit" type="radio" value="yes" data-aria-controls="conditional-child-benefit-1">
+                    <label class="govuk-label govuk-radios__label" for="child-benefit-1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-child-benefit-1">
+                    <div class="govuk-form-group">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="child-benefit-info">
+                            How many of these children live with you?
+                        </label>
+                        <input class="govuk-input govuk-input--width-2" id="child-benefit-input" name="child-benefit-input" type="text">
+                      </div>
+                    </div>
+                  </div>
               </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="child-benefit-2" name="child-benefit" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="child-benefit-2">
-                  No
-                </label>
-              </div>
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="child-benefit-2" name="child-benefit" type="radio" value="no" data-aria-controls="conditional-child-benefit-2">
+                  <label class="govuk-label govuk-radios__label" for="child-benefit-2">
+                    No
+                  </label>
+                </div>
+              </div> 
             </div>
           </fieldset>
         </div>
-
-        <p>Leah - We need to add conditional reveal to the 'Yes' answer that asks 'How many of these children live with you?' and gives a small text input field so the user can type the digit.</p>
 
         <button class="govuk-button">Continue</button>
 
