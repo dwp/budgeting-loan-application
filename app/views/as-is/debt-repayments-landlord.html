@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Savings - Budgeting Loans - GOV.UK
+  Landlord payments - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -18,24 +18,26 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you and your partner have combined savings of more than £1,000 (£2,000 if either of you are 63 or over)?
+                Do you owe any money to your landlord?
               </h1>
             </legend>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="savings-1" name="savings" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="savings-1">
+                <input class="govuk-radios__input" id="landlord-1" name="landlord" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="landlord-1">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="savings-2" name="savings" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="savings-2">
+                <input class="govuk-radios__input" id="landlord-2" name="landlord" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="landlord-2">
                   No
                 </label>
               </div>
           </fieldset>
         </div>
+
+        <p>Leah - If the user selects 'Yes' this should reveal 2 <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/68">currency input</a> fields underneath: 'How much do you pay back each month?' and 'How much is left to pay?'</p>
 
         <button class="govuk-button">Continue</button>
 
