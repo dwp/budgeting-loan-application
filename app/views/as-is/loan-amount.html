@@ -18,12 +18,13 @@
           <fieldset class="govuk-fieldset" aria-describedby="child-benefit-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                You can apply for between £100 and £[amount] - how much do you need?
+                You can apply for between £100 and £812 - how much do you need?
               </h1>
             </legend>
-
-            <p>Leah - Can you add a currency input here? Here's the <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/68">card in the Design System backlog</a>.</p>
-
+            <div class="input-wrapper">
+              <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+              <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+            </div>
           </fieldset>
         </div>
 
