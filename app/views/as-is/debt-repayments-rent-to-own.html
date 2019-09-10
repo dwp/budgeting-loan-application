@@ -24,23 +24,44 @@
             <p>
               These arrangements are sometimes known as ‘hire purchases’ or ‘rent to own’. Include anything you’re making repayments on.
             </p>
-            <div class="govuk-radios govuk-radios--inline">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="credit-store-cards-1" name="credit-store-cards" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="credit-store-cards-1">
-                  Yes
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="credit-store-cards-2" name="credit-store-cards" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="credit-store-cards-2">
-                  No
-                </label>
+            <div class="govuk-radios--inline">
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="hire-purchase-1" name="hire-purchase" type="radio" value="yes" data-aria-controls="conditional-hire-purchase-1">
+                      <label class="govuk-label govuk-radios__label" for="hire-purchase-1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="hire-purchase-2" name="hire-purchase" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="hire-purchase-2">
+                        No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hire-purchase-1" style="clear:left;">
+                      <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="hire-purchase-info">
+                              How much do you pay back each month?
+                          </label>
+                          <div class="input-wrapper">
+                            <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          </div>
+                          <label class="govuk-label" for="hire-purchase-info">
+                              How much is left to pay?
+                          </label>
+                          <div class="input-wrapper">
+                            <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
               </div>
           </fieldset>
         </div>
-
-        <p>Leah - If the user selects 'Yes' this should reveal 2 <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/68">currency input</a> fields underneath: 'How much do you pay back each month?' and 'How much is left to pay?'</p>
 
         <button class="govuk-button">Continue</button>
 
