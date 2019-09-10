@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Credit and store cards - Budgeting Loans - GOV.UK
+  Instalments - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,15 +12,19 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/as-is/debt-repayments-loans" method="post">
+      <form class="form" action="/as-is/personal-details" method="post">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you or your partner owe money on any credit or store cards?
+                Are you paying instalments on furniture, a car or household goods?
               </h1>
             </legend>
+            <span id="benefit-received-hint" class="govuk-hint">
+              These arrangements are sometimes known as ‘hire purchases’ or ‘rent to own’.<br>
+              Include anything you’re making repayments on.
+            </span>
             <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="credit-store-cards-1" name="credit-store-cards" type="radio" value="yes">
@@ -36,7 +40,7 @@
               </div>
           </fieldset>
         </div>
-    
+
         <p>Leah - If the user selects 'Yes' this should reveal 2 <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/68">currency input</a> fields underneath: 'How much do you pay back each month?' and 'How much is left to pay?'</p>
 
         <button class="govuk-button">Continue</button>
