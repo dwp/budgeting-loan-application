@@ -15,41 +15,40 @@
       <form class="form" action="/as-is/eligibility-100" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="benefit-received-hint">
+          <fieldset class="govuk-fieldset" aria-describedby="esa-type-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
                 What type of Employment and Support Allowance do you get?
               </h1>
             </legend>
-            <div class="govuk-radios">
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="benefit-received" name="benefit-received" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="benefit-received">
-                  Income-related
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="benefit-received-2" name="benefit-received" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="benefit-received-2">
-                  Contribution-based
-                </label>
-              </div>
-              <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="benefit-received-3" name="benefit-received" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="benefit-received-3">
-                  Don't know
-                </label>
-              </div>
-
-              <h2>Leah - this should be shown if user picks 'Don't know'</h2>
-
-              <p>Contact <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a> to find out what type of Employment and Support Allowance you get.</p>
-
-              <p>If you’ve had a Budgeting Loan before and your benefits haven’t changed, you’ll probably be getting income-related Employment and Support Allowance.</p>
-
-              <p>If you get contribution-based Employment and Support Allowance, you won’t be able to get a Budgeting Loan.</p>
-
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="esa-type-income" name="esa-type" type="radio" value="income" data-aria-controls="conditional-esa-type-income">
+                  <label class="govuk-label govuk-radios__label" for="esa-type-income">
+                      Income-related
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="esa-type-contribution" name="esa-type" type="radio" value="contribution" data-aria-controls="conditional-esa-type-contribution">
+                    <label class="govuk-label govuk-radios__label" for="esa-type-contribution">
+                        Contribution-based
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="esa-type-unknown" name="esa-type" type="radio" value="yes" data-aria-controls="conditional-esa-type-unknown">
+                    <label class="govuk-label govuk-radios__label" for="esa-type-unknown">
+                      Don't know
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-esa-type-unknown">
+                      <div class="govuk-inset-text">
+                        <p>Contact <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a> to find out what type of Employment and Support Allowance you get.</p>
+                        <p>If you’ve had a Budgeting Loan before and your benefits haven’t changed, you’ll probably be getting income-related Employment and Support Allowance.</p>
+                        <p>If you get contribution-based Employment and Support Allowance, you won’t be able to get a Budgeting Loan.</p>
+                      </div>
+                  </div>
             </div>
+
           </fieldset>
         </div>
 

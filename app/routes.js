@@ -152,5 +152,46 @@ router.post('/as-is/eligibility-esa-duration', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-esa-type', function (req, res) {
+
+  let esaDuration = req.session.data['esa-duration']
+
+  if (esaDuration === 'more-than-6months') {
+    res.redirect('/as-is/eligibility-esa-type')
+  } else {
+    res.redirect('/as-is/eligibility-esa-partner')
+  }
+})
+
+router.post('/as-is/eligibility-esa-previous', function (req, res) {
+
+  let esaDuration = req.session.data['esa-partner']
+
+  if (esaDuration === 'yes') {
+    res.redirect('/as-is/eligibility-100')
+  } else {
+    res.redirect('/as-is/eligibility-esa-previous')
+  }
+})
+
+router.post('/as-is/eligibility-100', function (req, res) {
+
+  let esaDuration = req.session.data['esa-previous']
+  let esaType = req.session.data['esa-type']
+
+  if (esaDuration === 'yes') {
+    res.redirect('/as-is/eligibility-100')
+  }
+  if (esaDuration === 'no') {
+    res.redirect('/as-is/exit-benefits-duration')
+  }
+  if (esaType === 'contribution') {
+    res.redirect('/as-is/exit-eligibility-esa-contrib')
+  } else {
+    res.redirect('/as-is/eligibility-100')
+  }
+})
+
+
 
 module.exports = router
