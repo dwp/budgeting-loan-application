@@ -132,5 +132,25 @@ router.post('/as-is/eligibility-benefits', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-esa-duration', function (req, res) {
+
+  let benefitRecieved = req.session.data['benefit-received']
+
+  if (benefitRecieved === 'esa') {
+    res.redirect('/as-is/eligibility-esa-duration')
+  }
+  if (benefitRecieved === 'jsa') {
+    res.redirect('/as-is/eligibility-jsa-duration')
+  } 
+  if (benefitRecieved === 'is') {
+    res.redirect('/as-is/eligibility-is-duration')
+  }
+  if (benefitRecieved === 'pc') {
+    res.redirect('/as-is/eligibility-pc-duration')
+  }else {
+    res.redirect('/as-is/exit-benefits')
+  }
+})
+
 
 module.exports = router
