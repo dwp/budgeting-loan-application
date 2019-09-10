@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Other benefits - Budgeting Loans - GOV.UK
+  Income Support - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,21 +12,16 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/as-is/eligibility-100" method="post">
+      <form class="form" action="/as-is/eligibility-esa-previous" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Have you got either of these benefits in the last 6 months?
+              Have you got Pension Credit with a previous partner in the last 6 months?
             </h1>
           </legend>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>income-based Jobseeker’s Allowance</li>
-            <li>Income Support</li>
-          </ul>
-
-          <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="radio-inline-1" name="radio-inline" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="radio-inline-1">
@@ -42,7 +37,7 @@
         </fieldset>
       </div>
 
-      <button class="govuk-button">Continue</button>
+        <button class="govuk-button">Continue</button>
 
       </form>
 
