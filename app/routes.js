@@ -121,5 +121,16 @@ router.post('/as-is/eligibility-uc', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-benefits', function (req, res) {
+
+  let socialfundDebt = req.session.data['claim-uc']
+
+  if (socialfundDebt === 'yes') {
+    res.redirect('/as-is/exit-uc')
+  } else {
+    res.redirect('/as-is/eligibility-benefits')
+  }
+})
+
 
 module.exports = router
