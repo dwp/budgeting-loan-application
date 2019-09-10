@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-// Branching
+// Branching V1
 
 router.post('/v1/address-to-write-to', function (req, res) {
     // Get the answer from session data
@@ -21,9 +21,6 @@ router.post('/v1/address-to-write-to', function (req, res) {
 
 
 router.post('/v1/if-appointee', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
     let differentAddress = req.session.data['if-loan-for-you']
   
@@ -34,11 +31,33 @@ router.post('/v1/if-appointee', function (req, res) {
     }
   })
 
+// Branching V2 
+router.post('/v2/address-to-write-to', function (req, res) {
+  
+  let differentAddress = req.session.data['different-address']
+
+  if (differentAddress === 'yes') {
+    res.redirect('/v2/address-to-write-to')
+  } else {
+    res.redirect('/v2/confirmation')
+  }
+})
+
+router.post('/v2/if-appointee', function (req, res) {
+
+  let differentAddress = req.session.data['if-loan-for-you']
+
+  if (differentAddress === 'yes') {
+    res.redirect('/v2/address')
+  } else {
+    res.redirect('/v2/if-appointee')
+  }
+})
+
+// Branching V4
+
 
 router.post('/v4/address-to-write-to', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
     let differentAddress = req.session.data['different-address']
   
@@ -51,9 +70,6 @@ router.post('/v4/address-to-write-to', function (req, res) {
 
 
 router.post('/v4/if-appointee', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
     let differentAddress = req.session.data['if-loan-for-you']
   
@@ -64,12 +80,9 @@ router.post('/v4/if-appointee', function (req, res) {
     }
   })
 
-
+// Branching V5
 
 router.post('/v5/address-to-write-to', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
     let differentAddress = req.session.data['different-address']
   
@@ -82,9 +95,6 @@ router.post('/v5/address-to-write-to', function (req, res) {
 
 
 router.post('/v5/if-appointee', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
     let differentAddress = req.session.data['if-loan-for-you']
   
@@ -97,33 +107,8 @@ router.post('/v5/if-appointee', function (req, res) {
 
 
 
-// Branching
-router.post('/v2/address-to-write-to', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
   
-    let differentAddress = req.session.data['different-address']
-  
-    if (differentAddress === 'yes') {
-      res.redirect('/v2/address-to-write-to')
-    } else {
-      res.redirect('/v2/confirmation')
-    }
-  })
+// Branching current as is journey
 
-  router.post('/v2/if-appointee', function (req, res) {
-    // Get the answer from session data
-    // The name between the quotes is the same as the 'name' attribute on the input elements
-    // However in JavaScript we can't use hyphens in variable names
-  
-    let differentAddress = req.session.data['if-loan-for-you']
-  
-    if (differentAddress === 'yes') {
-      res.redirect('/v2/address')
-    } else {
-      res.redirect('/v2/if-appointee')
-    }
-  })
 
 module.exports = router
