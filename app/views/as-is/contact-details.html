@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  About you - Budgeting Loans - GOV.UK
+  Your contact details - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -12,76 +12,55 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/as-is/children" method="post">
+      <form class="form" action="/as-is/declaration" method="post">
 
-      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              About you
+              Your address
             </h1>
           </legend>
-        </fieldset>
-      </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--s" for="first-name">
-          First name
-        </label>
-        <input class="govuk-input" id="first-name" name="first-name" type="text">
-      </div>
+          <p>If you have no fixed address, enter an address where you can be contacted.</p>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--s" for="last-name">
-          Last name
-        </label>
-        <input class="govuk-input" id="last-name" name="last-name" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--s" for="ni-number">
-          National Insurance number
-        </label>
-        <input class="govuk-input" id="ni-number" name="ni-number" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              <label class="govuk-label govuk-label--s" for="date-of-birth">
-              Date of birth
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
             </label>
-          </legend>
-          <div class="govuk-date-input" id="date-of-birth">
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-birth-day">
-                  Day
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-day" name="date-of-birth-day" type="number" pattern="[0-9]*">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-birth-month">
-                  Month
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="date-of-birth-month" name="date-of-birth-month" type="number" pattern="[0-9]*">
-              </div>
-            </div>
-            <div class="govuk-date-input__item">
-              <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="date-of-birth-year">
-                  Year
-                </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="date-of-birth-year" name="date-of-birth-year" type="number" pattern="[0-9]*">
-              </div>
-            </div>
+            <input class="govuk-input" id="address-line-1" name="address-line-1" type="text">
           </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+          </div>
+
         </fieldset>
-      </div>
 
-
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="mobile">
+                Your mobile (optional)
+              </label>
+            </h2>
+            <p>We can text you updates on your claim, or ring you if we need more information. This may speed up your application.</p>
+            <input class="govuk-input govuk-input--width-10" id="mobile" name="mobile" type="number">
+          </div>
 
         <button class="govuk-button">Continue</button>
 
