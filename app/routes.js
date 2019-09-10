@@ -107,8 +107,19 @@ router.post('/v5/if-appointee', function (req, res) {
 
 
 
-  
+
 // Branching current as is journey
+
+router.post('/as-is/eligibility-uc', function (req, res) {
+
+  let socialfundDebt = req.session.data['socialfund-debt']
+
+  if (socialfundDebt === 'yes') {
+    res.redirect('/as-is/exit-sf-debt')
+  } else {
+    res.redirect('/as-is/eligibility-uc')
+  }
+})
 
 
 module.exports = router
