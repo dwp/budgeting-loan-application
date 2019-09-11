@@ -177,6 +177,17 @@ router.post('/as-is/eligibility-jsa-type', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-is-partner', function (req, res) {
+
+  let isDuration = req.session.data['is-duration']
+
+  if (isDuration === 'more-than-6months') {
+    res.redirect('/as-is/eligibility-100')
+  } else {
+    res.redirect('/as-is/eligibility-is-partner')
+  }
+})
+
 router.post('/as-is/eligibility-esa-previous', function (req, res) {
 
   let esaDuration = req.session.data['esa-partner']
@@ -199,33 +210,43 @@ router.post('/as-is/eligibility-jsa-previous', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-is-previous', function (req, res) {
+
+  let isDuration = req.session.data['is-partner']
+
+  if (isDuration === 'yes') {
+    res.redirect('/as-is/eligibility-100')
+  } else {
+    res.redirect('/as-is/eligibility-is-previous')
+  }
+})
+
 router.post('/as-is/eligibility-100', function (req, res) {
 
   let esaDuration = req.session.data['esa-previous']
   let jsaDuration = req.session.data['jsa-previous']
+  let isDuration = req.session.data['is-previous']
   let esaType = req.session.data['esa-type']
   let jsaType = req.session.data['jsa-type']
 
-  if (esaDuration === 'no') {
+  if (esaDuration === 'esa-no') {
     res.redirect('/as-is/exit-benefits-duration')
-  } else {
-    res.redirect('/as-is/eligibility-100')
-  }
-
-  if (jsaDuration === 'no') {
-    res.redirect('/as-is/exit-benefits-duration')
-  } else {
-    res.redirect('/as-is/eligibility-100')
-  }
-
-  if (esaType === 'contribution') {
-    res.redirect('/as-is/exit-eligibility-esa-contrib')
-  } else {
-    res.redirect('/as-is/eligibility-100')
   }
   
-  if (jsaType === 'contribution') {
+  if (jsaDuration === 'jsa-no') {
+    res.redirect('/as-is/exit-benefits-duration')
+  } 
+
+  if (isDuration === 'is-no') {
+    res.redirect('/as-is/exit-benefits-duration')
+  } 
+
+  if (esaType === 'esa-contribution') {
     res.redirect('/as-is/exit-eligibility-esa-contrib')
+  } 
+
+  if (jsaType === 'jsa-contribution') {
+    res.redirect('/as-is/exit-eligibility-jsa-contrib')
   } else {
     res.redirect('/as-is/eligibility-100')
   }
