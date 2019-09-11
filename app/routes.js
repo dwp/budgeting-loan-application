@@ -188,11 +188,22 @@ router.post('/as-is/eligibility-is-partner', function (req, res) {
   }
 })
 
+router.post('/as-is/eligibility-pc-partner', function (req, res) {
+
+  let pcDuration = req.session.data['pc-duration']
+
+  if (pcDuration === 'yes') {
+    res.redirect('/as-is/eligibility-100')
+  } else {
+    res.redirect('/as-is/eligibility-pc-partner')
+  }
+})
+
 router.post('/as-is/eligibility-esa-previous', function (req, res) {
 
-  let esaDuration = req.session.data['esa-partner']
+  let esaPartner = req.session.data['esa-partner']
 
-  if (esaDuration === 'yes') {
+  if (esaPartner === 'yes') {
     res.redirect('/as-is/eligibility-100')
   } else {
     res.redirect('/as-is/eligibility-esa-previous')
@@ -201,9 +212,9 @@ router.post('/as-is/eligibility-esa-previous', function (req, res) {
 
 router.post('/as-is/eligibility-jsa-previous', function (req, res) {
 
-  let esaDuration = req.session.data['jsa-partner']
+  let esaPartner = req.session.data['jsa-partner']
 
-  if (esaDuration === 'yes') {
+  if (esaPartner === 'yes') {
     res.redirect('/as-is/eligibility-100')
   } else {
     res.redirect('/as-is/eligibility-jsa-previous')
@@ -212,9 +223,20 @@ router.post('/as-is/eligibility-jsa-previous', function (req, res) {
 
 router.post('/as-is/eligibility-is-previous', function (req, res) {
 
-  let isDuration = req.session.data['is-partner']
+  let isPartner = req.session.data['is-partner']
 
-  if (isDuration === 'yes') {
+  if (isPartner === 'yes') {
+    res.redirect('/as-is/eligibility-100')
+  } else {
+    res.redirect('/as-is/eligibility-is-previous')
+  }
+})
+
+router.post('/as-is/eligibility-pc-previous', function (req, res) {
+
+  let pcPartner = req.session.data['pc-partner']
+
+  if (pcPartner === 'yes') {
     res.redirect('/as-is/eligibility-100')
   } else {
     res.redirect('/as-is/eligibility-is-previous')
@@ -226,6 +248,7 @@ router.post('/as-is/eligibility-100', function (req, res) {
   let esaDuration = req.session.data['esa-previous']
   let jsaDuration = req.session.data['jsa-previous']
   let isDuration = req.session.data['is-previous']
+  let pcDuration = req.session.data['pc-previous']
   let esaType = req.session.data['esa-type']
   let jsaType = req.session.data['jsa-type']
 
@@ -239,7 +262,11 @@ router.post('/as-is/eligibility-100', function (req, res) {
 
   if (isDuration === 'is-no') {
     res.redirect('/as-is/exit-benefits-duration')
-  } 
+  }
+  
+  if (pcDuration === 'pc-no') {
+    res.redirect('/as-is/exit-benefits-duration')
+  }
 
   if (esaType === 'esa-contribution') {
     res.redirect('/as-is/exit-eligibility-esa-contrib')
