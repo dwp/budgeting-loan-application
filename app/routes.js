@@ -123,9 +123,9 @@ router.post('/as-is/eligibility-uc', function (req, res) {
 
 router.post('/as-is/eligibility-benefits', function (req, res) {
 
-  let socialfundDebt = req.session.data['claim-uc']
+  let claimUC = req.session.data['claim-uc']
 
-  if (socialfundDebt === 'yes') {
+  if (claimUC === 'yes') {
     res.redirect('/as-is/exit-uc')
   } else {
     res.redirect('/as-is/eligibility-benefits')
@@ -245,26 +245,26 @@ router.post('/as-is/eligibility-pc-previous', function (req, res) {
 
 router.post('/as-is/eligibility-100', function (req, res) {
 
-  let esaDuration = req.session.data['esa-previous']
-  let jsaDuration = req.session.data['jsa-previous']
-  let isDuration = req.session.data['is-previous']
-  let pcDuration = req.session.data['pc-previous']
+  let esaPrevious = req.session.data['esa-previous']
+  let jsaPrevious = req.session.data['jsa-previous']
+  let isPrevious = req.session.data['is-previous']
+  let pcPrevious = req.session.data['pc-previous']
   let esaType = req.session.data['esa-type']
   let jsaType = req.session.data['jsa-type']
 
-  if (esaDuration === 'esa-no') {
+  if (esaPrevious === 'esa-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
   
-  if (jsaDuration === 'jsa-no') {
+  if (jsaPrevious === 'jsa-no') {
     res.redirect('/as-is/exit-benefits-duration')
   } 
 
-  if (isDuration === 'is-no') {
+  if (isPrevious === 'is-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
   
-  if (pcDuration === 'pc-no') {
+  if (pcPrevious === 'pc-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
 
@@ -278,6 +278,40 @@ router.post('/as-is/eligibility-100', function (req, res) {
     res.redirect('/as-is/eligibility-100')
   }
 })
+
+router.post('/as-is/eligibility-industrial-action', function (req, res) {
+
+  let oneHundred = req.session.data['100-or-more']
+
+  if (oneHundred === '100-yes') {
+    res.redirect('/as-is/eligibility-industrial-action')
+  } else {
+    res.redirect('/as-is/exit-100')
+  }
+})
+
+router.post('/as-is/partner', function (req, res) {
+
+  let industrialAction = req.session.data['industrial-action']
+
+  if (industrialAction === 'ia-yes') {
+    res.redirect('/as-is/exit-industrial-action')
+  } else {
+    res.redirect('/as-is/partner')
+  }
+})
+
+router.post('/as-is/children', function (req, res) {
+
+  let hasPartner = req.session.data['partner']
+
+  if (hasPartner === 'partner-yes') {
+    res.redirect('/as-is/partner-details')
+  } else {
+    res.redirect('/as-is/children')
+  }
+})
+
 
 
 
