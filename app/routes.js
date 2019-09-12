@@ -239,7 +239,7 @@ router.post('/as-is/eligibility-pc-previous', function (req, res) {
   if (pcPartner === 'yes') {
     res.redirect('/as-is/eligibility-100')
   } else {
-    res.redirect('/as-is/eligibility-is-previous')
+    res.redirect('/as-is/eligibility-pc-previous')
   }
 })
 
