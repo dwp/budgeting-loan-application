@@ -42,12 +42,17 @@
     border-right: 0;
 }
 
-.govuk-inset-text {
+.govuk-inset-text--blue {
     border-color: #2b8cc4!important;
     background-color: #eaf4f9!important;
 }
 
 .govuk-phase-banner__text {
     vertical-align: middle!important;
+}
+
+.govuk-radios__conditional--withinset {
+    border-left: none!important;
+    padding-left: 0!important;
 }
 
