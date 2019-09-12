@@ -35,7 +35,7 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                  Do you or your partner get Child Benefit?
+                  Do you {% if data['partner']=='partner-yes' %}or your partner{% endif %} get Child Benefit?
               </h1>
             </legend>
             <div class="govuk-radios--inline">
