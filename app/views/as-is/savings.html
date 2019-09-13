@@ -32,7 +32,7 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you {% if data['partner']=='partner-yes' %}or your partner combined{% endif %} have savings of more than £1,000 (£2,000 if either of you are 63 or over)??
+                Do you {% if data['partner']=='partner-yes' %}or your partner combined{% endif %} have savings of more than £1,000 (£2,000 if {% if data['partner']=='partner-yes' %}either of{% endif %} you are 63 or over)??
               </h1>
             </legend>
             <div class="govuk-radios govuk-radios--inline">

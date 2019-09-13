@@ -32,7 +32,7 @@
           <fieldset class="govuk-fieldset" aria-describedby="child-benefit-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                You can apply for between £100 and £812 - how much do you need?
+                You can apply for between £100 and {% if data['child-benefit']== 'yes' %}£812{% elseif data['partner']== 'partner-yes' %}£464{% else %}£348{% endif %} - how much do you need?
               </h1>
             </legend>
             <div class="input-wrapper">
