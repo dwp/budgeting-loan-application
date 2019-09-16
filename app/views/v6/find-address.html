@@ -26,53 +26,35 @@
 
       <form class="form" action="/v6/select-address" method="post">
 
-      <fieldset class="govuk-fieldset">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-          <h1 class="govuk-fieldset__heading">
-            Find your address
-          </h1>
-        </legend>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h1 class="govuk-fieldset__heading">
+              Find your address
+            </h1>
+          </legend>
 
-        <p>If you have no fixed address, enter an address where you can be contacted.</p>
-      
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="address-number">
-            Property number or name
-          </label>
-          
-          <input class="govuk-input govuk-input--width-10" id="address-number" name="address-number" type="text">
-        </div>
-      
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="address-postcode">
-            Postcode
-          </label>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-        </div>
-      
-      </fieldset>
-
-      <details class="govuk-details" data-module="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              I don't know my postcode
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-              <p>You can:</p>
-              <ul class="govuk-list govuk-list--bullet">
-                <li>
-                  <a class="govuk-link" href="http://www.royalmail.com/find-a-postcode" target="_blank">find the postcode at Royal Mail (opens in a new window)</a>
-                </li>
-                <li>
-                  <a class="govuk-link" href="/v6/address" target="_blank">enter your address manually</a>
-                </li>
-              </ul>
-              <p>The address may not be listed if you are part of a new development, if that is the case please enter your address manually.</p>
+          <p>If you have no fixed address, enter an address where you can be contacted.</p>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-number">
+              Property number or name
+            </label>
+            
+            <input class="govuk-input govuk-input--width-10" id="address-number" name="address-number" type="text">
           </div>
-        </details>
+        
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+          </div>
+        
+        </fieldset>
 
         <button class="govuk-button">Continue</button>
+
+        <a class="govuk-link" href="/v6/enter-address">Enter your address manually</a>
 
       </form>
 
