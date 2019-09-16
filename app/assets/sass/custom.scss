@@ -66,3 +66,6 @@
 .govuk-radios__input:focus + .govuk-radios__label::before {
     box-shadow: 0 0 0 4px #fd0!important;
 }
+.govuk-button:focus {
+    outline: 3px solid #fd0!important;
+} 
