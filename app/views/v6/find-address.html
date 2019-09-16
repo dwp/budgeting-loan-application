@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Address
+  Find your address - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,12 +24,12 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v6/address-to-write-to" method="post">
+      <form class="form" action="/v6/select-address" method="post">
 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
           <h1 class="govuk-fieldset__heading">
-            Find you address
+            Find your address
           </h1>
         </legend>
 
@@ -60,12 +60,12 @@
           </summary>
           <div class="govuk-details__text">
               <p>You can:</p>
-              <ul class="govuk-list">
+              <ul class="govuk-list govuk-list--bullet">
                 <li>
-                  <a class="govuk-link" href="http://www.royalmail.com/find-a-postcode" target="_blank">find the postcode at Royal Mail</a>
+                  <a class="govuk-link" href="http://www.royalmail.com/find-a-postcode" target="_blank">find the postcode at Royal Mail (opens in a new window)</a>
                 </li>
                 <li>
-                  <a class="govuk-link" href="/v6/address" target="_blank">Enter your address manually</a>
+                  <a class="govuk-link" href="/v6/address" target="_blank">enter your address manually</a>
                 </li>
               </ul>
               <p>The address may not be listed if you are part of a new development, if that is the case please enter your address manually.</p>

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Address to write to
+  Select your address - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,7 +28,7 @@
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
                 <h1 class="govuk-fieldset__heading">
-                  Confirm address
+                  Select your address
                 </h1>
               </legend>
               <div class="govuk-checkboxes">
@@ -41,21 +41,7 @@
               </div>
             </fieldset>
 
-            <details class="govuk-details  govuk-!-margin-top-6" data-module="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    The address I want is not listed here
-                  </span>
-                </summary>
-                <div class="govuk-details__text">
-                  <ul class="govuk-list">
-                    <li>
-                      <a class="govuk-link" href="/v6/address" target="_blank">Enter your address manually</a>
-                    </li>
-                  </ul>
-                  <p>The address may not be listed if you are part of a new development, if that is the case please enter your address manually.</p>
-                </div>
-              </details>
+            <a href="/enter-address" class="govuk-link">If your address is not listed</a>
 
           </div>
 
