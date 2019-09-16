@@ -105,6 +105,18 @@ router.post('/v5/if-appointee', function (req, res) {
     }
   })
 
+// Branching V7
+
+router.post('/v7/declaration', function (req, res) {
+  
+  let addressConfirmation = req.session.data['address-confirmation']
+
+  if (addressConfirmation === 'address-not-listed') {
+    res.redirect('/v7/enter-address')
+  } else {
+    res.redirect('/v7/declaration')
+  }
+})
 
 
 
