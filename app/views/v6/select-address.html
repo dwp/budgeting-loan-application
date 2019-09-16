@@ -26,24 +26,24 @@
 
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
                   Select your address
                 </h1>
               </legend>
-              <div class="govuk-checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="address-confirmation" name="address-confirmation" type="checkbox" value="address-confirmation">
-                  <label class="govuk-label govuk-checkboxes__label" for="address-confirmation">
-                    DWP, Quarry House, Quarry Hill LS2 7UA
+              <p>One address found for 'Quarry House' and 'LS2 7UA'</p>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
+                    Quarry House, Quarry Hill, Leeds, LS2 7UA
                   </label>
                 </div>
               </div>
             </fieldset>
-
-            <a href="/enter-address" class="govuk-link">If your address is not listed</a>
-
           </div>
+
+          <p><a href="/v6/enter-address">The address is not on the list</a></p>
 
         <button class="govuk-button">Continue</button>
 
