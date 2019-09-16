@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Outgoings - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+        <h1 class="govuk-heading-l">The next questions are about money you owe</h1>
+
+        <p>Telling us about money you owe does not mean you are less likely to get a loan. We use this information to work out a repayment plan that works for you.</p>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
