@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select your address - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v7/declaration" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Select your address
+                </h1>
+              </legend>
+              <p>44 addresses found for '1' and 'W2 1JB'</p>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    403, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    705, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    704, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    703, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-not-listed">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
+                    The address is not listed here
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        <button class="govuk-button">Continue</button>
+
+    </div>
+  </div>
+
+{% endblock %}
