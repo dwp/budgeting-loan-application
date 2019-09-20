@@ -22,27 +22,27 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v7/declaration" method="post">
+      <form class="form" action="/v12/declaration" method="post">
 
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Select your address
+                  Would you like letters about your application to be sent to a different address?
                 </h1>
-                <p class="govuk-!-margin-top-4">1 address found for 'Quarry House' and 'LS2 7UA'</p>
+                <p class="govuk-!-margin-top-4">If you don't want letters sent to your registered benefit address you can enter another one</p>
               </legend>
-              <div class="govuk-radios">
+              <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation">
-                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
-                    Quarry House, Quarry Hill, Leeds, LS2 7UA
+                  <input class="govuk-radios__input" id="yes-extra-address" name="extra-address" type="radio" value="yes-extra-address">
+                  <label class="govuk-label govuk-radios__label" for="yes-extra-address">
+                    Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-not-listed">
-                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
-                    My address is not listed
+                  <input class="govuk-radios__input" id="no-extra-address" name="extra-address" type="radio" value="no-extra-address">
+                  <label class="govuk-label govuk-radios__label" for="no-extra-address">
+                    No
                   </label>
                 </div>
               </div>

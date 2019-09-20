@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select your address - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v12/declaration" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                 No results found for
+                </h1>
+              </legend>
+              <dl class="govuk-summary-list">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name or number
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Quarry House
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/v12/find-address">
+                        Change<span class="govuk-visually-hidden"> name/number</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Postcode
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      LS2 7UA
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/v7/find-address">
+                        Change<span class="govuk-visually-hidden"> postcode</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <p>If you are sure the information you gave is correct, then you can <a href="/v7/enter-address">enter your address manually</a>.</p>
+
+            </fieldset>
+          </div>
+
+    </div>
+  </div>
+
+{% endblock %}

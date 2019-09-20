@@ -118,6 +118,34 @@ router.post('/v7/declaration', function (req, res) {
   }
 })
 
+// Branching v12
+
+router.post('/v12/letter-address', function (req, res) {
+  
+  let addressConfirmation = req.session.data['address-confirmation']
+  let extraAddressConfirmation = req.session.data['address-confirmation']
+
+  if (addressConfirmation === 'address-not-listed') {
+    res.redirect('/v12/enter-address')
+  }
+  if (extraAddressConfirmation === 'address-not-listed') {
+    res.redirect('/v12/enter-letter-address')
+  } else {
+    res.redirect('/v12/letter-address')
+  }
+})
+
+router.post('/v12/declaration', function (req, res) {
+  
+  let extraAddress = req.session.data['extra-address']
+
+  if (extraAddress === 'yes-extra-address') {
+    res.redirect('/v12/find-letter-address')
+  } else {
+    res.redirect('/v12/declaration')
+  }
+})
+
 
 
 // Branching current as is journey
