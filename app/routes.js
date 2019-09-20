@@ -363,7 +363,7 @@ router.post('/as-is/children', function (req, res) {
   }
 })
 
-// Branching current as is journey
+// Branching new master application journey
 
 router.post('/master/eligibility-uc', function (req, res) {
 
