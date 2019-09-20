@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
 {% block pageTitle %}
-  If the loan is for you
+  Amount to borrow - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
-
 {% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 
   {{ govukPhaseBanner({
@@ -24,34 +26,31 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/v5/if-appointee" method="post">
+      <form class="form" action="/master/eligibility-industrial-action" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="if-loan-for-you-conditional-hint">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+          <fieldset class="govuk-fieldset" aria-describedby="100-or-more-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Is the loan for you?
+                Do you need to borrow £100 or more?
               </h1>
             </legend>
-          
-            <div class="govuk-radios">
+            <div class="govuk-radios govuk-radios--inline">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="if-loan-for-you-1" name="if-loan-for-you" type="radio" value="yes">
-                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-1">
+                <input class="govuk-radios__input" id="100-or-more-yes" name="100-or-more" type="radio" value="100-yes">
+                <label class="govuk-label govuk-radios__label" for="100-or-more-yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="if-loan-for-you-2" name="if-loan-for-you" type="radio" value="no">
-                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-2">
-                  No, it's for someone else
+                <input class="govuk-radios__input" id="100-or-more-no" name="100-or-more" type="radio" value="100-no">
+                <label class="govuk-label govuk-radios__label" for="100-or-more-no">
+                  No
                 </label>
               </div>
             </div>
           </fieldset>
         </div>
-
-        </fieldset>
 
         <button class="govuk-button">Continue</button>
 

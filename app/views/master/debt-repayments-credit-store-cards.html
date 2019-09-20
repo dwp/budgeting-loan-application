@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Credit and store cards - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/debt-repayments-loans" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you or your partner owe money on any credit or store cards?
+              </h1>
+            </legend>
+            <div class="govuk-radios--inline">
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="credit-store-cards-1" name="credit-store-cards" type="radio" value="yes" data-aria-controls="conditional-credit-store-cards-1">
+                      <label class="govuk-label govuk-radios__label" for="credit-store-cards-1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="credit-store-cards-2" name="credit-store-cards" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="credit-store-cards-2">
+                        No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-credit-store-cards-1" style="clear:left;">
+                      <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="credit-store-cards-info">
+                              How much do you pay back each month?
+                          </label>
+                          <div class="input-wrapper">
+                            <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          </div>
+                          <label class="govuk-label" for="credit-store-cards-info">
+                              How much is left to pay?
+                          </label>
+                          <div class="input-wrapper">
+                            <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </fieldset>
+        </div>
+    
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

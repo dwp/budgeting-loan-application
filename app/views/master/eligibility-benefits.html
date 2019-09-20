@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Current benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-esa-duration" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="benefit-received-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you get any of these benefits?
+              </h1>
+            </legend>
+            <p>
+              We’ll check which benefit you get. Incorrect information will delay your application or cause it to be rejected.
+            </p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="esa" name="benefit-received" type="radio" value="esa">
+                <label class="govuk-label govuk-radios__label" for="esa">
+                  Employment and Support Allowance
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="jsa" name="benefit-received" type="radio" value="jsa">
+                <label class="govuk-label govuk-radios__label" for="jsa">
+                  Jobseeker’s Allowance
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="is" name="benefit-received" type="radio" value="is">
+                <label class="govuk-label govuk-radios__label" for="is">
+                  Income Support
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="pc" name="benefit-received" type="radio" value="pc">
+                <label class="govuk-label govuk-radios__label" for="pc">
+                  Pension Credit
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="other" name="benefit-received" type="radio" value="other">
+                <label class="govuk-label govuk-radios__label" for="other">
+                  None of the above
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

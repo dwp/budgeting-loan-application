@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Jobseeker's Allowance - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-100" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="benefit-received-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of Jobseeker's Allowance do you get?
+              </h1>
+            </legend>
+
+
+
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="jsa-type-income" name="jsa-type" type="radio" value="income" data-aria-controls="conditional-jsa-type-income">
+                  <label class="govuk-label govuk-radios__label" for="jsa-type-income">
+                      Income-related
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="jsa-type-contribution" name="jsa-type" type="radio" value="jsa-contribution" data-aria-controls="conditional-jsa-type-contribution">
+                    <label class="govuk-label govuk-radios__label" for="jsa-type-contribution">
+                        Contribution-based
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="jsa-type-unknown" name="jsa-type" type="radio" value="unknown" data-aria-controls="conditional-jsa-type-unknown">
+                    <label class="govuk-label govuk-radios__label" for="jsa-type-unknown">
+                      Don't know
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--withinset govuk-radios__conditional--hidden" id="conditional-jsa-type-unknown">
+                      <div class="govuk-inset-text govuk-inset-text--blue">
+                          <p>Contact <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a> to find out what type of Jobseeker’s Allowance you get.</p>
+                          <p>If you’ve had a Budgeting Loan before and your benefits haven’t changed, you’ll probably be getting income-based Jobseeker’s Allowance.</p>
+                          <p>If you get contribution-based Jobseeker's Allowance, you won’t be able to get a Budgeting Loan.</p>
+                      </div>
+                  </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

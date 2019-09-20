@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Declaration
+  Declaration - Send application - Budgeting Loan - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -23,7 +23,9 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
 
-      <h1 class="govuk-heading-xl">Declaration</h1>
+      <form action="/master/confirmation" method="post" novalidate>
+
+      <h1 class="govuk-heading-l">Declaration</h1>
 
       <p>By submitting this application you agree:</p>
         <ul class="govuk-list govuk-list--bullet">
@@ -63,8 +65,6 @@
           Your benefit may be stopped if you deliberately give wrong information that would affect your claim, or don't report changes promptly.
         </strong>
       </div>
-
-      <form action="/v5/confirmation" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

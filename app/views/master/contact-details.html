@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/declaration" method="post">
+
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Your address
+            </h1>
+          </legend>
+
+          <p>If you have no fixed address, enter an address where you can be contacted.</p>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-1">
+              Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="address-line-1" name="address-line-1" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-line-2">
+              <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="address-line-2" name="address-line-2" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-town">
+              Town or city
+            </label>
+            <input class="govuk-input govuk-!-width-one-half" id="address-town" name="address-town" type="text">
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="address-postcode">
+              Postcode
+            </label>
+            <input class="govuk-input govuk-!-width-one-quarter" id="address-postcode" name="address-postcode" type="text">
+          </div>
+
+        </fieldset>
+
+          <div class="govuk-form-group">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="mobile">
+                Your mobile (optional)
+              </label>
+            </h2>
+            <p>We can text you updates on your claim, or ring you if we need more information. This may speed up your application.</p>
+            <input class="govuk-input govuk-input--width-10" id="mobile" name="mobile" type="number">
+          </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Loan amount - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/savings" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="child-benefit-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                You can apply for between £100 and {% if data['child-benefit']== 'yes' %}£812{% elseif data['partner']== 'partner-yes' %}£464{% else %}£348{% endif %} - how much do you need?
+              </h1>
+            </legend>
+            <div class="input-wrapper">
+              <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
+              <input class="govuk-c-input govuk-!-width-one-quarter" id="loan-amount" name="loan-amount" type="text">
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Eligibility - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/index" method="post">
+
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+            You’re not eligible for a Budgeting Loan
+          </h1>
+        </legend>
+        
+        <div class="govuk-inset-text govuk-inset-text--blue">
+          <p>You cannot get a Budgeting Loan if you receive Universal Credit.</p>
+          <p>You may be eligible for a <a href="https://www.gov.uk/guidance/universal-credit-advances">Universal Credit advance</a> instead.</p>
+        </div>
+        <h2 class="govuk-heading-m">If you want to apply for an advance</h2>
+
+        <p>Contact your local <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a> work coach.</p>
+
+        <h2 class="govuk-heading-m">If you made a mistake</h2>
+
+        <p>Make sure you have the correct information and <a href="/index">apply again</a>.</p>
+
+        <button class="govuk-button">Finish</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
