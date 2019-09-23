@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  If you are registered as their appointee
+  If the loan is for you
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,7 +15,16 @@
   html: 'Messages will not be sent and no data is saved.'
 }) }}
 
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+
+    {# <button onclick="goBack()">Back</button>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script> #}
+
 
 {% endblock %}
 
@@ -24,34 +33,34 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master/interruption-card" method="post">
+      <form class="form" action="/v3/if-appointee" method="post">
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
+          <fieldset class="govuk-fieldset" aria-describedby="if-loan-for-you-conditional-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
               <h1 class="govuk-fieldset__heading">
-                Are you registered as their appointee?
+                Is the loan for you?
               </h1>
             </legend>
-            <span id="undefined-hint" class="govuk-hint">You can still apply on someone else's behalf if you're not an appointee.</span>
-
-            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+          
+            <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="appointee-yes" name="appointee" type="radio" value="appointee-yes">
-                <label class="govuk-label govuk-radios__label" for="appointee-yes">
+                <input class="govuk-radios__input" id="if-loan-for-you-1" name="if-loan-for-you" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-1">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="appointee-no" name="appointee" type="radio" value="appointee-no">
-                <label class="govuk-label govuk-radios__label" for="appointee-no">
-                  No
+                <input class="govuk-radios__input" id="if-loan-for-you-2" name="if-loan-for-you" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-2">
+                  No, it's for someone else
                 </label>
               </div>
-
             </div>
           </fieldset>
         </div>
+
+        </fieldset>
 
         <button class="govuk-button">Continue</button>
 
