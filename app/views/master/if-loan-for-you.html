@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  If the loan is for you
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+
+    {# <button onclick="goBack()">Back</button>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+    </script> #}
+
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/if-appointee" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="if-loan-for-you-conditional-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Is the loan for you?
+              </h1>
+            </legend>
+          
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="if-loan-for-you-1" name="if-loan-for-you" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="if-loan-for-you-2" name="if-loan-for-you" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="if-loan-for-you-2">
+                  No, it's for someone else
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        </fieldset>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

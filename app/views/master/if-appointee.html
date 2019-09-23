@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  If you are registered as their appointee
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v1/interruption-card" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h1 class="govuk-fieldset__heading">
+                Are you registered as their appointee?
+              </h1>
+            </legend>
+            <span id="undefined-hint" class="govuk-hint">You can still apply on someone else's behalf if you're not an appointee.</span>
+
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee-yes" name="appointee" type="radio" value="appointee-yes">
+                <label class="govuk-label govuk-radios__label" for="appointee-yes">
+                  Yes
+                </label>
+              </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="appointee-no" name="appointee" type="radio" value="appointee-no">
+                <label class="govuk-label govuk-radios__label" for="appointee-no">
+                  No
+                </label>
+              </div>
+
+              </div>
+            </fieldset>
+            </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

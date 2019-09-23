@@ -365,6 +365,28 @@ router.post('/as-is/children', function (req, res) {
 
 // Branching new master application journey
 
+router.post('/master/if-appointee', function (req, res) {
+  
+  let yourLoan = req.session.data['if-loan-for-you']
+
+  if (yourLoan === 'yes') {
+    res.redirect('/master/eligibility-sf-debt')
+  } else {
+    res.redirect('/master/if-appointee')
+  }
+})
+
+router.post('/master/interruption-card', function (req, res) {
+  
+  let isAppointee = req.session.data['appointee']
+
+  if (isAppointee === 'appointee-yes') {
+    res.redirect('/master/interruption-card-appointee')
+  } else {
+    res.redirect('/master/interruption-card')
+  }
+})
+
 router.post('/master/eligibility-uc', function (req, res) {
 
   let socialfundDebt = req.session.data['socialfund-debt']
