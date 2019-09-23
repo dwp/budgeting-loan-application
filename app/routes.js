@@ -54,6 +54,30 @@ router.post('/v2/if-appointee', function (req, res) {
   }
 })
 
+// Branching V3
+
+router.post('/v3/if-appointee', function (req, res) {
+  
+  let yourLoan = req.session.data['if-loan-for-you']
+
+  if (yourLoan === 'yes') {
+    res.redirect('/v3/eligibility-sf-debt')
+  } else {
+    res.redirect('/v3/if-appointee')
+  }
+})
+
+router.post('/v3/interruption-card', function (req, res) {
+  
+  let isAppointee = req.session.data['appointee']
+
+  if (isAppointee === 'appointee-yes') {
+    res.redirect('/v3/interruption-card-appointee')
+  } else {
+    res.redirect('/v3/interruption-card')
+  }
+})
+
 // Branching V4
 
 
