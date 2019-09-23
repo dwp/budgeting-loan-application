@@ -60,8 +60,8 @@ router.post('/v3/if-appointee', function (req, res) {
   
   let yourLoan = req.session.data['if-loan-for-you']
 
-  if (yourLoan === 'yes') {
-    res.redirect('/v3/eligibility-sf-debt')
+  if (yourLoan === 'is-for-me') {
+    res.redirect('/v3/assisted-digital-thanks')
   } else {
     res.redirect('/v3/if-appointee')
   }
@@ -69,12 +69,12 @@ router.post('/v3/if-appointee', function (req, res) {
 
 router.post('/v3/interruption-card', function (req, res) {
   
-  let isAppointee = req.session.data['appointee']
+  let ifAppointee = req.session.data['if-appointee']
 
-  if (isAppointee === 'appointee-yes') {
-    res.redirect('/v3/interruption-card-appointee')
-  } else {
+  if (ifAppointee === 'not-appointee') {
     res.redirect('/v3/interruption-card')
+  } else {
+    res.redirect('/v3/interruption-card-appointee')
   }
 })
 
