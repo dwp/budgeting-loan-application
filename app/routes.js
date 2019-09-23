@@ -596,8 +596,12 @@ router.post('/master/enter-letter-address', function (req, res) {
 router.post('/master/check-your-answers', function (req, res) {
   
   let extraAddress = req.session.data['extra-address']
+  let letterAddress = req.session.data['address-postcode']
 
   if (extraAddress === 'yes-extra-address') {
+    res.redirect('/master/find-letter-address')
+  }
+  if (letterAddress === 'yes-extra-address') {
     res.redirect('/master/find-letter-address')
   } else {
     res.redirect('/master/check-your-answers')
