@@ -589,7 +589,7 @@ router.post('/master/enter-letter-address', function (req, res) {
   if (extraAddress === 'address-not-listed') {
     res.redirect('/master/enter-letter-address')
   } else {
-    res.redirect('/master/check-your-answers')
+    res.redirect('/master/contact-details')
   }
 })
 
