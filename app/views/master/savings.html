@@ -32,7 +32,7 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you {% if data['partner']=='partner-yes' %}or your partner combined{% endif %} have savings over £1000?
+                Do you {% if data['partner']=='partner-yes' %}and your partner{% endif %} have {% if data['partner']=='partner-yes' %}combined{% endif %} savings of more than £1,000?
               </h1>
             </legend>
             <span id="undefined-hint" class="govuk-hint">Include any money you have at home and in a bank, building society or credit union account. Also include investments like premium bonds and shares.</span>
