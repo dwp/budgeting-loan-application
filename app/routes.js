@@ -593,18 +593,24 @@ router.post('/master/enter-letter-address', function (req, res) {
   }
 })
 
-router.post('/master/check-your-answers', function (req, res) {
+router.post('/master/address-notfound', function (req, res) {
   
-  let extraAddress = req.session.data['extra-address']
   let letterAddress = req.session.data['letter-address']
 
+  if (letterAddress === 'yes-extra-address') {
+    res.redirect('/master/address-notfound')
+  } else {
+    res.redirect('/master/contact-details')
+  }
+})
+
+router.post('/master/contact-details', function (req, res) {
+  
+  let extraAddress = req.session.data['extra-address']
   if (extraAddress === 'yes-extra-address') {
     res.redirect('/master/find-letter-address')
-  }
-  if (letterAddress === 'yes-extra-address') {
-    res.redirect('/master/find-letter-address')
   } else {
-    res.redirect('/master/check-your-answers')
+    res.redirect('/master/contact-details')
   }
 })
 
