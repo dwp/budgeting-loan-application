@@ -627,13 +627,9 @@ router.post('/master/children', function (req, res) {
 router.post('/master/letter-address', function (req, res) {
   
   let addressConfirmation = req.session.data['address-confirmation']
-  let extraAddressConfirmation = req.session.data['address-confirmation']
 
   if (addressConfirmation === 'address-not-listed') {
     res.redirect('/master/enter-address')
-  }
-  if (extraAddressConfirmation === 'address-not-listed') {
-    res.redirect('/master/enter-letter-address')
   } else {
     res.redirect('/master/letter-address')
   }
