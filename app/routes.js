@@ -78,6 +78,17 @@ router.post('/v3/interruption-card', function (req, res) {
   }
 })
 
+router.post('/v3/assisted-digital-thanks', function (req, res) {
+  
+  let appointeeAddress = req.session.data['appointee-address-confirmation']
+
+  if (appointeeAddress === 'appointee-address-not-listed') {
+    res.redirect('/v3/appointee-enter-address')
+  } else {
+    res.redirect('/v3/assisted-digital-thanks')
+  }
+})
+
 // Branching V4
 
 
