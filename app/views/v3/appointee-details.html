@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  About appointee - Budgeting Loans - GOV.UK
+  Appointee details - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -32,7 +32,7 @@
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              About you - appointee
+              Appointee details
             </h1>
           </legend>
         </fieldset>
@@ -47,23 +47,16 @@
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="appointee-last-name">
-          Last name
+        Last name
         </label>
         <input class="govuk-input govuk-!-width-one-half" id="appointee-last-name" name="appointee-last-name" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-label--s" for="appointee-ni-number">
-          National Insurance number
-        </label>
-        <input class="govuk-input govuk-!-width-one-half" id="appointee-ni-number" name="appointee-ni-number" type="text">
       </div>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" role="group" aria-describedby="appointee-date-of-birth-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
               <label class="govuk-label govuk-label--s" for="appointee-date-of-birth">
-              date of birth
+              Date of birth
             </label>
           </legend>
           <div class="govuk-date-input" id="appointee-date-of-birth">
@@ -95,15 +88,22 @@
         </fieldset>
       </div>
 
+{# National Insurance question commented out, as it's not required as required field for clerical applications and we should avoid adding more questions in unless it's proven to be necessary #}
+
+{#       <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="appointee-ni-number">
+          National Insurance number (optional)
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="appointee-ni-number" name="appointee-ni-number" type="text">
+      </div> #}
+
       <div class="govuk-form-group">
           <label class="govuk-label govuk-label--s" for="appointee-mobile">
-            Your mobile number (optional)
+            Mobile number (optional)
           </label>
           <p>We can text you updates on this claim, or ring you if we need more information. This may speed up the application.</p>
           <input class="govuk-input govuk-input--width-10" id="appointee-mobile" name="appointee-mobile" type="number">
         </div>
-
-
 
         <a class="govuk-button" href="/v3/appointee-find-address">Continue</a>
 
