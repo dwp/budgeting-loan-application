@@ -83,7 +83,7 @@ router.post('/v3/check-your-answers', function (req, res) {
   let appointeeAddress = req.session.data['appointee-address-confirmation']
 
   if (appointeeAddress === 'appointee-address-not-listed') {
-    res.redirect('/v3/appointee-enter-address')
+    res.redirect('/v3/appointee-address-not-listed')
   } else {
     res.redirect('/v3/check-your-answers')
   }
