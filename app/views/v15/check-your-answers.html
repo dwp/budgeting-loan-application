@@ -1,0 +1,433 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+
+      <h2 class="govuk-heading-m">Social Fund debt</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Debt of £1,500 or more for Crisis Loans and Budgeting Loans
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-sf-debt">
+              Change
+              <span class="govuk-visually-hidden"> if you owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Benefits</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Universal Credit received
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-uc">
+              Change
+              <span class="govuk-visually-hidden"> if you get Universal Credit</span>
+            </a>
+          </dd>
+        </div>        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Benefit received
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Employment and Support Allowance (ESA)
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-benefits">
+              Change
+              <span class="govuk-visually-hidden"> benefit you get</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Received for
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Less than 6 months
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-esa-duration">
+              Change
+              <span class="govuk-visually-hidden"> how long you've been getting this benefit</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Type of ESA received
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Income-related
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-esa-type">
+              Change
+              <span class="govuk-visually-hidden"> the type of ESA you get</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Received ESA with a previous partner in last 6 months
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-esa-partner">
+              Change
+              <span class="govuk-visually-hidden"> if you got ESA with a previous partner in the last 6 months</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Received income-based Jobseeker's Allowance or Income Support in last 6 months
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-esa-previous">
+              Change
+              <span class="govuk-visually-hidden"> if you got income-based Jobseeker's Allowance or Income Support in the last 6 months</span>
+            </a>
+          </dd>
+        </div>        
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Loan needed £100 or more
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-100">
+              Change
+              <span class="govuk-visually-hidden"> if you need to borrow £100 or more</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Industrial action</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Involved in industrial action
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/eligibility-industrial-action">
+              Change
+              <span class="govuk-visually-hidden"> if you're involved in any industrial action</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Partner</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Has partner
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/partner">
+              Change
+              <span class="govuk-visually-hidden"> if you have a partner</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Partner full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Philip Mountbatten
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/partner-details">
+              Change
+              <span class="govuk-visually-hidden"> partner's full name</span>
+            </a>
+          </dd>
+        </div>     
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Partner date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            10 June 1921
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/partner-details">
+              Change
+              <span class="govuk-visually-hidden"> partner's date of birth</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Children</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Child Benefit received by you or your partner
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Yes, 2 children living with you
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/children">
+              Change
+              <span class="govuk-visually-hidden"> if you or your partner get Child Benefit</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Budgeting Loan needed</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Amount requested
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £250
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/loan-amount">
+              Change
+              <span class="govuk-visually-hidden"> how much Budgeting Loan you need</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Financial circumstances</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Savings of more than £1,000 (£2,000 if either you or your partner are 63 or over)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/savings">
+              Change
+              <span class="govuk-visually-hidden"> if you and your partner have combined savings of more than £1,000 (£2,000 if either of you are 63 or over)</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Credit or store card debt
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/debt-repayments-credit-store-cards">
+              Change
+              <span class="govuk-visually-hidden"> if you owe money on credit or store cards</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Outstanding loan debt
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/debt-repayments-loans">
+              Change
+              <span class="govuk-visually-hidden"> if you have any outstanding loans</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Instalments paid on furniture, a car or household goods
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/debt-repayments-rent-to-own">
+              Change
+              <span class="govuk-visually-hidden"> if you're paying instalments on furniture, a car or household goods</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Money owed to your landlord
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/debt-repayments-landlord">
+              Change
+              <span class="govuk-visually-hidden"> if you owe money to your landlord</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Personal details</h2>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Full name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Elizabeth Windsor
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/contact-details">
+              Change
+              <span class="govuk-visually-hidden"> full name</span>
+            </a>
+          </dd>
+        </div>     
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            National Insurance number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            AB123456C
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/contact-details">
+              Change
+              <span class="govuk-visually-hidden"> National Insurance number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            21 April 1926
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/contact-details">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Buckingham Palace<br>
+            Consitution Hill<br>
+            London<br>
+            SW1A 1AA
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/contact-details">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobile number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            07777 888999
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/contact-details">
+              Change
+              <span class="govuk-visually-hidden"> your mobile number</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <form action="/v15/declaration" method="post" novalidate>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button">
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
