@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/v16/check-your-answers" method="post">
+
+          <div class="govuk-form-group">
+
+              <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                        Would you like to provide your mobile number so we can keep you up to date on your application via text?
+                    </h1>
+                  </legend>
+                  <div class="govuk-radios--inline">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="mobile-number-yes" name="mobile-number" type="radio" value="yes" data-aria-controls="conditional-mobile-number-yes">
+                          <label class="govuk-label govuk-radios__label" for="mobile-number-yes">
+                            Yes
+                          </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="mobile-number-no" name="mobile-number" type="radio" value="no" data-aria-controls="conditional-mobile-number-no">
+                          <label class="govuk-label govuk-radios__label" for="mobile-number-no">
+                            No
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-number-yes" style="clear:left;">
+                          <div class="govuk-form-group">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="mobile-number-info">
+                                  Please enter the mobile number that you would like us to contact you on
+                              </label>
+                              <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+            </div>
+  
+          <button class="govuk-button">Continue</button>
+  
+
+    </div>
+  </div>
+
+{% endblock %}
