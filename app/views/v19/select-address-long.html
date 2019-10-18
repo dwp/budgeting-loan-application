@@ -1,0 +1,238 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Select your address - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/v19/declaration" method="post">
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Select your address
+                </h1>
+              </legend>
+              <p>30 addresses found for '1' and 'W2 1JB'</p>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    403, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    404, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    405, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    406, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    407, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    408, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    409, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    410, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    411, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    412, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    413, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    414, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    415, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    416, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    417, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    418, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    419, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    420, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    421, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    422, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    423, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    424, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    425, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    426, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    427, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-1">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-1">
+                    428, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-2">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-2">
+                    429, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-3">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-3">
+                    430, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    431, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    432, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation-4">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation-4">
+                    433, Westcliffe Apartments, 1, South Wharf Road, London, W2 1JB, England
+                  </label>
+                </div>
+                <div class="govuk-radios__divider">or</div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-not-listed">
+                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
+                    The address is not listed here
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+        <button class="govuk-button">Continue</button>
+
+    </div>
+  </div>
+
+{% endblock %}
