@@ -33,86 +33,78 @@
               <fieldset class="govuk-fieldset">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                     <h1 class="govuk-fieldset__heading">
-                      How would you like to recieve the decision about your loan?
+                      How would you like to receive the decision about your application?
                     </h1>
                   </legend>
-                  <span id="undefined-hint" class="govuk-hint">It can often speed up your application if you choose to be contacted via SMS or email.</span>
-                  <div class="govuk-radios">
-                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="mobile-number" name="mobile-number" type="radio" value="mobile-number" data-aria-controls="conditional-mobile-number">
-                          <label class="govuk-label govuk-radios__label" for="mobile-number">
-                            Mobile phone - SMS
-                          </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-number">
+                  <span id="undefined-hint" class="govuk-hint">Applications are completed more quickly by text or email.</span>
+
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes govuk-radios--conditional" data-module="checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="mobile-number" name="contactpreference" type="checkbox" value="text message" data-aria-controls="conditional-mobile-number">
+                        <label class="govuk-label govuk-checkboxes__label" for="mobile-number">
+                          Text message
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-mobile-number">
+                        <div class="govuk-form-group">
                           <div class="govuk-form-group">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label" for="mobile-number-info">
-                                  Please enter the mobile number that you would like us to contact you on with updates about your application progress
-                              </label>
-                              <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
-                              <label class="govuk-label govuk-!-margin-top-2" for="mobile-number-info">
-                                  Please re-enter the mobile number so we can check for any mistakes
-                              </label>
-                              <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
-                            </div>
+                            <label class="govuk-label" for="mobile-number-info">
+                                Mobile number
+                            </label>
+                            <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
+                            <label class="govuk-label govuk-!-margin-top-2" for="mobile-number-info">
+                                Confirm mobile number
+                            </label>
+                            <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
                           </div>
                         </div>
+                      </div>
 
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="email" name="email" type="radio" value="email" data-aria-controls="conditional-email">
-                          <label class="govuk-label govuk-radios__label" for="email">
-                            Email
-                          </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="email" name="contactpreference" type="checkbox" value="email" data-aria-controls="conditional-email">
+                        <label class="govuk-label govuk-checkboxes__label" for="email">
+                          Email
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-email">
+                        <div class="govuk-form-group">
                           <div class="govuk-form-group">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label" for="email-info">
-                                  Please enter the email address that you would like us to contact you on with updates about your application progress
-                              </label>
-                              <input class="govuk-input" id="email-input" name="email-input" type="text">
-                              <label class="govuk-label govuk-!-margin-top-2" for="email-info">
-                                  Please re-enter the email address so we can check for any mistakes
-                              </label>
-                              <input class="govuk-input" id="email-input" name="email-input" type="text">
-                            </div>
+                            <label class="govuk-label" for="email-info">
+                                Email address
+                            </label>
+                            <input class="govuk-input" id="email-input" name="email-input" type="text">
+                            <label class="govuk-label govuk-!-margin-top-2" for="email-info">
+                                Confirm email address
+                            </label>
+                            <input class="govuk-input" id="email-input" name="email-input" type="text">
                           </div>
                         </div>
-
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="letter" name="letter" type="radio" value="letter" data-aria-controls="conditional-letter">
-                          <label class="govuk-label govuk-radios__label" for="letter">
-                            Letter
-                          </label>
-                        </div>
-                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-letter" >
-                          <div class="govuk-form-group">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label" for="letter-info">
-                                  Please note that the letter offer and acceptance process is slower than the digital version, it may speed up the process if you have a mobile phone number or email address that we can contact you on.
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="letter" name="contactpreference" type="checkbox" value="letter">
+                        <label class="govuk-label govuk-checkboxes__label" for="letter">
+                          Letter
+                        </label>
+                      </div>
                     </div>
                   </div>
 
                   <div class="govuk-form-group govuk-!-margin-top-4">
                     <label class="govuk-label govuk-label--s" for="first-name">
-                        Enter your mobile number if you’d like text message updates on your application
+                        Enter your mobile number if you’d like text message updates on your application (optional)
                     </label>
                     <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobile-number-input" type="text">
                   </div>
-                </fieldset>
+
+              </fieldset>
 
             </div>
+          </div>
+          </div>
   
           <button class="govuk-button">Continue</button>
   
-
     </div>
   </div>
 
