@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Employment and Support Allowance - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-100" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="esa-type-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                What type of Employment and Support Allowance do you get?
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="esa-type-income" name="esa-type" type="radio" value="income" data-aria-controls="conditional-esa-type-income">
+                  <label class="govuk-label govuk-radios__label" for="esa-type-income">
+                      Income-related
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="esa-type-contribution" name="esa-type" type="radio" value="esa-contribution" data-aria-controls="conditional-esa-type-contribution">
+                    <label class="govuk-label govuk-radios__label" for="esa-type-contribution">
+                        Contribution-based
+                    </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="esa-type-unknown" name="esa-type" type="radio" value="unknown" data-aria-controls="conditional-esa-type-unknown">
+                    <label class="govuk-label govuk-radios__label" for="esa-type-unknown">
+                      Don't know
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--withinset govuk-radios__conditional--hidden" id="conditional-esa-type-unknown">
+                      <div class="govuk-inset-text govuk-inset-text--blue">
+                        <p>Contact <a href="https://www.gov.uk/contact-jobcentre-plus">Jobcentre Plus</a> to find out what type of Employment and Support Allowance you get.</p>
+                        <p>If you’ve had a Budgeting Loan before and your benefits haven’t changed, you’ll probably be getting income-related Employment and Support Allowance.</p>
+                        <p>If you get contribution-based Employment and Support Allowance, you won’t be able to get a Budgeting Loan.</p>
+                      </div>
+                  </div>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Jobseeker's Allowance - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-jsa-type" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="duration-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How long have you been getting Jobseeker's Allowance?
+              </h1>
+            </legend>
+            <p>
+              This could include any breaks, up to a total of 28 days.
+            </p>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="-jsa-duration-1" name="jsa-duration" type="radio" value="more-than-12-months">
+                <label class="govuk-label govuk-radios__label" for="jsa-duration-1">
+                  More than 12 months
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="jsa-duration-2" name="jsa-duration" type="radio" value="6-to-12-months">
+                <label class="govuk-label govuk-radios__label" for="jsa-duration-2">
+                  Between 6 and 12 months
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="jsa-duration-3" name="jsa-duration" type="radio" value="less-than-6-months">
+                <label class="govuk-label govuk-radios__label" for="-jsa-duration-3">
+                  Less than 6 months
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

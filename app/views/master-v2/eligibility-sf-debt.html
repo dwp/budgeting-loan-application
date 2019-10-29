@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Outstanding Social Fund loans - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-uc" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Do you owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="socialfund-debt-1" name="socialfund-debt" type="radio" value="yes" data-aria-controls="conditional-socialfund-debt-1">
+                <label class="govuk-label govuk-radios__label" for="socialfund-debt-1">
+                  Yes
+                </label>
+            </div>
+            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+              <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="socialfund-debt-2" name="socialfund-debt" type="radio" value="no" data-aria-controls="conditional-socialfund-debt-2">
+                  <label class="govuk-label govuk-radios__label" for="socialfund-debt-2">
+                    No
+                  </label>
+              </div>
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="socialfund-debt-3" name="socialfund-debt" type="radio" value="dont-know" data-aria-controls="conditional-socialfund-debt-3">
+                  <label class="govuk-label govuk-radios__label" for="socialfund-debt-3">
+                    Don't know
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--withinset govuk-radios__conditional--hidden" id="conditional-socialfund-debt-3">
+                  <div class="govuk-inset-text govuk-inset-text--blue">
+                      You can’t get a Budgeting Loan if you already owe more than £1,500 for Budgeting Loans or Crisis Loans. You can still apply - we’ll work out what you owe the Social Fund when we make a decision.
+                  </div>
+                </div>
+    
+              </div> 
+  
+            </div>
+          </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

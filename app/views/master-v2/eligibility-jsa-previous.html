@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Other benefits - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-100" method="post">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Have you got either of these benefits in the last 6 months?
+            </h1>
+          </legend>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>income-related Employment and Support Allowance</li>
+            <li>Income Support</li>
+          </ul>
+
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jsa-previous-yes" name="jsa-previous" type="radio" value="jsa-yes">
+              <label class="govuk-label govuk-radios__label" for="jsa-previous-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="jsa-previous-no" name="jsa-previous" type="radio" value="jsa-no">
+              <label class="govuk-label govuk-radios__label" for="jsa-previous-no">
+                No
+              </label>
+            </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

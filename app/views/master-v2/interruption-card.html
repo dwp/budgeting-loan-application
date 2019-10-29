@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Fill in the form using their details
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/master/eligibility-sf-debt" method="post">
+
+        <fieldset class="govuk-fieldset" aria-describedby="if-loan-for-you-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Fill in the rest of the form using their details
+            </h1>
+          </legend>
+          <p>For example, when asked for 'Your address' put the address of the person you're applying on behalf of.</p>
+        </fieldset>
+     
+       <button class="govuk-button">Continue</button>
+     </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}
