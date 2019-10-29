@@ -624,25 +624,14 @@ router.post('/master/children', function (req, res) {
   }
 })
 
-router.post('/master/letter-address', function (req, res) {
+router.post('/v7/declaration', function (req, res) {
   
   let addressConfirmation = req.session.data['address-confirmation']
 
   if (addressConfirmation === 'address-not-listed') {
-    res.redirect('/master/enter-address')
+    res.redirect('/v7/enter-address')
   } else {
-    res.redirect('/master/letter-address')
-  }
-})
-
-router.post('/master/enter-letter-address', function (req, res) {
-  
-  let extraAddress = req.session.data['address-confirmation']
-
-  if (extraAddress === 'address-not-listed') {
-    res.redirect('/master/enter-letter-address')
-  } else {
-    res.redirect('/master/contact-details')
+    res.redirect('/v7/declaration')
   }
 })
 
@@ -659,9 +648,10 @@ router.post('/master/address-notfound', function (req, res) {
 
 router.post('/master/contact-details', function (req, res) {
   
-  let extraAddress = req.session.data['extra-address']
-  if (extraAddress === 'yes-extra-address') {
-    res.redirect('/master/find-letter-address')
+  let addressConfirmation = req.session.data['address-confirmation']
+
+  if (addressConfirmation === 'address-not-listed') {
+    res.redirect('/master/enter-address')
   } else {
     res.redirect('/master/contact-details')
   }
