@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="BLAS/v1/declaration" method="post">
+
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h1 class="govuk-fieldset__heading">
+              Please enter the following numbers from offer notification.
+          </h1>
+        </legend>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="application-reference">
+              Application reference number
+            </label>
+          </h2>
+          <span id="undefined-hint" class="govuk-hint">You can find this on the notification that you recieved.</span>
+          <input class="govuk-input govuk-input--width-20" id="application-reference" name="application-reference" type="number">
+        </div>
+
+        <div class="govuk-form-group">
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="offer-code">
+              Offer code
+            </label>
+          </h2>
+          <span id="undefined-hint" class="govuk-hint">You can find this on the notification that you recieved.</span>
+          <input class="govuk-input govuk-input--width-20" id="offer-code" name="offer-code" type="number">
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
