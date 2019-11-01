@@ -936,7 +936,7 @@ router.post('/notify-test/email-contact-method', function (req, res) {
 
   // This is the URL the users will be redirected to once the email
   // has been sent
-  res.redirect('/confirmation-page');
+  res.redirect('notify-test/declaration');
 
 });
 
