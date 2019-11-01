@@ -21,43 +21,65 @@
 
 {% endblock %}
 
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="email-address">
+            Email address
+          </label>
+          <input class="govuk-input" id="email-address" name="emailAddress" type="text">
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+    </div>
+  </div>
+{% endblock %}
+
+
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="/v18a/phone-contact-method" method="post">
+        <form class="form" action="/notify-test/declaration" method="post">
 
           <div class="govuk-form-group">
 
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h1 class="govuk-fieldset__heading">
-                      Can we send you text messages with updates about your claim?
+                      Can we send you emails with updates about your claim?
                   </h1>
                 </legend>
                 <span id="undefined-hint" class="govuk-hint">These will be about your offer or payments. Applications are completed more quickly by text message or email.</span>
                 <div class="govuk-radios--inline">
                   <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="mobile-phone-1" name="mobile-phone" type="radio" value="yes" data-aria-controls="conditional-mobile-phone-1">
-                        <label class="govuk-label govuk-radios__label" for="mobile-phone-1">
+                        <input class="govuk-radios__input" id="email-address-1" name="email-address" type="radio" value="yes" data-aria-controls="conditional-email-address-1">
+                        <label class="govuk-label govuk-radios__label" for="email-address-1">
                           Yes
                         </label>
                       </div>
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="mobile-phone-2" name="mobile-phone" type="radio" value="no" data-aria-controls="conditional-mobile-phone-2">
-                        <label class="govuk-label govuk-radios__label" for="mobile-phone-2">
+                        <input class="govuk-radios__input" id="email-address-2" name="email-address" type="radio" value="no" data-aria-controls="conditional-email-address-2">
+                        <label class="govuk-label govuk-radios__label" for="email-address-2">
                           No
                         </label>
                       </div>
-                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-phone-1" style="clear:left;">
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email-address-1" style="clear:left;">
                         <div class="govuk-form-group">
                           <div class="govuk-form-group">
-                            <label class="govuk-label" for="mobile-phone-info">
-                                Please enter your mobile phone number
+                            <label class="govuk-label" for="email-address-info">
+                                Please enter your email address
                             </label>
-                            <input class="govuk-input govuk-input--width-20" id="mobile-phone-input" name="mobile-phone-input" type="text">
+                            <input class="govuk-input govuk-input--width-20" id="email-address-input" name="emailAddress" type="text">
                           </div>
                         </div>
                       </div>
