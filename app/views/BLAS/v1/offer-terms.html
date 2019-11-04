@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Declaration - Send application - Budgeting Loan - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form action="/BLAS/v1/confirmation" method="post" novalidate>
+
+      <h1 class="govuk-heading-l">Your Buget Loan offer</h1>
+
+      <p>You applied for £720.00, based on your current outstanding debts we can offer you the following:</p>
+      <h2 class="govuk-heading-m">£348.00</h2>
+
+      <p>By accepting this application you agree:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>the information in the application is complete and correct as far as you know</li>
+          <li>you agree to the offer amount</li>
+          <li>you agree to the repayment terms</li>
+        </ul>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Your benefit may be stopped if you deliberately give wrong information that would affect your claim, or don't report changes promptly.
+        </strong>
+      </div>
+
+        <input type="hidden" name="answers-checked" value="true">
+
+        <button type="submit" class="govuk-button">
+          I agree - send my application
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
