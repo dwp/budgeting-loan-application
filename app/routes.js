@@ -923,7 +923,6 @@ router.post('/master-v2/contact-details', function (req, res) {
 // The URL here needs to match the URL of the page that the user is on
 // when they type in their email address
 router.post('/notify-test/email-contact-method', function (req, res) {
-
   notify.sendEmail(
     // this long string is the template ID, copy it from the template
     // page in GOV.UK Notify. It’s not a secret so it’s fine to put it
