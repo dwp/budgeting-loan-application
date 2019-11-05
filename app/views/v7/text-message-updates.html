@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Text message updates - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/v7/check-your-answers" method="post">
+
+          <div class="govuk-form-group">
+
+              <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h1 class="govuk-fieldset__heading">
+                      Do you want text message updates about your application?
+                    </h1>
+                  </legend>
+
+                  <div class="govuk-radios--inline">
+                    <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="mobile-number-yes" name="mobile-number" type="radio" value="yes" data-aria-controls="conditional-mobile-number-yes">
+                        <label class="govuk-label govuk-radios__label" for="mobile-number-yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="mobile-number-no" name="mobile-number" type="radio" value="no" data-aria-controls="conditional-mobile-number-no">
+                        <label class="govuk-label govuk-radios__label" for="mobile-number-no">
+                          No
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-number-yes" style="clear:left;">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="mobile-number-info">
+                                Mobile phone number
+                            </label>
+                            <input class="govuk-input govuk-input--width-20" id="mobile-number-input" name="mobile-number-input" type="tel" autocomplete="tel">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </fieldset>
+
+            </div>
+          </div>
+          </div>
+  
+          <button class="govuk-button">Continue</button>
+  
+    </div>
+  </div>
+
+{% endblock %}

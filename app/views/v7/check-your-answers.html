@@ -25,8 +25,6 @@
 
       <h1 class="govuk-heading-xl">Check your answers before sending your application</h1>
 
-      <a href="/v7/declaration">View 'check answers' page that includes all questions</a></p>
-
       <h2 class="govuk-heading-m">Social Fund debt</h2>
 
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -318,9 +316,23 @@
             </a>
           </dd>
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobile phone number for text message updates
+          </dt>
+          <dd class="govuk-summary-list__value">
+            07000 999111
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="#">
+              Change
+              <span class="govuk-visually-hidden"> whether you want text message updates</span>
+            </a>
+          </dd>
+        </div>
       </dl>
 
-      <form action="/v5/declaration" method="post" novalidate>
+      <form action="/v7/declaration" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 
