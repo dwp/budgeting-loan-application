@@ -7,20 +7,62 @@
 
 {% block content %}
 
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-half">
+      <a href="#" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Prototypes for testing in user research</h2>
+        </div>
+      </a>
+    </div>
+    
+    <div class="govuk-grid-column-one-half">
+      <a href="#" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Suggested end to end service flow diagram</h2>
+        </div>
+      </a>
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <a href="/master/start" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Proposed application prototype</h2>
+          <p>To reflect the updated user journey with agreed changes for Alpha.</p>
+        </div>
+      </a>
+    </div>
+      
+    <div class="govuk-grid-column-one-half">
+      <a href="/as-is/start" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">Application prototype 2016 - 2019</h2>
+          <p>To reflect the user journey without the changes we're making in Alpha.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+      <a href="index-prototype" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">List of all prototypes</h2>
+
+        </div>
+      </a>
+    </div>
+      
+    <div class="govuk-grid-column-one-half">
+      <a href="index-userflow" class="tile tile--grey">
+        <div class="tile__contents">
+          <h2 class="tile__title">List of all user flow diagrams</h2>
+        </div>
+      </a>
+    </div>
+</div>
+
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">
-            Apply for a Budgeting Loan prototype
-          </h1>
-          <p>This is for testing only, do not use it if you want something real to happen.</p>
-
-          <h2 class="govuk-heading-m"><a href="/as-is/start">Budgeting Loan application as of September 2019 - the 'as is' flow</a></h2>
-          <p>To reflect the user journey without the changes we're making in Alpha.</p>
-          <p><a class="govuk-button" href="/as-is/start">Start - Live application</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/master/start">New Budgeting Loan application flow with improvements (sometimes called the 'master')</a></h2>
-          <p>To reflect the updated user journey with agreed changes for Alpha.</p>
-          <p><a class="govuk-button" href="/master/start">Start - Proposed new application</a></p>
 
           <h2 class="govuk-heading-m"><a href="/master-v2/start">New Budgeting Loan application flow with improvements (sometimes called the 'master') V2</a></h2>
           <p>To reflect the updated user journey with agreed changes for Alpha.</p>
@@ -31,205 +73,6 @@
           <p>This shows the design work the service team prepared in 2016 and 2017 for the launch of the service into public beta. </p>
           <p>Each version contains notes as to what the team changed in light of analysis and user research. Username and password follow the usual conventions.</p>
           <p><a class="govuk-button" href="https://bud-loans.herokuapp.com">Start - Older prototype work up to January 2017</a></p>
-
-          <h1 class="govuk-heading-l">Prototypes for specific updates to the application flow</h1>
-
-          <h2 class="govuk-heading-m"><strong>THIS VERSION IS NOW DISREGARDED BY UR</strong><br /><a href="/v1/start">Version 1 - alternative address</a></h2>
-          <p>Assumption: Not everyone will know what address their benefit is registered to, so gathering where they live and letters sent will be enough to match addresses in our systems.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Start page</li>
-            <li>Start question about whether you're the applicant</li>
-            <li>Address question around assumption above</li>
-          </ul>
-          <p><a class="govuk-button" href="/v1/start">Start - version 1.0</a></p>
-
-          <h2 class="govuk-heading-m"><strong>THIS VERSION IS NOW DISREGARDED BY UR</strong><br /><a href="/v2/start">Version 2 - alternative address</a></h2>
-          <p>Assumption: Everyone knows what address their benefit is registered to, so asking for that address will be enough to match addresses in our systems, and then offer them an alternate correspondence address.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Start page</li>
-            <li>Start question about whether you're the applicant</li>
-            <li>Address question around assumption above</li>
-          </ul>
-          <p><a class="govuk-button" href="/v2/start">Start - version 2.0</a></p>
-  
-          <h2 class="govuk-heading-m"><a href="/v3/start">Version 3 - appointee/assisted digital start and end</a></h2>
-          <p>Assumption: People that are filling in the form on someone else's behalf, such as an appointee acting on behalf of a claimant, will understand our instruction to fill in the form using the other person's details rather than their own.</p>
-          <ul class="govuk-list govuk-list--bullet">
-              <li>Start page</li>
-              <li>Start question about whether you're the applicant</li>
-              <li>Appointee/assisted digital interruption cards</li>
-              <li>Appointee contact details at the end</li>
-          </ul>
-
-          <p><a class="govuk-button" href="/v3/start">Start - version 3.0</a></p>
-
-          <h2 class="govuk-heading-m"><strong>THIS VERSION WAS NOT TAKEN FORWARD</strong><a href="/v4/start"><br />Version 4 - summary page</a></h2>
-          <p>Assumption: People will be more likely to check their answers and read the declaration if these are on the same page, as the the former must be done to accept the latter.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Same content as version 1</li>
-            <li>Check answers showing full range of possible questions with declaration on same page</li>
-            <li>Back link added to each page</li>             
-          </ul>
-          <p><a class="govuk-button" href="/v4/start">Start - version 4.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v5/start">Version 5 - summary page</a></h2>
-          <p>Assumption: People will be more likely to check their answers and read the declaration if these are split over two pages, as otherwise there's too much to read and process at once.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Same content as version 1</li>
-            <li>Check answers on its own page</li>
-            <li>Declaration on its own page</li>
-            <li>Back link added to each page</li>
-          </ul>
-          <p><a class="govuk-button" href="/v5/start">Start - version 5.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v6/find-address">Version 6 - find address by postcode</a></h2>
-          <p>Assumption: People will be more likely to enter the correct address that can be processed by robotics (and not fail) if they enter the essential parts and the system automatically fills in the rest.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Postcode and house number fields for lookup</li>
-            <li>Select address from those returned</li>
-            <li>Text link to enter address manually if it is not returned</li>            
-            <li>Enter address manually from text link</li>
-          </ul>
-          <p><a class="govuk-button" href="/v6/find-address">Start - version 6.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v7/find-address">Version 7 - find address by postcode</a></h2>
-          <p>Assumption: People will be more likely to enter the correct address that can be processed by robotics (and not fail) if they enter the essential parts and the system automatically fills in the rest.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Postcode and house number fields for lookup</li>
-            <li>Text from version 20 to guide users on what address to enter if unsure</li>
-            <li>Select address from those returned</li>
-            <li><a href="/v7/select-address-long">Long list of addresses returned as an edge case</a></li>
-            <li>Radio option if address not returned as expected</li>
-            <li>Enter address manually if stuck or prefer to</li>
-            <li>Show name/number or postcode inputted if <a href="/v7/address-notfound">no results found</a> to check for mistakes</li>
-            <li>Change name/number or postcode inputted if <a href="/v7/address-notfound">no results found</a> and mistake made</li>
-            <li>Enter address manually if <a href="/v7/address-notfound">no results found</a> and no mistakes made</li>
-
-            <li>Separate page to check if the user wants <a href="/v7/text-message-updates">text message updates</a>, as this was previously on the address page</li>
-          </ul>
-          <p><a class="govuk-button" href="/v7/find-address">Start - version 7.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v8/start">Version 8 - Savings amount</a></h2>
-          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
-            <li>Savings amount if 'yes' is selected</li>
-          </ul>
-          <p><a class="govuk-button" href="/v8/start">Start - version 8.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v9/start">Version 9 - Savings amount</a></h2>
-          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
-            <li>Hint text around what savings are</li>
-            <li>Savings amount if 'yes' is selected</li>
-          </ul>
-          <p><a class="govuk-button" href="/v9/start">Start - version 9.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v10/start">Version 10 - Savings amount over or under</a></h2>
-          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
-            <li>Hint text around what savings are</li>
-            <li>over or under radios for amount</li>
-            <li>Savings amount if 'yes' is selected</li>
-          </ul>
-          <p><a class="govuk-button" href="/v10/start">Start - version 10.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v11/start">Version 11 - Savings yes with amount and no, revised question</a></h2>
-          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
-            <li>Hint text around what savings are</li>
-            <li>yes or no for amount</li>
-            <li>Savings amount if 'yes' is selected</li>
-          </ul>
-          <p><a class="govuk-button" href="/v11/start">Start - version 11.0</a></p>
-
-          <h2 class="govuk-heading-m"><strong>THIS VERSION IS NOW DISREGARDED BY UR</strong><br /><a href="/v12/find-address">Version 12 - find address by postcode with extra correspondence address</a></h2>
-          <p>Assumption: People will be more likely to enter the correct address that can be processed by robotics (and not fail) if they enter the essential parts and the system automatically fills in the rest. Plus Everyone knows what address their benefit is registered to, so asking for that address will be enough to match addresses in our systems, and then offer them an alternate correspondence address.</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Question asking for registered benefit address (Doncaster UR proved this term was understood)</li>
-            <li>Address lookup from v7</li>
-            <li>Question to provide additional letter address and yes/no radio</li>
-            <li>If yes selected, secondary address lookup following same pattern as v7</li>            
-            <li>If no selected - declaration.</li>
-          </ul>
-          <p><a class="govuk-button" href="/v12/find-address">Start - version 12.0</a></p>
-
-          <h2 class="govuk-heading-m"><strong>Contact details spike</a></h2>
-          <p>Version 13 - DISREGARDED AFTER WORKSHOP 21/10/19</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select one method of contact</li>
-            <li>Enter method of contact once</li>
-            <li>No validation on entry</li>
-            <li>No option for offer via one method and mobile updates for everything else</li>
-          </ul>
-          <p><a class="govuk-button" href="/v13/personal-details">Start - version 13.0</a></p>
-
-          <p>Version 14</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select multiple methods of contact</li>
-            <li>Enter method of contact once</li>
-            <li>No option for offer via one method and mobile updates for everything else</li>
-          </ul>
-          <p><a class="govuk-button" href="/v14/personal-details">Start - version 14.0</a></p>
-
-          <p>Version 15 - DISREGARDED AFTER WORKSHOP 21/10/19</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select one method of contact</li>
-            <li>Enter method of contact twice to confirm</li>
-            <li>No option for offer via one method and mobile updates for everything else</li>
-          </ul>
-          <p><a class="govuk-button" href="/v15/personal-details">Start - version 15.0</a></p>
-
-          <p>Version 16 - DISREGARDED AFTER WORKSHOP 21/10/19</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select multiple methods of contact</li>
-            <li>Enter method of contact twice to confirm</li>
-            <li>Option for offer via one method and mobile updates for everything else on seperate page</li>
-          </ul>
-          <p><a class="govuk-button" href="/v16/personal-details">Start - version 16.0</a></p>
-
-          <p>Version 17 - DISREGARDED AFTER WORKSHOP 21/10/19</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select multiple methods of contact</li>
-            <li>Enter method of contact twice to confirm</li>
-            <li>Option for offer via one method and mobile updates for everything else on same page</li>
-          </ul>
-          <p><a class="govuk-button" href="/v17/personal-details">Start - version 17.0</a></p>
-
-          <p>Version 18 - for round two of testing when we have evidence of users inputing information incorrectly</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Able to select multiple methods of contact</li>
-            <li>Enter method of contact twice to confirm</li>
-            <li>No option for offer via one method and mobile updates for everything else</li>
-          </ul>
-          <p><a class="govuk-button" href="/v18/personal-details">Start - version 18.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v19/find-address">Version 19 - reducing address mis-matches</a></h2>
-
-          <p>Assumption: It is necessary to guide users who do not have a fixed address on what to do, so by guiding them to enter where they get letters about their benefit claim sent to, users will be more likely to enter an address that is both:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>held on DWP systems for the purposes of matching (either the address their benefit claim is registered to or the correspondence address for their claim)</li>
-            <li>suitable to them as a place to receive post, as they’ve already agreed this with DWP as part of their qualifying benefit claim</li>
-          </ul>
-
-          <p><a class="govuk-button" href="/v19/find-address">Start - version 19.0</a></p>
-
-          <h2 class="govuk-heading-m"><a href="/v20/find-address">Version 20 - reducing address mis-matches</a></h2>
-
-          <p>Assumption: We can remove the reference on what people with no fixed address should do, as we currently don't have a record if they need or read this text. Instead, by encouraging all users to enter where they get letters about their benefit claim sent to, users will be more likely to enter an address that is both:</p>
-
-          <ul class="govuk-list govuk-list--bullet">
-            <li>held on DWP systems for the purposes of matching (either the address their benefit claim is registered to or the correspondence address for their claim)</li>
-            <li>suitable to them as a place to receive post, as they’ve already agreed this with DWP as part of their qualifying benefit claim</li>
-          </ul>
-
-          <p>This was integrated into the 'Master' for user research purposes on 30 October 2019.</p>
-
-          <p><a class="govuk-button" href="/v20/find-address">Start - version 20.0</a></p>
 
     </div>
 </div>
