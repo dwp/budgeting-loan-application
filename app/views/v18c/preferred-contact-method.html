@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form class="form" action="/v18c/check-your-answers" method="post">
+
+          <div class="govuk-form-group">
+
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h1 class="govuk-fieldset__heading">
+                      Can we email you about your loan application?
+                  </h1>
+                </legend>
+                <span id="undefined-hint" class="govuk-hint">These will be about your offer or payments. Applications are completed more quickly by text message or email.</span>
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="email" name="contact-method" type="radio" value="email" data-aria-controls="conditional-email">
+                      <label class="govuk-label govuk-radios__label" for="email">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email" style="clear:left;">
+                      <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="email-info">
+                              Please enter your email address
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="email-input" name="email-input" type="text">
+                          <label class="govuk-label" for="email-info-check">
+                              Please re-enter your email address
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="email-input-check" name="email-input-check" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="mobile-phone" name="contact-method" type="radio" value="mobile-phone" data-aria-controls="conditional-mobile-phone">
+                      <label class="govuk-label govuk-radios__label" for="mobile-phone">
+                        No, send me text messages about my application
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-phone" style="clear:left;">
+                      <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="mobile-phone-info">
+                              Please enter your mobile phone number
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="mobile-phone-input" name="mobile-phone-input" type="text">
+                          <label class="govuk-label" for="mobile-phone-info-check">
+                              Please re-enter your mobile phone number
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="mobile-phone-input-check" name="mobile-phone-input-check" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="letter" name="contact-method" type="radio" value="letter" data-aria-controls="conditional-letter">
+                      <label class="govuk-label govuk-radios__label" for="letter">
+                        No, send me letters about my application
+                      </label>
+                    </div>
+                </div>
+              </fieldset>
+
+            </div>
+  
+          <button class="govuk-button">Continue</button>
+  
+    </div>
+  </div>
+
+{% endblock %}
