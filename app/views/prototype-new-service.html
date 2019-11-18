@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Budgeting Loan Application
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Prototypes for the new acceptance service</h1>
+
+          <h2 class="govuk-heading-m"><a href="/BLAS/v1/offer-codes">Version 1</a></h2>
+          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
+            <li>Savings amount if 'yes' is selected</li>
+          </ul>
+          <p><a class="govuk-button" href="/BLAS/v1/offer-codes">Start - version 1</a></p>
+
+          <h2 class="govuk-heading-m"><a href="/BLAS/v2/offer-code">Version 2</a></h2>
+          <p>Assumption: If the amount of savings is recorded in the application then they don't have to contacted to find out this figure, speeding up the application process.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Smaller title as we don't know the user's age yet so can't apply validation</li>
+            <li>Hint text around what savings are</li>
+            <li>Savings amount if 'yes' is selected</li>
+          </ul>
+          <p><a class="govuk-button" href="/BLAS/v1/offer-code">Start - version 2.0</a></p>
+
+    </div>
+</div>
+
+{% endblock %}
