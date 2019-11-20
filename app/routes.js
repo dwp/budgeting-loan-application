@@ -664,6 +664,17 @@ router.post('/master/contact-details', function (req, res) {
 
 })
 
+router.post('/master/contact-details-appointee', function (req, res) {
+  
+  let addressConfirmation = req.session.data['appointee-address-confirmation']
+  
+  if (addressConfirmation === 'appointee-address-not-listed') {
+    res.redirect('/master/appointee-enter-address')
+  }   
+  res.redirect('/master/contact-details-appointee')
+
+})
+
 // version routes
 
 router.post('/v7/declaration', function (req, res) {
