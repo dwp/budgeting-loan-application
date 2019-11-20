@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Select your address - Budgeting Loans - GOV.UK
+  Select appointee address - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,26 +22,26 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master-v2/contact-details" method="post">
+      <form class="form" action="/master/contact-details-appointee" method="post">
 
         <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Select your address
+                  Select appointee address
                 </h1>
                 <p class="govuk-!-margin-top-4">1 address found for 'Quarry House' and 'LS2 7UA'</p>
               </legend>
               <div class="govuk-radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-confirmation">
-                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
-                    Quarry House, Quarry Hill, Leeds, LS2 7UA
+                  <input class="govuk-radios__input" id="address-1" name="appointee-address-confirmation" type="radio" value="address-1">
+                  <label class="govuk-label govuk-radios__label" for="address-1">
+                     Quarry House, Quarry Hill, Leeds, LS2 7UA
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="address-confirmation" name="address-confirmation" type="radio" value="address-not-listed">
-                  <label class="govuk-label govuk-radios__label" for="address-confirmation">
+                  <input class="govuk-radios__input" id="appointee-address-not-listed" name="appointee-address-confirmation" type="radio" value="appointee-address-not-listed">
+                  <label class="govuk-label govuk-radios__label" for="appointee-address-not-listed">
                     My address is not listed
                   </label>
                 </div>
