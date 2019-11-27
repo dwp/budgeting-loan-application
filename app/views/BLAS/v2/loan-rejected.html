@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/BLAS/v2/declaration" method="post">
+
+        <fieldset class="govuk-fieldset" aria-describedby="offer-acceptance">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                Your budget loan offer
+            </h1>
+          </legend>
+          <p>On the <strong>12th November 2019</strong> you applied for <strong>£348.00</strong>.</p>
+          <p>Based on your the answers that you submitted in your application, at this current time with your circumstances we can't offer you a budget loan.</p>
+
+          <h2 class="govuk-heading-m">How the decision was made</h2>
+          <p>We couldn't offer you a budgeting loan because of the following reason(s):</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you are recieving Universal Credit, which is a non qualifying budget for a budget loan</li>
+          </ul>
+
+          <h2 class="govuk-heading-m">Help and advice</h2>
+          <p>If there is anything you want to ask us about your application then please <a href="#">get in touch</a></p>
+          <p>If you need help managing money or are worried about debt there are multiple organisations that can give you free advice<br /><a href="#">Organisation information</a></p>
+          <p>There are also other types of helpa available from the social fund<br /><a href="#">More Information</a></p>
+
+          <h2 class="govuk-heading-m">Your right to a review</h2>
+          <p>If you disagree with the decision you have a right to ask for a review. you can either do that now or you can contact us within <strong>28 days</strong> of recieving this offer. <strong>This loan offer was issued on the 24th November 2019</strong></p>
+          <p><a href="#">Review my offer</a></p>
+
+        </fieldset>
+      
+        <button class="govuk-button">finish</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

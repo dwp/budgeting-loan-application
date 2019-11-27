@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+      <nav aria-label="Sub navigation">
+        <ul class="dwp-vertical-navigation">
+    
+          <li>
+            <a href="/BLAS/v5/offer">Your Decision</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/decision" aria-current="page">How we make a decision</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/review">Right to a review</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/help">Help and advice</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="#" method="post">
+
+        <fieldset class="govuk-fieldset" aria-describedby="offer-acceptance">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                How we make a decision
+            </h1>
+          </legend>
+
+          <p>Info here</p>
+
+        </fieldset>
+      
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

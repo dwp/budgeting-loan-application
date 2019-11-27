@@ -26,18 +26,18 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/BLAS/v2/offer-acceptance" method="post">
+      <form class="form" action="/BLAS/v4/offer-review" method="post">
 
-          <div class="govuk-form-group">
-            <h2 class="govuk-label-wrapper">
-              <label class="govuk-label govuk-label--xl" for="offer-code">
-                Your offer code
-              </label>
-            </h2>
-            <span id="undefined-hint" class="govuk-hint">You can find this on the notification that you recieved.</span>
-            <input class="govuk-input govuk-input--width-10" id="offer-code" name="offer-code" type="number">
-          </div>
+        <fieldset class="govuk-fieldset" aria-describedby="offer-acceptance">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+                Paying back the loan
+            </h1>
+          </legend>
+          <p>It has been decided, based on your current debt levels, that you will pay back <strong>£39.10</strong> per week from your Pension Credit.</p>
 
+        </fieldset>
+      
         <button class="govuk-button">Continue</button>
 
       </form>

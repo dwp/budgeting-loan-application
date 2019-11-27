@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Your contact details - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-one-quarter">
+      <nav aria-label="Sub navigation">
+        <ul class="dwp-vertical-navigation">
+    
+          <li>
+            <a href="/BLAS/v5/offer" aria-current="page">Your Decision</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/decision">How we make a decision</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/review">Right to a review</a>
+          </li>
+          <li>
+            <a href="/BLAS/v5/help">Help and advice</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/BLAS/v5/declaration-success" method="post">
+
+        <div class="govuk-form-group">
+
+          <fieldset class="govuk-fieldset" aria-describedby="offer-acceptance">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                  Would you like to accept the budget loan offer?
+              </h1>
+            </legend>
+
+
+            <div class="govuk-radios--inline" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="offer-yes" name="offer-acceptance" type="radio" value="offer-yes">
+                  <label class="govuk-label govuk-radios__label" for="offer-yes">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="offer-no" name="offer-acceptance" type="radio" value="offer-no">
+                  <label class="govuk-label govuk-radios__label" for="offer-no">
+                    No
+                  </label>
+                </div>
+            
+          </fieldset>
+        </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
