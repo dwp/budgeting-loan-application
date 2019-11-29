@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Declaration - Send application - Budgeting Loan - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <form action="/BLAS/v3/confirmation" method="post" novalidate>
+
+      <h1 class="govuk-heading-l">Declaration</h1>
+
+      <p>I understand that I've declined the offer from the social fund and that in agreeing to this my application and offer will be closed and no further action will be taken.</p>
+      <input type="hidden" name="answers-checked" value="true">
+
+      <button type="submit" class="govuk-button">
+        I agree - decline my offer
+      </button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

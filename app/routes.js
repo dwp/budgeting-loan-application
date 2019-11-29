@@ -730,6 +730,41 @@ router.post('/notify-test/email-contact-method', function (req, res) {
 
 });
 
+//BLAS ROUTING
+
+router.post('/BLAS/v3/declaration-success', function (req, res) {
+  
+  let offerAcceptance = req.session.data['offer-acceptance']
+
+  if (offerAcceptance === 'offer-yes') {
+    res.redirect('/BLAS/v3/declaration-success')
+  } else {
+    res.redirect('/BLAS/v3/declaration-reject')
+  }
+})
+
+router.post('/BLAS/v4/declaration-success', function (req, res) {
+  
+  let offerAcceptance = req.session.data['offer-acceptance']
+
+  if (offerAcceptance === 'offer-yes') {
+    res.redirect('/BLAS/v4/declaration-success')
+  } else {
+    res.redirect('/BLAS/v4/declaration-reject')
+  }
+})
+
+router.post('/BLAS/v5/declaration-success', function (req, res) {
+  
+  let offerAcceptance = req.session.data['offer-acceptance']
+
+  if (offerAcceptance === 'offer-yes') {
+    res.redirect('/BLAS/v5/declaration-success')
+  } else {
+    res.redirect('/BLAS/v5/declaration-reject')
+  }
+})
+
 
 
 module.exports = router
