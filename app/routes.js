@@ -742,6 +742,15 @@ router.post('/BLAS/v5/declaration-success', function (req, res) {
   }
 })
 
+router.post('/BLAS/v6/loan-accepted', function (req, res) {
+  
+  let offerAcceptance = req.session.data['loan-decision']
 
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/v6/loan-accepted')
+  } else {
+    res.redirect('/BLAS/v6/loan-declined')
+  }
+})
 
 module.exports = router
