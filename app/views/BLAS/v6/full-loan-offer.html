@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Budgeting Loan application decision
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v6/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-xl">Your Budgeting Loan application decision</h1>
+
+          <p>You applied for a Budgeting Loan of £300 on 6 December 2019.</p>
+
+          <p>We can offer you the £300 you asked for.</p>
+
+          <p>You have until 12 January 2020 to decide whether to accept the loan.</p>
+
+          <h2 class="govuk-heading-l">If you accept the loan</h2>
+
+          <p>You’ll receive the money within 7 days. The loan will be paid into the account that your benefit is paid into.</p>
+
+          <p>Repayments will be taken automatically from your benefits. This means that your benefit payment will reduce from £56.50 to £50 for 37 weeks.</p>
+          
+          <p>You’ll still have to pay back the loan if you stop claiming benefits.</p>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              How this is worked out
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>This is based on:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>your income, including any benefits you receive</li>
+              <li>whether you’re paying back any other Budgeting Loans or Crisis Loans</li>
+              <li>any other debts you have</li>
+            </ul>
+          </div>
+        </details>
+
+          <h2 class="govuk-heading-l">If you’re not happy with the decision</h2>
+
+        <p>You can ask us to review a decision. To do this, write to the <a href="https://www.gov.uk/budgeting-help-benefits/how-to-apply">Social Fund</a> before 12 January 2020 explaining why you think the decision is wrong.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h2 class="govuk-fieldset__heading">
+                Do you want to accept the loan?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan-decision-1" name="loan-decision" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="loan-decision-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan-decision-2" name="loan-decision" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="loan-decision-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+  
+        <br>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}
