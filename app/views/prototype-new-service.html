@@ -77,15 +77,41 @@
           <h2 class="govuk-heading-m"><a href="/BLAS/v7/email-offer">Version 7</a></h2>
           <p>Assumption: The claimant will be able to find and fill in the details needed to see the decision, then understand the decision we have given them and take the action that's right for them.</p>
 
-          <p>This prototype includes:</p>
+          <p>A mocked-up email notification:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>a mockup of an email notification for an approved application that tells the application we can offer them the loan, then directs the applicant to go to the online service to complete the process</li>
-            <li>a decision page for a full award that explains the repayment terms, information about how this is worked out that's hidden as a default (as I assume most will not be interested in this, but they still have the right to know)</li>
-            <li>a question asking if the applicant wants to take the loan on the same page as the offer information, so they have an active choice to make based on the terms given to them</li>
-            <li>a declaration by this question,  as applicants are about to enter into an agreement</li>
-            <li>a shorter reference on the decision page to the fact that applicants can us to review the decision if they're not happy with it, with information on what to do and contact details moved to the outcome page after the applicant declines the loan</li>
-            <li>a confirmation page for when the applicant chooses to accept the loan that tells them they've been sent a confirmation email, tells them when they should be paid and that we'll tell them when we do this</li>
+            <li>tells the applicant if we can or cannot offer them the loan</li>
+            <li>directs them to go to the online service to complete the process by a date, as the offer is only valid so long</li>
+            <li>provides contact details if the applicant cannot complete the process online</li>
           </ul>
+          <p>A page to enter the application reference number.</p>
+          <p>A page to enter the response code.</p>
+          <p>a page containing the decision that contains:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>the amount offered</li>
+            <li>how much they'll pay back a week and the benefit this is taken from (as we'll have this information from the Social Fund Computer System)</li> 
+            <li>information about how the offer is worked out that's hidden as a default, as I assume most will not be interested in this, but they still have the right to know</li>
+            <li>a declaration containing terms for the applicant to agree to</li>
+            <li>a call to action button for acceptance of the loan under the declaration that is written from the applicant's point of view</li>
+            <li>a way of declining the loan as a text link under the acceptance</li>
+            <li>a shorter reference to the applicant right to a review by the decline link</li>
+          <ul>
+          <p>A confirmation page for an accepted loan that contains:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a panel component confirming the action<li>
+            <li>the amount they will be paid and by when</li>
+            <li>what their repayments will be and what they will be taken from</li>
+            <li>a 'Print this page' link as another way of keeping a record of what's happened</li>
+          </ul>
+          <p>A confirmation page for a rejected loan that contains:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>a panel component confirming the action<li>
+            <li>an explanation of their right to a review</li>
+            <li>clarification that they cannot ask us to review the repayment terms offered</li>
+            <li>a postal address they can write to</li>
+            <li>a link to GOV.UK navigation section on other help for people on a low income, as the user has just decided not to use this Budgeting Loan as a form of support</li>
+            <li>a 'Print this page' link as another way of keeping a record of what's happened</li>
+          </ul>
+
           <p><a class="govuk-button" href="/BLAS/v7/email-offer">Start - version 7.0</a></p>
 
 
