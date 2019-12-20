@@ -30,7 +30,7 @@
       <hr>
 
   {{ govukHeader({
-    homepageUrl: "/BLAS/v6/email-neutral",
+    homepageUrl: "/BLAS/v7/email-neutral",
     containerClasses: "govuk-width-container"
   }) }}
 
@@ -39,9 +39,11 @@
 
       <p>Dear Sarah,</p>
 
-      <p>You applied for a Budgeting Loan on Monday 15 December 2019.</p>
+      <p>You applied for a Budgeting Loan on [date].</p>
 
-      <p>We have made a decision about your application.</p>
+      <p>We have decided we can offer you a loan.</p>
+
+      <p>You need to decide whether to accept the loan by [date].</p> 
 
       <p>Use the online service to:</p>
 
@@ -53,13 +55,11 @@
       <p>You will need to fill in your:
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>application reference, which is <strong>13792468</strong></li>
-        <li>response code, which is <strong>9173</strong></li>
+        <li>application reference, which is <strong>[number]</strong></li>
+        <li>response code, which is <strong>[number]</strong></li>
       </ul>
 
-      <p>These codes are valid for 14 days.</p>
-
-      <p>Go to <a href="/BLAS/v6/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a>
+      <p>Go to <a href="/BLAS/v7/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a>
       </p>
 
       <p>If you cannot use the online service, contact us using the details below.</p>
@@ -68,14 +68,13 @@
 
       <p>Budgeting Loans, Department for Work and Pensions</p>
 
+      <hr>
       <ul class="govuk-list">
         <li>Telephone: 0800 169 0140</li>
         <li>Welsh language: 0800 169 0240</li>
         <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
         <li>Monday to Friday, 8am to 6pm</li>
       </ul>
-      <p><a class="govuk-link" href="#">Find out about call charges</a></p>
-
 
     </div>
   </div>

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Budgeting Loan accepted
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">You have accepted this Budgeting Loan</h1>
+      </div>
+
+      <p>We have sent you a confirmation email.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>You’ll receive £[amount] within [X] days.</p>
+
+      <p>You’ll pay back £[amount] a week. We will take this from your [benefit name].</p>
+
+      <p><a href="javascript:window.print()">Print this page</a></p>
+
+ {#      <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p> #}
+
+    </div>
+  </div>
+
+{% endblock %}

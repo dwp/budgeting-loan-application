@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Budgeting Loan declined
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">You have declined this Budgeting Loan</h1>
+      </div>
+
+      <p>We have sent you a confirmation [email/text/letter].</p>
+
+      <h2 class="govuk-heading-m">If you’re not happy with the decision</h2>
+
+      <p>You can ask us to review the decision. Write a letter explaining why you think the decision was wrong. Include your reference, which is [number].</p>
+
+      <p>We cannot review decisions about how much you are asked to pay back a week.</p>
+
+      <ul class="govuk-list">
+        <li><strong>Social Fund [location]</strong></li>
+        <li>Post Handling Site B</li>
+        <li>Wolverhampton</li>
+        <li>WV99 2FT</li>
+      </ul>
+
+      <p>Find out about <a href="https://www.gov.uk/browse/benefits/jobseekers-allowance">other help if you're on a low income</a>.</p> 
+
+ {#      <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p> #}
+
+    </div>
+  </div>
+
+{% endblock %}
