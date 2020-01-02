@@ -1,0 +1,46 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  (Email) A decision on your Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Choose notification type</h1>
+
+      <p>Email:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/BLAS/v7/email-offer">indicating approval</a></li>
+          <li><a href="/BLAS/v7/email-declined">indicating rejection</a></li>
+          <li><a href="/BLAS/v7/email-neutral">neutrally worded</a></li>
+        </ul>
+
+      <p>SMS:</p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/BLAS/v7/SMS-less-than-320-offer">indicating approval - less than 320 characters</a></li>
+          <li><a href="/BLAS/v7/SMS-less-than-320-declined">indicating rejection - less than 320 characters</a></li>
+          <li><a href="/BLAS/v7/SMS-less-than-320-neutral">neutrally worded - less than 320 characters</a></li>
+        </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

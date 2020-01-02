@@ -3,7 +3,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  (Email) A decision on your Budgeting Loan application
+  (Email) Your Budgeting Loan application
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,7 +22,7 @@
 {% block content %}
 
       <div>
-        <h1 class="govuk-heading-s">A decision on your Budgeting Loan application</h1>
+        <h1 class="govuk-heading-s">Your Budgeting Loan application, reference [number]</h1>
         <p class="govuk-body-s"><strong>To:</strong> yourname@gmail.com<br>
         <strong>From:</strong> budgetingloans@dwp.gov.uk</p>
       </div>
@@ -30,35 +30,30 @@
       <hr>
 
   {{ govukHeader({
-    homepageUrl: "/BLAS/v7/email-neutral",
+    homepageUrl: "#",
     containerClasses: "govuk-width-container"
   }) }}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <p>Dear Sarah,</p>
+      <p>Dear [full name],</p>
 
-      <p>You applied for a Budgeting Loan on 15 December 2019.</p>
+{#       <p>You applied for a Budgeting Loan on 15 December 2019.</p> #}
 
-      <p>We have made a decision about your application.</p>
+      <p>We have made a decision on your Budgeting Loan application.</p>
 
-      <p>Use the online service to:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>read the decision</li>
-        <li>take any actions needed</li>
-      </ul>
-
-      <p>You will need to fill in your:
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>application reference, which is <strong>13792468</strong></li>
-        <li>response code, which is <strong>9173</strong></li>
-      </ul>
+      <p>You need to check the decision by [date].</p>
 
       <p>Go to <a href="/BLAS/v7/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a>
       </p>
+
+      <p>Fill in your:
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>application reference, which is <strong>[number]</strong></li>
+        <li>response code, which is <strong>[number]</strong></li>
+      </ul>
 
       <p>If you cannot use the online service, contact us using the details below.</p>
 
@@ -66,13 +61,13 @@
 
       <p>Budgeting Loans, Department for Work and Pensions</p>
 
+      <hr>
       <ul class="govuk-list">
         <li>Telephone: 0800 169 0140</li>
         <li>Welsh language: 0800 169 0240</li>
         <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
         <li>Monday to Friday, 8am to 6pm</li>
       </ul>
-      <p><a class="govuk-link" href="#">Find out about call charges</a></p>
 
 
     </div>

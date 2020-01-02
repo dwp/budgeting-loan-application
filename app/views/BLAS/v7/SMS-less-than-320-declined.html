@@ -1,0 +1,36 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  SMS decision notification - less than 320 characters 
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h1 class="govuk-heading-s">Budgeting Loans - DWP</h1>
+
+      <hr>
+
+      <p>We cannot offer you a Budgeting Loan at this time. You can read an explanation of the decision online. Your application reference is [XXXXXX]. Your response code is [ZZZZ]. Go to <a href="/BLAS/v7/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
