@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Budgeting Loan application decision
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v7/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-xl">Your Budgeting Loan application decision</h1>
+
+          <p>You applied for a Budgeting Loan of £[amount] on [date].</p>
+
+          <p>We cannot offer you a Budgeting Loan at this time.</p>
+
+          <p>This is because:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you're not getting Income Support, income-based Jobseeker's Allowance, income-related Employment and Support Allowance or Pension Credit</li>
+            <li>you owe more than £1,500 in total for Budgeting Loans and Crisis Loans</li>
+            <li>you [and your partner] have savings of over £[amount], which we have decided are enough to pay for what you need</li>
+            <li>we cannot offer you more than £100, which is the lowest amount you can borrow</li>
+{#             <li>we cannot pay people who are involved in a trade dispute</li> #}
+          </ul>
+
+          <p>Find out about <a href="https://www.gov.uk/budgeting-help-benefits/other-help-you-can-get">other help you could get</a>.</p> 
+
+          <p><a href="/BLAS/v7/review-rights">Contact the Social Fund</a> if you need to ask a question or think the decision is wrong.</p>
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

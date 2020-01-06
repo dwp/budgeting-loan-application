@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Budgeting Loan application decision
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v7/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-xl">Contact the Social Fund about your decision</h1>
+
+          <p>An adviser can explain the decision to you. You will need to give your reference, which is [XXXXXX].</p>
+
+          <ul class="govuk-list">
+            <li><strong>Social Fund</strong></li>
+            <li>Telephone: 0800 169 0140</li>
+            <li>Welsh language: 0800 169 0240</li> 
+            <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+            <li>Monday to Friday, 8am to 6pm</li>
+            <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+          </ul>
+
+          <h2 class="govuk-heading-l">If you think the decision is wrong</h2>
+
+          <p>You can ask us to review the decision. Write a letter to us by [date 28 days from today] explaining why you think the decision is wrong. Sign the letter and include your name, address and reference.</p>
+
+          <ul class="govuk-list">
+            <li><strong>Five Ways House Social Fund</strong></li>
+            <li>Post Handling Site B</li>
+            <li>Wolverhampton</li>
+            <li>WV99 2FX</li>
+          </ul>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}

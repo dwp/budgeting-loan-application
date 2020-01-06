@@ -79,15 +79,28 @@
 
           <p>This version indicates where dates, amounts or other strings of text are variables.</p>
 
-          <p>A mocked-up email notification:</p>
+          <p>Draft text message and email decision notifications that:</p>
           <ul class="govuk-list govuk-list--bullet">
-            <li>tells the applicant if we can or cannot offer them the loan</li>
-            <li>directs them to go to the online service to complete the process by a date, as the offer is only valid so long</li>
-            <li>provides contact details if the applicant cannot complete the process online</li>
+            <li>tell the applicant if we can or cannot offer them the loan</li>
+            <li>direct users to the online service to complete the process by a date, as the offer is only valid so long</li>
+            <li>give users the codes they'll need to fill in</li>
           </ul>
+
+          <p>The email also provides contact details if the applicant cannot complete the process online.</p>
+
           <p>A page to enter the application reference number.</p>
+          
           <p>A page to enter the response code.</p>
-          <p>A page containing the decision that contains:</p>
+
+          <p>A <a href="/BLAS/V7/no-loan-offer">2-page flow when no loan can be offered</a> that contains:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>an explanation of why the applicant cannot be offered a loan, selected based on the factors involved</li>
+            <li>a link out to other help the user can get (in the Budgeting Loan mainstream guidance)</li>
+            <li>a link to what they can do if they have a question or think something is wrong</li>
+            <li>a page containing contact details for questions or to write to when requesting a review</li>
+          </ul>
+
+          <p>If the applicant is offered something, a page containing the decision that contains:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>the amount offered</li>
             <li>how much they'll pay back a week and the benefit this is taken from (as we'll have this information from the Social Fund Computer System)</li> 
@@ -97,14 +110,16 @@
             <li>a way of declining the loan as a text link under the acceptance</li>
             <li>a short reference to the applicant's right to a review by the decline link</li>
           </ul>
-          <p>A confirmation page for an accepted loan that contains:</p>
+
+          <p>A confirmation page if the user accepts the loan that contains:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>a panel component confirming the action</li>
             <li>the amount they will be paid and by when</li>
             <li>what their repayments will be and what they will be taken from</li>
             <li>a 'Print this page' link as another way of keeping a record of what's happened</li>
           </ul>
-          <p>A confirmation page for a rejected loan that contains:</p>
+
+          <p>A confirmation page if the user declines the loan that contains:</p>
           <ul class="govuk-list govuk-list--bullet">
             <li>a panel component confirming the action</li>
             <li>an explanation of their right to a review</li>
