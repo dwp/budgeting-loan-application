@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Budgeting Loan application decision
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v7/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">Your Budgeting Loan application decision</h1>
+
+          <p>You applied for a Budgeting Loan of £[amount] on [date].</p>
+
+          <p>We have decided we can offer you a loan of £[amount].</p>
+
+          <p>You have until [date] to decide whether to accept the loan.</p>
+
+          <h2 class="govuk-heading-m">If you accept the loan</h2>
+
+          <p>You’ll get the money within [X] days. It will be paid into the same account as your benefit.</p>
+
+          <p>You’ll pay back £[amount] every [time period based on benefit]. This will be taken automatically from your [benefit name].</p>
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How your loan offer is worked out
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>The loan offer is based on:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>whether you’re single or live with a partner</li>
+                <li>whether you live with children</li>
+                <li>how much money we have in our budget</li>
+                <li>how much you owe for other Budgeting Loans or Crisis Loans</li>
+                <li>how much money you owe other people</li>
+                <li>how much you could repay each week and for how long</li>
+                <li>whether we can offer more than £100, as we cannot offer a loan for less than this</li>
+              </ul>
+            </div>
+          </details>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Do you want to accept the loan?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan-decision-1" name="loan-decision" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="loan-decision-1">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="loan-decision-2" name="loan-decision" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="loan-decision-2">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <br>
+
+        <p>By accepting this loan you agree that:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>you’ll pay back this money, even if you stop claiming benefits</li>
+          <li>your benefits, or those of your partner, will reduced in order to pay back the money</li>
+        </ul>
+
+        <button class="govuk-button" data-module="govuk-button">Send your decision</button>
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}
