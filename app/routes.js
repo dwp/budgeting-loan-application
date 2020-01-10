@@ -192,6 +192,28 @@ router.post('/v12/declaration', function (req, res) {
   }
 })
 
+router.post('/v18a/mobile-contact-method', function (req, res) {
+  
+  let emailAddress = req.session.data['email-address']
+
+  if (emailAddress === 'yes') {
+    res.redirect('/v18a/call-option')
+  } else {
+    res.redirect('/v18a/mobile-contact-method')
+  }
+})
+
+router.post('/v18a/call-option-with-mobile', function (req, res) {
+  
+  let mobilePhone = req.session.data['mobile-phone']
+
+  if (mobilePhone === 'yes') {
+    res.redirect('/v18a/call-option-with-mobile')
+  } else {
+    res.redirect('/v18a/call-option')
+  }
+})
+
 
 
 // Branching current as is journey
