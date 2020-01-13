@@ -390,10 +390,10 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            Buckingham Palace<br>
-            Consitution Hill<br>
-            London<br>
-            SW1A 1AA
+            Quarry House<br> 
+            Quarry Hill<br> 
+            Leeds<br> 
+            LS2 7UA
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -407,21 +407,91 @@
       <h2 class="govuk-heading-m">How you want to be contacted</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>No</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/v18a/email-contact-method">
+              Change
+              <span class="govuk-visually-hidden"> email contact preference</span>
+            </a>
+          </dd>
+        </div>
+{#         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>elizabeth.windsor@internet.com</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/v18a/email-contact-method">
+              Change
+              <span class="govuk-visually-hidden">email address</span>
+            </a>
+          </dd>
+        </div> #}
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Text message
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>Yes</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/v18a/mobile-contact-method">
+              Change
+              <span class="govuk-visually-hidden"> text message contact preference</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Mobile phone number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p>0771 234 567</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/v18a/mobile-contact-method">
+              Change
+              <span class="govuk-visually-hidden"> mobile phone number</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Contact preferences
+              If you can be called
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>Text message to 07700 900000</p>
-              <p>Email to elizabeth.windsor@crown.uk</p>
+              <p>Yes</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a href="#">
+              <a href="/v18a/phone-contact-method">
                 Change
-                <span class="govuk-visually-hidden"> your contact preference</span>
+                <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
             </dd>
           </div>
-        </dl>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Phone number to call
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>01132 111 222</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/v18a/phone-contact-method">
+                Change
+                <span class="govuk-visually-hidden"> phone number to call</span>
+              </a>
+            </dd>
+          </div>
+      </dl>
 
       <form action="/master/declaration" method="post" novalidate>
 
