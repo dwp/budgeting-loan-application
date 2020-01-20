@@ -1,0 +1,36 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  SMS service confirmation - loan declined - fewer than 320 characters
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h1 class="govuk-heading-s">Budgeting Loans - DWP</h1>
+
+      <hr>
+
+      <p>You've declined the Budgeting Loan we offered you, [first name].</p>
+
+    </div>
+  </div>
+
+{% endblock %}
