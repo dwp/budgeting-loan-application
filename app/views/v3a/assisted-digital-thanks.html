@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+    Thanks for helping us test this prototype - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="/index" method="post">
+
+        <fieldset class="govuk-fieldset" aria-describedby="if-loan-for-you-conditional-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Thanks for helping us test this prototype 
+            </h1>
+          </legend>
+          <p>The rest of the application form then follows as it does now.</p>
+        </fieldset>
+       
+        <button class="govuk-button">Finish</button>
+      </form>
+
+    </div>
+  </div>
+
+
+{% endblock %}

@@ -89,6 +89,41 @@ router.post('/v3/check-your-answers', function (req, res) {
   }
 })
 
+// Branching V3.1/3a
+
+router.post('/v3a/if-appointee', function (req, res) {
+  
+  let yourLoan = req.session.data['if-loan-for-you']
+
+  if (yourLoan === 'is-for-me') {
+    res.redirect('/v3a/assisted-digital-thanks')
+  } else {
+    res.redirect('/v3a/if-appointee')
+  }
+})
+
+router.post('/v3a/interruption-card', function (req, res) {
+  
+  let ifAppointee = req.session.data['if-appointee']
+
+  if (ifAppointee === 'not-appointee') {
+    res.redirect('/v3a/interruption-card')
+  } else {
+    res.redirect('/v3a/interruption-card-appointee')
+  }
+})
+
+router.post('/v3a/check-your-answers', function (req, res) {
+  
+  let appointeeAddress = req.session.data['appointee-address-confirmation']
+
+  if (appointeeAddress === 'appointee-address-not-listed') {
+    res.redirect('/v3a/appointee-address-not-listed')
+  } else {
+    res.redirect('/v3a/check-your-answers')
+  }
+})
+
 // Branching V4
 
 
