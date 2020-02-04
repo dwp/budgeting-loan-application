@@ -33,10 +33,10 @@
             Debt of £1,500 or more for Crisis Loans and Budgeting Loans
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{ data['socialfund-debt'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/master/eligibility-sf-debt">
               Change
               <span class="govuk-visually-hidden"> if you owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans</span>
             </a>
@@ -52,21 +52,21 @@
             Universal Credit received
           </dt>
           <dd class="govuk-summary-list__value">
-            No
+            {{ data['claim-uc'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="#">
+            <a href="/master/eligibility-uc">
               Change
               <span class="govuk-visually-hidden"> if you get Universal Credit</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Benefit received
           </dt>
           <dd class="govuk-summary-list__value">
-            Employment and Support Allowance (ESA)
+            {{ data['benefit-received'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -91,7 +91,7 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type of ESA received
+            Type of {{ data['benefit-received'] }} received
           </dt>
           <dd class="govuk-summary-list__value">
             Income-related
@@ -99,13 +99,13 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> the type of ESA you get</span>
+              <span class="govuk-visually-hidden"> the type of {{ data['benefit-received'] }} you get</span>
             </a>
           </dd>
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Received ESA with a previous partner in last 6 months
+            Received {{ data['benefit-received'] }} with a previous partner in last 6 months
           </dt>
           <dd class="govuk-summary-list__value">
             No
@@ -113,7 +113,7 @@
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> if you got ESA with a previous partner in the last 6 months</span>
+              <span class="govuk-visually-hidden"> if you got {{ data['benefit-received'] }} with a previous partner in the last 6 months</span>
             </a>
           </dd>
         </div>
@@ -130,7 +130,7 @@
               <span class="govuk-visually-hidden"> if you got income-based Jobseeker's Allowance or Income Support in the last 6 months</span>
             </a>
           </dd>
-        </div>        
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Loan needed £100 or more
@@ -196,7 +196,7 @@
               <span class="govuk-visually-hidden"> partner's full name</span>
             </a>
           </dd>
-        </div>     
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Partner date of birth
@@ -356,7 +356,7 @@
               <span class="govuk-visually-hidden"> full name</span>
             </a>
           </dd>
-        </div>     
+        </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             National Insurance number
@@ -390,9 +390,9 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            Quarry House<br> 
-            Quarry Hill<br> 
-            Leeds<br> 
+            Quarry House<br>
+            Quarry Hill<br>
+            Leeds<br>
             LS2 7UA
           </dd>
           <dd class="govuk-summary-list__actions">

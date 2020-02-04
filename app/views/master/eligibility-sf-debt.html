@@ -37,21 +37,21 @@
           </legend>
           <div class="govuk-radios govuk-radios--conditional" data-module="radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="socialfund-debt-1" name="socialfund-debt" type="radio" value="yes" data-aria-controls="conditional-socialfund-debt-1">
+                <input class="govuk-radios__input" id="socialfund-debt-1" name="socialfund-debt" type="radio" value="yes" data-aria-controls="conditional-socialfund-debt-1" {{ checked("socialfund-debt", "yes") }}>
                 <label class="govuk-label govuk-radios__label" for="socialfund-debt-1">
                   Yes
                 </label>
             </div>
             <div class="govuk-radios govuk-radios--conditional" data-module="radios">
               <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="socialfund-debt-2" name="socialfund-debt" type="radio" value="no" data-aria-controls="conditional-socialfund-debt-2">
+                  <input class="govuk-radios__input" id="socialfund-debt-2" name="socialfund-debt" type="radio" value="No" data-aria-controls="conditional-socialfund-debt-2" {{ checked("socialfund-debt", "No") }}>
                   <label class="govuk-label govuk-radios__label" for="socialfund-debt-2">
                     No
                   </label>
               </div>
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="socialfund-debt-3" name="socialfund-debt" type="radio" value="dont-know" data-aria-controls="conditional-socialfund-debt-3">
+                  <input class="govuk-radios__input" id="socialfund-debt-3" name="socialfund-debt" type="radio" value="dont-know" data-aria-controls="conditional-socialfund-debt-3" {{ checked("socialfund-debt", "dont-know") }}>
                   <label class="govuk-label govuk-radios__label" for="socialfund-debt-3">
                     Don't know
                   </label>
@@ -61,9 +61,9 @@
                       You can’t get a Budgeting Loan if you already owe more than £1,500 for Budgeting Loans or Crisis Loans. You can still apply - we’ll work out what you owe the Social Fund when we make a decision.
                   </div>
                 </div>
-    
-              </div> 
-  
+
+              </div>
+
             </div>
           </fieldset>
       </div>

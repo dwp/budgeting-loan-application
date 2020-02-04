@@ -40,19 +40,19 @@
             </p>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="jsa-duration-1" name="jsa-duration" type="radio" value="more-than-12-months">
+                <input class="govuk-radios__input" id="jsa-duration-1" name="jsa-duration" type="radio" value="more-than-12-months" {{ checked("jsa-duration", "more-than-12-months") }}>
                 <label class="govuk-label govuk-radios__label" for="jsa-duration-1">
                   More than 12 months
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="jsa-duration-2" name="jsa-duration" type="radio" value="6-to-12-months">
+                <input class="govuk-radios__input" id="jsa-duration-2" name="jsa-duration" type="radio" value="6-to-12-months" {{ checked("jsa-duration", "6-to-12-months") }}>
                 <label class="govuk-label govuk-radios__label" for="jsa-duration-2">
                   Between 6 and 12 months
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="jsa-duration-3" name="jsa-duration" type="radio" value="less-than-6-months">
+                <input class="govuk-radios__input" id="jsa-duration-3" name="jsa-duration" type="radio" value="less-than-6-months" {{ checked("jsa-duration", "less-than-6-months") }}>
                 <label class="govuk-label govuk-radios__label" for="jsa-duration-3">
                   Less than 6 months
                 </label>
