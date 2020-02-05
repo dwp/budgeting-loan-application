@@ -26,7 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="/master/check-your-answers" method="post">
+        <form class="form" action="/v14/check-your-answers" method="post">
 
           <div class="govuk-form-group">
 
@@ -38,22 +38,16 @@
                 </legend>
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="phone-1" name="phone" type="radio" value="Yes, on 0771 234 567" data-aria-controls="conditional-phone-1">
-                      <label class="govuk-label govuk-radios__label" for="phone-1">
-                        Yes, call me on 0771 234 567
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="phone-2" name="phone" type="radio" value="Yes, on" data-aria-controls="conditional-phone-2">
                       <label class="govuk-label govuk-radios__label" for="phone-2">
-                        Yes, call me on a different number
+                        Yes
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-2" style="clear:left;">
                       <div class="govuk-form-group">
                         <div class="govuk-form-group">
                           <label class="govuk-label" for="phone-info">
-                              Your preferred phone number
+                              Phone number
                           </label>
                           <input class="govuk-input govuk-input--width-20" id="phone-input" name="phone-input" type="text">
                         </div>
