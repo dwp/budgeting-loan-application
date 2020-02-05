@@ -227,7 +227,20 @@ router.post('/v12/declaration', function (req, res) {
   }
 })
 
-// Branching v12 - gather phone number for questions based on if they've already entered a mobile number
+// Branching v14 - gather phone number for questions based on if they've already entered a mobile number
+
+router.post('/v14/call-option', function (req, res) {
+  
+  let contactPreference = req.session.data['contactpreference']
+
+  if (contactPreference === 'text message') {
+    res.redirect('/v14/call-option-with-mobile')
+  } else {
+    res.redirect('/v14/call-option')
+  }
+})
+
+// Branching v18a - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v18a/mobile-contact-method', function (req, res) {
   
