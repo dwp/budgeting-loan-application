@@ -230,8 +230,9 @@ router.post('/v12/declaration', function (req, res) {
 // Branching v14 - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v14/call-option', function (req, res) {
-
-  if (req.session.data['contactpreference'].includes('text message'))  {
+  
+  let contactPreference = req.session.data['contactpreference']
+  if (contactPreference === 'mobile-number') {
     res.redirect('/v14/call-option-with-mobile')
   } else {
     res.redirect('/v14/call-option')
@@ -730,6 +731,16 @@ router.post('/master/contact-details-appointee', function (req, res) {
 
 })
 
+router.post('/master/call-option', function (req, res) {
+  
+  let contactPreference = req.session.data['contactpreference']
+  if (contactPreference === 'mobile-number') {
+    res.redirect('/master/call-option-with-mobile')
+  } else {
+    res.redirect('/master/call-option')
+  }
+})
+
 // version routes
 
 router.post('/v7/declaration', function (req, res) {
@@ -762,31 +773,6 @@ router.post('/master-v2/contact-details', function (req, res) {
     res.redirect('/master-v2/enter-address')
   } else {
     res.redirect('/master-v2/contact-details')
-  }
-})
-
-
-// Branching master - gather phone number for questions based on if they've already entered a mobile number
-
-router.post('/master/mobile-contact-method', function (req, res) {
-  
-  let emailAddress = req.session.data['email-address']
-
-  if (emailAddress === 'yes') {
-    res.redirect('/master/call-option')
-  } else {
-    res.redirect('/master/mobile-contact-method')
-  }
-})
-
-router.post('/master/call-option-with-mobile', function (req, res) {
-  
-  let mobilePhone = req.session.data['mobile-phone']
-
-  if (mobilePhone === 'yes') {
-    res.redirect('/master/call-option-with-mobile')
-  } else {
-    res.redirect('/master/call-option')
   }
 })
 
