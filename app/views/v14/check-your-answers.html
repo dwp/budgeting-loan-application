@@ -404,20 +404,33 @@
         </div>
       </dl>
 
-      <h2 class="govuk-heading-m">How you wanty to be contacted</h2>
+      <h2 class="govuk-heading-m">Contact preferences</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Contact preferences
+              How you can be contacted about your application
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>Text message to 07700 900000</p>
-              <p>Email to elizabeth.windsor@crown.uk</p>
+              <p>{{ data['mobilenumberinput'] }}<br> {{ data['email-input'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a href="/v14/contact-details">
                 Change
                 <span class="govuk-visually-hidden"> your contact preference</span>
+              </a>
+            </dd>
+          </div>
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              If you can be called
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>{{ data['phone'] }} {{ data['phone-input'] }}</p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/v14/call-option">
+                Change
+                <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
             </dd>
           </div>
