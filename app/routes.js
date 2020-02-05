@@ -230,10 +230,8 @@ router.post('/v12/declaration', function (req, res) {
 // Branching v14 - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v14/call-option', function (req, res) {
-  
-  let contactPreference = req.session.data['contactpreference']
 
-  if (contactPreference === 'text message') {
+  if (req.session.data['contactpreference'].includes('text message'))  {
     res.redirect('/v14/call-option-with-mobile')
   } else {
     res.redirect('/v14/call-option')
