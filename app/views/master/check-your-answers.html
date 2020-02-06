@@ -291,6 +291,7 @@
           </dd>
         </div>
 
+        {% if data['partner']=="Yes" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Partner full name
@@ -320,6 +321,7 @@
             </a>
           </dd>
         </div>
+        {% endif %}
 
       </dl>
 
@@ -331,7 +333,7 @@
             Child Benefit received by you or your partner
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['child-benefit'] }}, {{ data['child-benefit-input'] }} living with you
+            {{ data['child-benefit'] }}{% if data['child-benefit']=="Yes" %}, {{ data['child-benefit-input'] }} living with you{% endif %}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/master/children1">
