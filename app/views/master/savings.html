@@ -32,20 +32,20 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                Do you {% if data['partner']=='partner-yes' %}and your partner{% endif %} have {% if data['partner']=='partner-yes' %}combined{% endif %} savings of more than £1,000?
+                Do you {% if data['partner']=='Yes' %}and your partner{% endif %} have {% if data['partner']=='Yes' %}combined{% endif %} savings of more than £1,000?
               </h1>
             </legend>
             <span id="undefined-hint" class="govuk-hint">Include any money you have at home and in a bank, building society or credit union account. Also include investments like premium bonds and shares.</span>
             <div class="govuk-radios--inline">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="savings-1" name="savings" type="radio" value="yes" data-aria-controls="conditional-savings-1">
+                    <input class="govuk-radios__input" id="savings-1" name="savings" type="radio" value="Yes" data-aria-controls="conditional-savings-1" {{ checked("savings", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="savings-1">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="savings-2" name="savings" type="radio" value="no">
+                    <input class="govuk-radios__input" id="savings-2" name="savings" type="radio" value="No" {{ checked("savings", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="savings-2">
                       No
                     </label>
@@ -57,7 +57,7 @@
                       </label>
                       <div class="input-wrapper">
                         <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                        <input class="govuk-c-input govuk-!-width-one-quarter" id="total-savings" name="total-savings" type="text">
+                        <input class="govuk-c-input govuk-!-width-one-quarter" id="total-savings" name="total-savings" type="text" value="{{ data['total-savings'] }}">
                       </div>
                     </div>
                   </div>

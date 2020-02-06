@@ -462,7 +462,7 @@ router.post('/master/if-appointee', function (req, res) {
 
   let yourLoan = req.session.data['if-loan-for-you']
 
-  if (yourLoan === 'yes') {
+  if (yourLoan === 'Yes') {
     res.redirect('/master/eligibility-sf-debt')
   } else {
     res.redirect('/master/if-appointee')
@@ -473,7 +473,7 @@ router.post('/master/interruption-card', function (req, res) {
 
   let isAppointee = req.session.data['appointee']
 
-  if (isAppointee === 'appointee-yes') {
+  if (isAppointee === 'Yes') {
     res.redirect('/master/interruption-card-appointee')
   } else {
     res.redirect('/master/interruption-card')
@@ -484,7 +484,7 @@ router.post('/master/eligibility-uc', function (req, res) {
 
   let socialfundDebt = req.session.data['socialfund-debt']
 
-  if (socialfundDebt === 'yes') {
+  if (socialfundDebt === 'Yes') {
     res.redirect('/master/exit-sf-debt')
   } else {
     res.redirect('/master/eligibility-uc')
@@ -524,9 +524,9 @@ router.post('/master/eligibility-esa-duration', function (req, res) {
 
 router.post('/master/eligibility-esa-type', function (req, res) {
 
-  let esaDuration = req.session.data['esa-duration']
+  let esaDuration = req.session.data['benefit-duration']
 
-  if (esaDuration === 'more-than-6months') {
+  if (esaDuration === '6 months or more') {
     res.redirect('/master/eligibility-esa-type')
   } else {
     res.redirect('/master/eligibility-esa-partner')
@@ -535,12 +535,12 @@ router.post('/master/eligibility-esa-type', function (req, res) {
 
 router.post('/master/eligibility-jsa-type', function (req, res) {
 
-  let jsaDuration = req.session.data['jsa-duration']
+  let jsaDuration = req.session.data['benefit-duration']
 
-  if (jsaDuration === 'more-than-12-months') {
+  if (jsaDuration === 'More than 12 months') {
     res.redirect('/master/eligibility-100')
   }
-  if (jsaDuration === '6-to-12-months') {
+  if (jsaDuration === 'Between 6 and 12 months') {
     res.redirect('/master/eligibility-jsa-type')
   } else {
     res.redirect('/master/eligibility-jsa-partner')
@@ -549,9 +549,9 @@ router.post('/master/eligibility-jsa-type', function (req, res) {
 
 router.post('/master/eligibility-is-partner', function (req, res) {
 
-  let isDuration = req.session.data['is-duration']
+  let isDuration = req.session.data['benefit-duration']
 
-  if (isDuration === 'more-than-6months') {
+  if (isDuration === 'More than 6 months') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-is-partner')
@@ -560,7 +560,7 @@ router.post('/master/eligibility-is-partner', function (req, res) {
 
 router.post('/master/eligibility-pc-partner', function (req, res) {
 
-  let pcDuration = req.session.data['pc-duration']
+  let pcDuration = req.session.data['benefit-duration']
 
   if (pcDuration === 'yes') {
     res.redirect('/master/eligibility-100')
@@ -584,7 +584,7 @@ router.post('/master/eligibility-jsa-previous', function (req, res) {
 
   let esaPartner = req.session.data['jsa-partner']
 
-  if (esaPartner === 'yes') {
+  if (esaPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-jsa-previous')
@@ -595,7 +595,7 @@ router.post('/master/eligibility-is-previous', function (req, res) {
 
   let isPartner = req.session.data['is-partner']
 
-  if (isPartner === 'yes') {
+  if (isPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-is-previous')
@@ -606,7 +606,7 @@ router.post('/master/eligibility-pc-previous', function (req, res) {
 
   let pcPartner = req.session.data['pc-partner']
 
-  if (pcPartner === 'yes') {
+  if (pcPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-pc-previous')
@@ -626,15 +626,15 @@ router.post('/master/eligibility-100', function (req, res) {
     res.redirect('/master/exit-benefits-duration')
   }
 
-  if (jsaPrevious === 'jsa-no') {
+  if (jsaPrevious === 'No') {
     res.redirect('/master/exit-benefits-duration')
   }
 
-  if (isPrevious === 'is-no') {
+  if (isPrevious === 'No') {
     res.redirect('/master/exit-benefits-duration')
   }
 
-  if (pcPrevious === 'pc-no') {
+  if (pcPrevious === 'No') {
     res.redirect('/master/exit-benefits-duration')
   }
 
@@ -653,7 +653,7 @@ router.post('/master/eligibility-industrial-action', function (req, res) {
 
   let oneHundred = req.session.data['100-or-more']
 
-  if (oneHundred === '100-yes') {
+  if (oneHundred === 'Yes') {
     res.redirect('/master/eligibility-industrial-action')
   } else {
     res.redirect('/master/exit-100')
@@ -664,7 +664,7 @@ router.post('/master/partner', function (req, res) {
 
   let industrialAction = req.session.data['industrial-action']
 
-  if (industrialAction === 'ia-yes') {
+  if (industrialAction === 'Yes') {
     res.redirect('/master/exit-industrial-action')
   } else {
     res.redirect('/master/partner')
@@ -675,7 +675,7 @@ router.post('/master/children', function (req, res) {
 
   let hasPartner = req.session.data['partner']
 
-  if (hasPartner === 'partner-yes') {
+  if (hasPartner === 'Yes') {
     res.redirect('/master/partner-details')
   } else {
     res.redirect('/master/children')

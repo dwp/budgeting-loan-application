@@ -26,7 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master/children" method="post">
+      <form class="form" action="/master/children1" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -42,14 +42,14 @@
         <label class="govuk-label govuk-label--s" for="partner-first-name">
           Their first name
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="partner-first-name" name="partner-first-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="partner-first-name" name="partner-first-name" type="text" value="{{ data['partner-first-name'] }}">
       </div>
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="partner-last-name">
           Their last name
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="partner-last-name" name="partner-last-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="partner-last-name" name="partner-last-name" type="text" value="{{ data['partner-last-name'] }}">
       </div>
 
       <div class="govuk-form-group">
@@ -65,7 +65,7 @@
                 <label class="govuk-label govuk-date-input__label" for="partner-date-of-birth-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="partner-date-of-birth-day" name="partner-date-of-birth-day" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="partner-date-of-birth-day" name="partner-date-of-birth-day" type="number" pattern="[0-9]*" value="{{ data['partner-date-of-birth-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -73,7 +73,7 @@
                 <label class="govuk-label govuk-date-input__label" for="partner-date-of-birth-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="partner-date-of-birth-month" name="partner-date-of-birth-month" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="partner-date-of-birth-month" name="partner-date-of-birth-month" type="number" pattern="[0-9]*" value="{{ data['partner-date-of-birth-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -81,7 +81,7 @@
                 <label class="govuk-label govuk-date-input__label" for="partner-date-of-birth-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="partner-date-of-birth-year" name="partner-date-of-birth-year" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="partner-date-of-birth-year" name="partner-date-of-birth-year" type="number" pattern="[0-9]*" value="{{ data['partner-date-of-birth-year'] }}">
               </div>
             </div>
           </div>
@@ -90,7 +90,7 @@
 
 
 
-        <a class="govuk-button" href="/master/children">Continue</a>
+        <button class="govuk-button"  data-module="govuk-button">Continue</button>
 
       </form>
 

@@ -37,13 +37,13 @@
 
             <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="appointee-yes" name="appointee" type="radio" value="appointee-yes">
+                <input class="govuk-radios__input" id="appointee-yes" name="appointee" type="radio" value="Yes" {{ checked("appointee", "Yes") }}>
                 <label class="govuk-label govuk-radios__label" for="appointee-yes">
                   Yes
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="appointee-no" name="appointee" type="radio" value="appointee-no">
+                <input class="govuk-radios__input" id="appointee-no" name="appointee" type="radio" value="No" {{ checked("appointee", "No") }}>
                 <label class="govuk-label govuk-radios__label" for="appointee-no">
                   No
                 </label>
