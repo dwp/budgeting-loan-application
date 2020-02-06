@@ -38,13 +38,13 @@
                 </legend>
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="phone-1" name="phone" type="radio" value="yes" data-aria-controls="conditional-phone-1">
+                      <input class="govuk-radios__input" id="phone-1" name="phone" type="radio" value="Yes, on 0771 234 567" {{ checked("phone-given", "Yes, on 0771 234 567") }} data-aria-controls="conditional-phone-1">
                       <label class="govuk-label govuk-radios__label" for="phone-1">
                         Yes, call me on 0771 234 567
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="phone-2" name="phone" type="radio" value="no-different-number" data-aria-controls="conditional-phone-2">
+                      <input class="govuk-radios__input" id="phone-2" name="phone" type="radio" value="Yes, on" {{ checked("phone", "Yes, on") }} data-aria-controls="conditional-phone-2">
                       <label class="govuk-label govuk-radios__label" for="phone-2">
                         Yes, call me on a different number
                       </label>
@@ -55,12 +55,12 @@
                           <label class="govuk-label" for="phone-info">
                               Your preferred phone number
                           </label>
-                          <input class="govuk-input govuk-input--width-10" id="phone-input" name="phone-input" type="text">
+                          <input class="govuk-input govuk-input--width-10" id="phone-input" name="phone-input" value="{{ data['phone-input'] }}"type="text">
                         </div>
                       </div>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="phone-3" name="phone" type="radio" value="no-do-not-call">
+                      <input class="govuk-radios__input" id="phone-3" name="phone" type="radio" value="No, write to me instead" {{ checked("phone", "No, write to me instead") }}>
                       <label class="govuk-label govuk-radios__label" for="phone-3">
                         No, write to me instead
                       </label>
