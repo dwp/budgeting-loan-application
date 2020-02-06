@@ -26,63 +26,70 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <form class="form" action="/master/check-your-answers" method="post">
+      <form class="form" action="/master/call-option" method="post">
 
-          <div class="govuk-form-group">
+        <div class="govuk-form-group">
 
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-fieldset__heading">
-                    Do you want to be emailed about your loan application?
-                  </h1>
-                </legend>
-                <span id="undefined-hint" class="govuk-hint">This will tell you how to find out the decision and what to do next.</span>
-                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="email" name="contact-method" type="radio" value="email" data-aria-controls="conditional-email">
-                      <label class="govuk-label govuk-radios__label" for="email">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email" style="clear:left;">
-                      <div class="govuk-form-group">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="email-info">
-                            Email address
-                          </label>
-                          <input class="govuk-input govuk-input--width-20" id="email-input" name="email-input" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="mobile-phone" name="contact-method" type="radio" value="mobile-phone" data-aria-controls="conditional-mobile-phone">
-                      <label class="govuk-label govuk-radios__label" for="mobile-phone">
-                        No, by text message
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-phone" style="clear:left;">
-                      <div class="govuk-form-group">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="mobile-phone-info">
-                              Mobile phone number
-                          </label>
-                          <input class="govuk-input govuk-input--width-20" id="mobile-phone-input" name="mobile-phone-input" type="text">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="letter" name="contact-method" type="radio" value="letter" data-aria-controls="conditional-letter">
-                      <label class="govuk-label govuk-radios__label" for="letter">
-                        No, by letter (slowest method)
-                      </label>
-                    </div>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                How do you want to be contacted about your application?
+              </h1>
+            </legend>
+
+            <p>We will send you confirmation of your application and contact you when we've made a decision.</p>
+
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes govuk-radios--conditional" data-module="checkboxes">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="mobile-number" name="contactpreference" type="checkbox" value="text message" {{ checked("contactpreference", "text message") }} data-aria-controls="conditional-mobile-number">
+                  <label class="govuk-label govuk-checkboxes__label" for="mobile-number">
+                    Text message
+                  </label>
                 </div>
-              </fieldset>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-mobile-number">
+                  <div class="govuk-form-group">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="mobile-number-info">
+                          Mobile number
+                      </label>
+                      <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobilenumberinput" value="{{ data['mobilenumberinput'] }}"type="text">
+                    </div>
+                  </div>
+                </div>
 
-            </div>
-  
-          <button class="govuk-button">Continue</button>
-  
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="email" name="contactpreference" type="checkbox" value="email" {{ checked("contactpreference", "email") }} data-aria-controls="conditional-email">
+                  <label class="govuk-label govuk-checkboxes__label" for="email">
+                    Email
+                  </label>
+                </div>
+                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-email">
+                  <div class="govuk-form-group">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="email-info">
+                          Email address
+                      </label>
+                      <input class="govuk-input" id="email-input" name="email-input" value="{{ data['email-input'] }}" type="text" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="letter" name="contactpreference" type="checkbox" value="letter" {{ checked("contactpreference", "letter") }} >
+                  <label class="govuk-label govuk-checkboxes__label" for="letter">
+                    Letter (slowest method)
+                  </label>
+                </div>
+              </div>
+
+            </fieldset>                      
+ 
+          </div>
+
+        <button class="govuk-button">Continue</button>
+
+      </form>
+
     </div>
   </div>
 
