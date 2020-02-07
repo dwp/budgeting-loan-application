@@ -369,12 +369,7 @@
             Savings of more than £1,000 (£2,000 if either you or your partner are 63 or over)
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['savings'] }}</p>
-            {% if data['savings']=="Yes" %}
-            <ul class="govuk-list govuk-list--bullet">
-              <li>&pound;{{ data['total-savings'] }}</li>
-            </ul>
-            {% endif%}
+            <p>{{ data['savings'] }}{% if data['savings']=="Yes" %}, &pound;{{ data['total-savings'] }}{% endif%}</p>
 
           </dd>
           <dd class="govuk-summary-list__actions">
