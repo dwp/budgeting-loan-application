@@ -40,31 +40,31 @@
             </p>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="esa" name="benefit-received" type="radio" value="esa">
+                <input class="govuk-radios__input" id="esa" name="benefit-received" type="radio" value="Employment and Support Allowance" {{ checked("benefit-received", "Employment and Support Allowance") }}>
                 <label class="govuk-label govuk-radios__label" for="esa">
                   Employment and Support Allowance
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="jsa" name="benefit-received" type="radio" value="jsa">
+                <input class="govuk-radios__input" id="jsa" name="benefit-received" type="radio" value="Jobseeker’s Allowance" {{ checked("benefit-received", "Jobseeker’s Allowance") }}>
                 <label class="govuk-label govuk-radios__label" for="jsa">
                   Jobseeker’s Allowance
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="is" name="benefit-received" type="radio" value="is">
+                <input class="govuk-radios__input" id="is" name="benefit-received" type="radio" value="Income Support" {{ checked("benefit-received", "Income Support") }}>
                 <label class="govuk-label govuk-radios__label" for="is">
                   Income Support
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pc" name="benefit-received" type="radio" value="pc">
+                <input class="govuk-radios__input" id="pc" name="benefit-received" type="radio" value="Pension Credit" {{ checked("benefit-received", "Pension Credit") }}>
                 <label class="govuk-label govuk-radios__label" for="pc">
                   Pension Credit
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="other" name="benefit-received" type="radio" value="other">
+                <input class="govuk-radios__input" id="other" name="benefit-received" type="radio" value="other" {{ checked("benefit-received", "other") }}>
                 <label class="govuk-label govuk-radios__label" for="other">
                   None of the above
                 </label>

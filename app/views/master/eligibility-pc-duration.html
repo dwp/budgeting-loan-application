@@ -40,13 +40,13 @@
             </p>
             <div class="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pc-duration" name="pc-duration" type="radio" value="yes">
+                <input class="govuk-radios__input" id="pc-duration" name="benefit-duration" type="radio" value="More than 6 months" {{ checked("benefit-duration", "More than 6 months") }}>
                 <label class="govuk-label govuk-radios__label" for="pc-duration">
                   6 months or more
                 </label>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="pc-duration-2" name="pc-duration" type="radio" value="no">
+                <input class="govuk-radios__input" id="pc-duration-2" name="benefit-duration" type="radio" value="Less than 6 months" {{ checked("benefit-duration", "Less than 6 months") }}>
                 <label class="govuk-label govuk-radios__label" for="pc-duration-2">
                   Less than 6 months
                 </label>

@@ -38,13 +38,13 @@
           <p>A partner is someone over the age of 16 who you’re married to or live with as if you’re married to them.</p>
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="partner-yes" name="partner" type="radio" value="partner-yes">
+              <input class="govuk-radios__input" id="partner-yes" name="partner" type="radio" value="Yes" {{ checked("partner", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="partner-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="partner-no" name="partner" type="radio" value="partner-no">
+              <input class="govuk-radios__input" id="partner-no" name="partner" type="radio" value="No" {{ checked("partner", "No") }}>
               <label class="govuk-label govuk-radios__label" for="partner-no">
                 No
               </label>

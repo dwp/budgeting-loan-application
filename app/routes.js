@@ -9,9 +9,9 @@ router.post('/v1/address-to-write-to', function (req, res) {
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
-  
+
     let differentAddress = req.session.data['different-address']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v1/address-to-write-to')
     } else {
@@ -21,9 +21,9 @@ router.post('/v1/address-to-write-to', function (req, res) {
 
 
 router.post('/v1/if-appointee', function (req, res) {
-  
+
     let differentAddress = req.session.data['if-loan-for-you']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v1/address')
     } else {
@@ -31,9 +31,9 @@ router.post('/v1/if-appointee', function (req, res) {
     }
   })
 
-// Branching V2 
+// Branching V2
 router.post('/v2/address-to-write-to', function (req, res) {
-  
+
   let differentAddress = req.session.data['different-address']
 
   if (differentAddress === 'yes') {
@@ -57,7 +57,7 @@ router.post('/v2/if-appointee', function (req, res) {
 // Branching V3
 
 router.post('/v3/if-appointee', function (req, res) {
-  
+
   let yourLoan = req.session.data['if-loan-for-you']
 
   if (yourLoan === 'is-for-me') {
@@ -68,7 +68,7 @@ router.post('/v3/if-appointee', function (req, res) {
 })
 
 router.post('/v3/interruption-card', function (req, res) {
-  
+
   let ifAppointee = req.session.data['if-appointee']
 
   if (ifAppointee === 'not-appointee') {
@@ -79,7 +79,7 @@ router.post('/v3/interruption-card', function (req, res) {
 })
 
 router.post('/v3/check-your-answers', function (req, res) {
-  
+
   let appointeeAddress = req.session.data['appointee-address-confirmation']
 
   if (appointeeAddress === 'appointee-address-not-listed') {
@@ -92,7 +92,7 @@ router.post('/v3/check-your-answers', function (req, res) {
 // Branching V3.1/3a
 
 router.post('/v3a/if-appointee', function (req, res) {
-  
+
   let yourLoan = req.session.data['if-loan-for-you']
 
   if (yourLoan === 'is-for-me') {
@@ -103,7 +103,7 @@ router.post('/v3a/if-appointee', function (req, res) {
 })
 
 router.post('/v3a/interruption-card', function (req, res) {
-  
+
   let ifAppointee = req.session.data['if-appointee']
 
   if (ifAppointee === 'not-appointee') {
@@ -114,7 +114,7 @@ router.post('/v3a/interruption-card', function (req, res) {
 })
 
 router.post('/v3a/check-your-answers', function (req, res) {
-  
+
   let appointeeAddress = req.session.data['appointee-address-confirmation']
 
   if (appointeeAddress === 'appointee-address-not-listed') {
@@ -128,9 +128,9 @@ router.post('/v3a/check-your-answers', function (req, res) {
 
 
 router.post('/v4/address-to-write-to', function (req, res) {
-  
+
     let differentAddress = req.session.data['different-address']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v4/address-to-write-to')
     } else {
@@ -140,9 +140,9 @@ router.post('/v4/address-to-write-to', function (req, res) {
 
 
 router.post('/v4/if-appointee', function (req, res) {
-  
+
     let differentAddress = req.session.data['if-loan-for-you']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v4/address')
     } else {
@@ -153,9 +153,9 @@ router.post('/v4/if-appointee', function (req, res) {
 // Branching V5
 
 router.post('/v5/address-to-write-to', function (req, res) {
-  
+
     let differentAddress = req.session.data['different-address']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v5/address-to-write-to')
     } else {
@@ -165,9 +165,9 @@ router.post('/v5/address-to-write-to', function (req, res) {
 
 
 router.post('/v5/if-appointee', function (req, res) {
-  
+
     let differentAddress = req.session.data['if-loan-for-you']
-  
+
     if (differentAddress === 'yes') {
       res.redirect('/v5/address')
     } else {
@@ -178,7 +178,7 @@ router.post('/v5/if-appointee', function (req, res) {
 // Branching V7
 
 router.post('/v7/declaration', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['address-confirmation']
 
   if (addressConfirmation === 'address-not-listed') {
@@ -191,7 +191,7 @@ router.post('/v7/declaration', function (req, res) {
 // Branching v12
 
 router.post('/v12/letter-address', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['address-confirmation']
   let extraAddressConfirmation = req.session.data['address-confirmation']
 
@@ -206,7 +206,7 @@ router.post('/v12/letter-address', function (req, res) {
 })
 
 router.post('/v12/enter-letter-address', function (req, res) {
-  
+
   let extraAddress = req.session.data['address-confirmation']
 
   if (extraAddress === 'address-not-listed') {
@@ -217,7 +217,7 @@ router.post('/v12/enter-letter-address', function (req, res) {
 })
 
 router.post('/v12/declaration', function (req, res) {
-  
+
   let extraAddress = req.session.data['extra-address']
 
   if (extraAddress === 'yes-extra-address') {
@@ -230,7 +230,7 @@ router.post('/v12/declaration', function (req, res) {
 // Branching v14 - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v14/call-option', function (req, res) {
-  
+
   let contactPreference = req.session.data['contactpreference']
   if (contactPreference.includes('text message')) {
     res.redirect('/v14/call-option-with-mobile')
@@ -242,7 +242,7 @@ router.post('/v14/call-option', function (req, res) {
 // Branching v18a - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v18a/mobile-contact-method', function (req, res) {
-  
+
   let emailAddress = req.session.data['email-address']
 
   if (emailAddress === 'yes') {
@@ -253,7 +253,7 @@ router.post('/v18a/mobile-contact-method', function (req, res) {
 })
 
 router.post('/v18a/call-option-with-mobile', function (req, res) {
-  
+
   let mobilePhone = req.session.data['mobile-phone']
 
   if (mobilePhone === 'yes') {
@@ -297,7 +297,7 @@ router.post('/as-is/eligibility-esa-duration', function (req, res) {
   }
   if (benefitRecieved === 'jsa') {
     res.redirect('/as-is/eligibility-jsa-duration')
-  } 
+  }
   if (benefitRecieved === 'is') {
     res.redirect('/as-is/eligibility-is-duration')
   }
@@ -411,22 +411,22 @@ router.post('/as-is/eligibility-100', function (req, res) {
   if (esaPrevious === 'esa-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
-  
+
   if (jsaPrevious === 'jsa-no') {
     res.redirect('/as-is/exit-benefits-duration')
-  } 
+  }
 
   if (isPrevious === 'is-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
-  
+
   if (pcPrevious === 'pc-no') {
     res.redirect('/as-is/exit-benefits-duration')
   }
 
   if (esaType === 'esa-contribution') {
     res.redirect('/as-is/exit-eligibility-esa-contrib')
-  } 
+  }
 
   if (jsaType === 'jsa-contribution') {
     res.redirect('/as-is/exit-eligibility-jsa-contrib')
@@ -471,10 +471,10 @@ router.post('/as-is/children', function (req, res) {
 // Branching new master application journey
 
 router.post('/master/if-appointee', function (req, res) {
-  
+
   let yourLoan = req.session.data['if-loan-for-you']
 
-  if (yourLoan === 'yes') {
+  if (yourLoan === 'Yes') {
     res.redirect('/master/eligibility-sf-debt')
   } else {
     res.redirect('/master/if-appointee')
@@ -482,10 +482,10 @@ router.post('/master/if-appointee', function (req, res) {
 })
 
 router.post('/master/interruption-card', function (req, res) {
-  
+
   let isAppointee = req.session.data['appointee']
 
-  if (isAppointee === 'appointee-yes') {
+  if (isAppointee === 'Yes') {
     res.redirect('/master/interruption-card-appointee')
   } else {
     res.redirect('/master/interruption-card')
@@ -496,7 +496,7 @@ router.post('/master/eligibility-uc', function (req, res) {
 
   let socialfundDebt = req.session.data['socialfund-debt']
 
-  if (socialfundDebt === 'yes') {
+  if (socialfundDebt === 'Yes') {
     res.redirect('/master/exit-sf-debt')
   } else {
     res.redirect('/master/eligibility-uc')
@@ -507,7 +507,7 @@ router.post('/master/eligibility-benefits', function (req, res) {
 
   let claimUC = req.session.data['claim-uc']
 
-  if (claimUC === 'yes') {
+  if (claimUC === 'Yes') {
     res.redirect('/master/exit-uc')
   } else {
     res.redirect('/master/eligibility-benefits')
@@ -518,16 +518,16 @@ router.post('/master/eligibility-esa-duration', function (req, res) {
 
   let benefitRecieved = req.session.data['benefit-received']
 
-  if (benefitRecieved === 'esa') {
+  if (benefitRecieved === 'Employment and Support Allowance') {
     res.redirect('/master/eligibility-esa-duration')
   }
-  if (benefitRecieved === 'jsa') {
+  if (benefitRecieved === 'Jobseeker’s Allowance') {
     res.redirect('/master/eligibility-jsa-duration')
-  } 
-  if (benefitRecieved === 'is') {
+  }
+  if (benefitRecieved === 'Income Support') {
     res.redirect('/master/eligibility-is-duration')
   }
-  if (benefitRecieved === 'pc') {
+  if (benefitRecieved === 'Pension Credit') {
     res.redirect('/master/eligibility-pc-duration')
   }else {
     res.redirect('/master/exit-benefits')
@@ -536,9 +536,9 @@ router.post('/master/eligibility-esa-duration', function (req, res) {
 
 router.post('/master/eligibility-esa-type', function (req, res) {
 
-  let esaDuration = req.session.data['esa-duration']
+  let esaDuration = req.session.data['benefit-duration']
 
-  if (esaDuration === 'more-than-6months') {
+  if (esaDuration === '6 months or more') {
     res.redirect('/master/eligibility-esa-type')
   } else {
     res.redirect('/master/eligibility-esa-partner')
@@ -547,12 +547,12 @@ router.post('/master/eligibility-esa-type', function (req, res) {
 
 router.post('/master/eligibility-jsa-type', function (req, res) {
 
-  let jsaDuration = req.session.data['jsa-duration']
+  let jsaDuration = req.session.data['benefit-duration']
 
-  if (jsaDuration === 'more-than-12-months') {
+  if (jsaDuration === 'More than 12 months') {
     res.redirect('/master/eligibility-100')
   }
-  if (jsaDuration === '6-to-12-months') {
+  if (jsaDuration === 'Between 6 and 12 months') {
     res.redirect('/master/eligibility-jsa-type')
   } else {
     res.redirect('/master/eligibility-jsa-partner')
@@ -561,9 +561,9 @@ router.post('/master/eligibility-jsa-type', function (req, res) {
 
 router.post('/master/eligibility-is-partner', function (req, res) {
 
-  let isDuration = req.session.data['is-duration']
+  let isDuration = req.session.data['benefit-duration']
 
-  if (isDuration === 'more-than-6months') {
+  if (isDuration === 'More than 6 months') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-is-partner')
@@ -572,7 +572,7 @@ router.post('/master/eligibility-is-partner', function (req, res) {
 
 router.post('/master/eligibility-pc-partner', function (req, res) {
 
-  let pcDuration = req.session.data['pc-duration']
+  let pcDuration = req.session.data['benefit-duration']
 
   if (pcDuration === 'yes') {
     res.redirect('/master/eligibility-100')
@@ -596,7 +596,7 @@ router.post('/master/eligibility-jsa-previous', function (req, res) {
 
   let esaPartner = req.session.data['jsa-partner']
 
-  if (esaPartner === 'yes') {
+  if (esaPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-jsa-previous')
@@ -607,7 +607,7 @@ router.post('/master/eligibility-is-previous', function (req, res) {
 
   let isPartner = req.session.data['is-partner']
 
-  if (isPartner === 'yes') {
+  if (isPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-is-previous')
@@ -618,7 +618,7 @@ router.post('/master/eligibility-pc-previous', function (req, res) {
 
   let pcPartner = req.session.data['pc-partner']
 
-  if (pcPartner === 'yes') {
+  if (pcPartner === 'Yes') {
     res.redirect('/master/eligibility-100')
   } else {
     res.redirect('/master/eligibility-pc-previous')
@@ -637,22 +637,22 @@ router.post('/master/eligibility-100', function (req, res) {
   if (esaPrevious === 'esa-no') {
     res.redirect('/master/exit-benefits-duration')
   }
-  
-  if (jsaPrevious === 'jsa-no') {
-    res.redirect('/master/exit-benefits-duration')
-  } 
 
-  if (isPrevious === 'is-no') {
+  if (jsaPrevious === 'No') {
     res.redirect('/master/exit-benefits-duration')
   }
-  
-  if (pcPrevious === 'pc-no') {
+
+  if (isPrevious === 'No') {
+    res.redirect('/master/exit-benefits-duration')
+  }
+
+  if (pcPrevious === 'No') {
     res.redirect('/master/exit-benefits-duration')
   }
 
   if (esaType === 'esa-contribution') {
     res.redirect('/master/exit-eligibility-esa-contrib')
-  } 
+  }
 
   if (jsaType === 'jsa-contribution') {
     res.redirect('/master/exit-eligibility-jsa-contrib')
@@ -665,7 +665,7 @@ router.post('/master/eligibility-industrial-action', function (req, res) {
 
   let oneHundred = req.session.data['100-or-more']
 
-  if (oneHundred === '100-yes') {
+  if (oneHundred === 'Yes') {
     res.redirect('/master/eligibility-industrial-action')
   } else {
     res.redirect('/master/exit-100')
@@ -676,7 +676,7 @@ router.post('/master/partner', function (req, res) {
 
   let industrialAction = req.session.data['industrial-action']
 
-  if (industrialAction === 'ia-yes') {
+  if (industrialAction === 'Yes') {
     res.redirect('/master/exit-industrial-action')
   } else {
     res.redirect('/master/partner')
@@ -687,7 +687,7 @@ router.post('/master/children', function (req, res) {
 
   let hasPartner = req.session.data['partner']
 
-  if (hasPartner === 'partner-yes') {
+  if (hasPartner === 'Yes') {
     res.redirect('/master/partner-details')
   } else {
     res.redirect('/master/children')
@@ -695,7 +695,7 @@ router.post('/master/children', function (req, res) {
 })
 
 router.post('/master/address-notfound', function (req, res) {
-  
+
   let letterAddress = req.session.data['letter-address']
 
   if (letterAddress === 'yes-extra-address') {
@@ -706,33 +706,34 @@ router.post('/master/address-notfound', function (req, res) {
 })
 
 router.post('/master/contact-details', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['address-confirmation']
   let appointeeDetails = req.session.data['appointee']
-  
+
   if (appointeeDetails === 'appointee-yes') {
     res.redirect('/master/appointee-details')
   }
   if (addressConfirmation === 'address-not-listed') {
     res.redirect('/master/enter-address')
-  }   
+  }
   res.redirect('/master/contact-details')
 
 })
 
 router.post('/master/contact-details-appointee', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['appointee-address-confirmation']
-  
+
   if (addressConfirmation === 'appointee-address-not-listed') {
     res.redirect('/master/appointee-enter-address')
-  }   
+  }
   res.redirect('/master/contact-details-appointee')
 
 })
 
 
 router.post('/master/call-option', function (req, res) {
+
   let contactPreference = req.session.data['contactpreference']
   if (contactPreference.includes('text message')) {
     res.redirect('/master/call-option-with-mobile')
@@ -745,7 +746,7 @@ router.post('/master/call-option', function (req, res) {
 // version routes
 
 router.post('/v7/declaration', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['address-confirmation']
 
   if (addressConfirmation === 'address-not-listed') {
@@ -756,7 +757,7 @@ router.post('/v7/declaration', function (req, res) {
 })
 
 router.post('/master-v2/address-notfound', function (req, res) {
-  
+
   let letterAddress = req.session.data['letter-address']
 
   if (letterAddress === 'yes-extra-address') {
@@ -767,7 +768,7 @@ router.post('/master-v2/address-notfound', function (req, res) {
 })
 
 router.post('/master-v2/contact-details', function (req, res) {
-  
+
   let addressConfirmation = req.session.data['address-confirmation']
 
   if (addressConfirmation === 'address-not-listed') {
@@ -778,11 +779,36 @@ router.post('/master-v2/contact-details', function (req, res) {
 })
 
 
+// Branching master - gather phone number for questions based on if they've already entered a mobile number
+
+router.post('/master/mobile-contact-method', function (req, res) {
+
+  let emailAddress = req.session.data['email-address']
+
+  if (emailAddress === 'yes') {
+    res.redirect('/master/call-option')
+  } else {
+    res.redirect('/master/mobile-contact-method')
+  }
+})
+
+router.post('/master/call-option-with-mobile', function (req, res) {
+
+  let mobilePhone = req.session.data['mobile-phone']
+
+  if (mobilePhone === 'yes') {
+    res.redirect('/master/call-option-with-mobile')
+  } else {
+    res.redirect('/master/call-option')
+  }
+})
+
+
 
 //BLAS ROUTING
 
 router.post('/BLAS/v3/declaration-success', function (req, res) {
-  
+
   let offerAcceptance = req.session.data['offer-acceptance']
 
   if (offerAcceptance === 'offer-yes') {
@@ -793,7 +819,7 @@ router.post('/BLAS/v3/declaration-success', function (req, res) {
 })
 
 router.post('/BLAS/v4/declaration-success', function (req, res) {
-  
+
   let offerAcceptance = req.session.data['offer-acceptance']
 
   if (offerAcceptance === 'offer-yes') {
@@ -804,7 +830,7 @@ router.post('/BLAS/v4/declaration-success', function (req, res) {
 })
 
 router.post('/BLAS/v5/declaration-success', function (req, res) {
-  
+
   let offerAcceptance = req.session.data['offer-acceptance']
 
   if (offerAcceptance === 'offer-yes') {
@@ -815,7 +841,7 @@ router.post('/BLAS/v5/declaration-success', function (req, res) {
 })
 
 router.post('/BLAS/v6/loan-accepted', function (req, res) {
-  
+
   let offerAcceptance = req.session.data['loan-decision']
 
   if (offerAcceptance === 'yes') {
@@ -826,7 +852,7 @@ router.post('/BLAS/v6/loan-accepted', function (req, res) {
 })
 
 router.post('/BLAS/v7/loan-accepted', function (req, res) {
-  
+
   let offerAcceptance = req.session.data['loan-decision']
 
   if (offerAcceptance === 'yes') {

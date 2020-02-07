@@ -43,13 +43,13 @@
 
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="pc-previous-yes" name="pc-previous" type="radio" value="pc-yes">
+              <input class="govuk-radios__input" id="pc-previous-yes" name="pc-previous" type="radio" value="Yes" {{ checked("pc-previous", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="pc-previous-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="pc-previous-no" name="pc-previous" type="radio" value="pc-no">
+              <input class="govuk-radios__input" id="pc-previous-no" name="pc-previous" type="radio" value="No" {{ checked("pc-previous", "No") }}>
               <label class="govuk-label govuk-radios__label" for="pc-previous-no">
                 No
               </label>

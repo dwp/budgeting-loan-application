@@ -38,13 +38,13 @@
             <div class="govuk-radios--inline">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="landlord-1" name="landlord" type="radio" value="yes" data-aria-controls="conditional-landlord-1">
+                    <input class="govuk-radios__input" id="landlord-1" name="landlord" type="radio" value="Yes" data-aria-controls="conditional-landlord-1" {{ checked("landlord", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="landlord-1">
                       Yes
                     </label>
                   </div>
                   <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="landlord-2" name="landlord" type="radio" value="no">
+                    <input class="govuk-radios__input" id="landlord-2" name="landlord" type="radio" value="No" {{ checked("landlord", "No") }}>
                     <label class="govuk-label govuk-radios__label" for="landlord-2">
                       No
                     </label>
@@ -57,21 +57,21 @@
                         </label>
                         <div class="input-wrapper">
                           <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                          <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="landlord-pay-back" type="text" value="{{ data['landlord-pay-back'] }}">
                         </div>
                         <label class="govuk-label" for="landlord-info">
                             How much is left to pay?
                         </label>
                         <div class="input-wrapper">
                           <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                          <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="ticket-price" type="text">
+                          <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="landlord-left-to-pay" type="text" value="{{ data['landlord-left-to-pay'] }}">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
             </div>
-              
+
           </fieldset>
         </div>
 

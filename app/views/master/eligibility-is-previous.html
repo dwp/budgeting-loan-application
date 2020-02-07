@@ -42,13 +42,13 @@
 
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="is-previous-yes" name="is-previous" type="radio" value="is-yes">
+              <input class="govuk-radios__input" id="is-previous-yes" name="is-previous" type="radio" value="Yes" {{ checked("is-previous", "Yes") }}>
               <label class="govuk-label govuk-radios__label" for="is-previous-yes">
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="is-previous-no" name="is-previous" type="radio" value="is-no">
+              <input class="govuk-radios__input" id="is-previous-no" name="is-previous" type="radio" value="No" {{ checked("is-previous", "No") }}>
               <label class="govuk-label govuk-radios__label" for="is-previous-no">
                 No
               </label>
