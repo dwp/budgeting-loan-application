@@ -232,7 +232,7 @@ router.post('/v12/declaration', function (req, res) {
 router.post('/v14/call-option', function (req, res) {
 
   let contactPreference = req.session.data['contactpreference']
-  if (contactPreference === 'mobile-number') {
+  if (contactPreference.includes('text message')) {
     res.redirect('/v14/call-option-with-mobile')
   } else {
     res.redirect('/v14/call-option')
@@ -731,15 +731,17 @@ router.post('/master/contact-details-appointee', function (req, res) {
 
 })
 
+
 router.post('/master/call-option', function (req, res) {
 
   let contactPreference = req.session.data['contactpreference']
-  if (contactPreference === 'mobile-number') {
+  if (contactPreference.includes('text message')) {
     res.redirect('/master/call-option-with-mobile')
   } else {
     res.redirect('/master/call-option')
   }
 })
+
 
 // version routes
 
