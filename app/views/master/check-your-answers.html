@@ -511,13 +511,13 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            Quarry House<br>
-            Quarry Hill<br>
-            Leeds<br>
-            LS2 7UA
+            {{ data['address-line-1'] }}<br>
+            {{ data['address-line-2'] }}<br>
+            {{ data['address-town'] }}<br>
+            {{ data['address-postcode'] }}<br>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/select-address">
+            <a href="/master/enter-address">
               Change
               <span class="govuk-visually-hidden"> address</span>
             </a>
@@ -525,11 +525,63 @@
         </div>
       </dl>
 
+      {% if data['appointee-yes'] %}
+      <h2 class="govuk-heading-m">Appointee details</h2>
+      
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            {{ data['appointee-first-name'] }} {{ data['appointee-last-name'] }}
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Alexandrina Victoria
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/appointee-details">
+              Change
+              <span class="govuk-visually-hidden"> full name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['appointee-date-of-birth-day'] }} {{ data['appointee-date-of-birth-month'] }} {{ data['appointee-date-of-birth-year'] }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/appointee-details">
+              Change
+              <span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['appointee-address-line-1'] }}<br>
+            {{ data['appointee-address-line-2'] }}<br>
+            {{ data['appointee-address-town'] }}<br>
+            {{ data['appointee-address-postcode'] }}<br>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/master/appointee-enter-address">
+              Change
+              <span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+      {% endif%}
+
       <h2 class="govuk-heading-m">Contact preferences</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              How you can be contacted about your application
+              How you want to be contacted about your application
             </dt>
             <dd class="govuk-summary-list__value">
               <p>{{ data['mobilenumberinput'] }}<br> {{ data['email-input'] }}</p>

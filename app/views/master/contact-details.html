@@ -39,15 +39,15 @@
 
             <p>We will send you confirmation of your application and contact you when we've made a decision.</p>
 
-            <div class="govuk-checkboxes">
-              <div class="govuk-checkboxes govuk-radios--conditional" data-module="checkboxes">
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="mobile-number" name="contactpreference" type="checkbox" value="text message" {{ checked("contactpreference", "text message") }} data-aria-controls="conditional-mobile-number">
-                  <label class="govuk-label govuk-checkboxes__label" for="mobile-number">
+            <div class="govuk-radios">
+              <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="mobile-number" name="contactpreference" type="radio" value="text message" {{ checked("contactpreference", "text message") }} data-aria-controls="conditional-mobile-number">
+                  <label class="govuk-label govuk-radios__label" for="mobile-number">
                     Text message
                   </label>
                 </div>
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-mobile-number">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-number">
                   <div class="govuk-form-group">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="mobile-number-info">
@@ -58,13 +58,13 @@
                   </div>
                 </div>
 
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="email" name="contactpreference" type="checkbox" value="email" {{ checked("contactpreference", "email") }} data-aria-controls="conditional-email">
-                  <label class="govuk-label govuk-checkboxes__label" for="email">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="email" name="contactpreference" type="radio" value="email" {{ checked("contactpreference", "email") }} data-aria-controls="conditional-email">
+                  <label class="govuk-label govuk-radios__label" for="email">
                     Email
                   </label>
                 </div>
-                <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-email">
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-email">
                   <div class="govuk-form-group">
                     <div class="govuk-form-group">
                       <label class="govuk-label" for="email-info">
@@ -74,9 +74,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="letter" name="contactpreference" type="checkbox" value="letter" {{ checked("contactpreference", "letter") }} >
-                  <label class="govuk-label govuk-checkboxes__label" for="letter">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="letter" name="contactpreference" type="radio" value="letter" {{ checked("contactpreference", "letter") }} >
+                  <label class="govuk-label govuk-radios__label" for="letter">
                     Letter (slowest method)
                   </label>
                 </div>
