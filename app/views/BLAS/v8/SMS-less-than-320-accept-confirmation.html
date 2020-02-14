@@ -1,0 +1,36 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  SMS service confirmation - loan accepted - fewer than 320 characters 
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h1 class="govuk-heading-s">Budgeting Loans - DWP</h1>
+
+      <hr>
+
+      <p>You've accepted a Budgeting Loan of £250, [first name]. You'll get the money within 5 days. You'll pay back £15.20 every 2 weeks from your Jobseeker’s Allowance. We will write to you when your repayments are due to start. Contact us if you need help, Monday to Friday, 8am to 6pm. Telephone: 0800 169 0140. Welsh language: 0800 169 0240. NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140.</li>
+
+    </div>
+  </div>
+
+{% endblock %}

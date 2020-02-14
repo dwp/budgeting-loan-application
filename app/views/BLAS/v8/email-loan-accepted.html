@@ -1,0 +1,64 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  (Email) Budgeting Loan accepted
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+      <div>
+        <h1 class="govuk-heading-s">Budgeting Loans service - loan accepted</h1>
+        <p class="govuk-body-s"><strong>To:</strong> yourname@gmail.com<br>
+        <strong>From:</strong> budgetingloans@dwp.gov.uk</p>
+      </div>
+
+      <hr>
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    containerClasses: "govuk-width-container"
+  }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>Dear [name],</p>
+
+      <p>You’ve accepted a Budgeting Loan of £250. You’ll get the money within 5 days.
+
+      <p>You’ll pay back £15.20 every 2 weeks. We will take this automatically from your Jobseeker’s Allowance.</p>
+
+      <p>We will write to you when your repayments are due to start. Your repayments may not start straight away if you have other debt.</p>
+
+      <p>Regards,</p>
+
+      <p>Budgeting Loans, Department for Work and Pensions</p>
+
+      <hr>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+        <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  Your Budgeting Loan decision – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v8/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">Your Budgeting Loan decision</h1>
+
+          <p>You applied for a Budgeting Loan of £812 on 18 February 2020.</p>
+
+          <p>Based on the information we have, we cannot offer you a Budgeting Loan.</p>
+
+          <p>This is because:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you have already <a href="https://www.gov.uk/budgeting-help-benefits/what-youll-get">borrowed as much as you can</a> in other Budgeting Loans or Crisis Loans</li>
+            <li>you do not receive a <a href="https://www.gov.uk/budgeting-help-benefits/eligibility">benefit that would make you eligible</a></li>
+            <li>you have not received <a href="https://www.gov.uk/budgeting-help-benefits/eligibility">benefits that would make you eligible for 6 months</a></li>
+            <li>you and your partner have savings of £[X] which we have decided are enough to pay for what you need</li>
+{#             <li>we cannot offer you more than the minimum amount of £100</li>
+ #}          </ul>
+
+          <p><a href="/BLAS/v8/review-rights">Contact the Social Fund</a> if you want to ask a question or think the decision is wrong.</p>
+
+          <p>Find out about <a href="https://www.gov.uk/budgeting-help-benefits/other-help-you-can-get">other help you could get</a>.</p> 
+
+        </form>
+
+    </div>
+  </div>
+
+{% endblock %}
