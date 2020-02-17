@@ -26,7 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master/appointee-find-address" method="post">
+      <form class="form" action="/master/appointee-enter-address" method="post">
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -42,14 +42,14 @@
         <label class="govuk-label govuk-label--s" for="appointee-first-name">
           First name
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="appointee-first-name" name="appointee-first-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="appointee-first-name" name="appointee-first-name" type="text" value="{{ data['appointee-first-name'] }}">
       </div>
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="appointee-last-name">
         Last name
         </label>
-        <input class="govuk-input govuk-!-width-one-half" id="appointee-last-name" name="appointee-last-name" type="text">
+        <input class="govuk-input govuk-!-width-one-half" id="appointee-last-name" name="appointee-last-name" type="text" value="{{ data['appointee-last-name'] }}">
       </div>
 
       <div class="govuk-form-group">
@@ -65,7 +65,7 @@
                 <label class="govuk-label govuk-date-input__label" for="appointee-date-of-birth-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointee-date-of-birth-day" name="appointee-date-of-birth-day" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointee-date-of-birth-day" name="appointee-date-of-birth-day" type="number" pattern="[0-9]*" value="{{ data['appointee-date-of-birth-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -73,7 +73,7 @@
                 <label class="govuk-label govuk-date-input__label" for="appointee-date-of-birth-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointee-date-of-birth-month" name="appointee-date-of-birth-month" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="appointee-date-of-birth-month" name="appointee-date-of-birth-month" type="number" pattern="[0-9]*" value="{{ data['appointee-date-of-birth-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
@@ -81,7 +81,7 @@
                 <label class="govuk-label govuk-date-input__label" for="appointee-date-of-birth-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="appointee-date-of-birth-year" name="appointee-date-of-birth-year" type="number" pattern="[0-9]*">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="appointee-date-of-birth-year" name="appointee-date-of-birth-year" type="number" pattern="[0-9]*" value="{{ data['appointee-date-of-birth-year'] }}">
               </div>
             </div>
           </div>
