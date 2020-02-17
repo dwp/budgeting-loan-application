@@ -33,10 +33,10 @@
             Debt of £1,500 or more for Crisis Loans and Budgeting Loans
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['socialfund-debt'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-sf-debt">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans</span>
             </a>
@@ -52,24 +52,24 @@
             Universal Credit received
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['claim-uc'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-uc">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you get Universal Credit</span>
             </a>
           </dd>
-        </div>
+        </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Benefit received
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['benefit-received'] }}
+            Employment and Support Allowance (ESA)
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-benefits">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> benefit you get</span>
             </a>
@@ -80,12 +80,7 @@
             Received for
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if data['benefit-received'] %}
-              {% for feature in data['benefit-duration'] -%}
-                {{ feature }}
-              {%- else %}
-              {% endfor %}
-            {% endif %}
+            Less than 6 months
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
@@ -94,159 +89,57 @@
             </a>
           </dd>
         </div>
-        {% if data['esa-type'] %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Type of {{ data['benefit-received'] }} received
+            Type of ESA received
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['esa-type'] }}
+            Income-related
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="#">
               Change
-              <span class="govuk-visually-hidden"> the type of {{ data['benefit-received'] }} you get</span>
+              <span class="govuk-visually-hidden"> the type of ESA you get</span>
             </a>
           </dd>
         </div>
-        {% endif %}
-        {% if data['esa-partner'] %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Received {{ data['benefit-received'] }} with a previous partner in last 6 months
+            Received ESA with a previous partner in last 6 months
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['esa-partner'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-esa-partner">
+            <a href="#">
               Change
-              <span class="govuk-visually-hidden"> if you got {{ data['benefit-received'] }} with a previous partner in the last 6 months</span>
+              <span class="govuk-visually-hidden"> if you got ESA with a previous partner in the last 6 months</span>
             </a>
           </dd>
         </div>
-        {% endif %}
-        {% if data['jsa-partner'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received {{ data['benefit-received'] }} with a previous partner in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['jsa-partner'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-jsa-partner">
-              Change
-              <span class="govuk-visually-hidden"> if you got {{ data['benefit-received'] }} with a previous partner in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        {% if data['is-partner'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received {{ data['benefit-received'] }} with a previous partner in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['is-partner'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-is-partner">
-              Change
-              <span class="govuk-visually-hidden"> if you got {{ data['benefit-received'] }} with a previous partner in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        {% if data['pc-partner'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received {{ data['benefit-received'] }} with a previous partner in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['pc-partner'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-pc-partner">
-              Change
-              <span class="govuk-visually-hidden"> if you got {{ data['benefit-received'] }} with a previous partner in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        {% if data['esa-previous'] %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Received income-based Jobseeker's Allowance or Income Support in last 6 months
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['esa-previous'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-esa-previous">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you got income-based Jobseeker's Allowance or Income Support in the last 6 months</span>
             </a>
           </dd>
-        </div>
-        {% endif %}
-        {% if data['jsa-previous'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received income-related Employment and Support Allowance or Income Support in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['jsa-previous'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-jsa-previous">
-              Change
-              <span class="govuk-visually-hidden"> if you got income-related Employment and Support Allowance or Income Support in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        {% if data['is-previous'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received income-based Jobseeker's Allowance or income-related Employment and Support Allowance in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['is-previous'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-is-previous">
-              Change
-              <span class="govuk-visually-hidden"> if you got income-based Jobseeker's Allowance or income-related Employment and Support Allowance in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
-        {% if data['pc-previous'] %}
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Received income-related Employment and Support Allowance, income-based Jobseeker's Allowance or Income Support in last 6 months
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['pc-previous'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-pc-previous">
-              Change
-              <span class="govuk-visually-hidden"> if you got income-related Employment and Support Allowance, income-based Jobseeker's Allowance or Income Support in the last 6 months</span>
-            </a>
-          </dd>
-        </div>
-        {% endif %}
+        </div>        
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Loan needed £100 or more
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['100-or-more'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-100">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you need to borrow £100 or more</span>
             </a>
@@ -262,10 +155,10 @@
             Involved in industrial action
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['industrial-action'] }}
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/eligibility-industrial-action">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you're involved in any industrial action</span>
             </a>
@@ -281,48 +174,43 @@
             Has partner
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['partner'] }}
+            Yes
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/partner">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you have a partner</span>
             </a>
           </dd>
         </div>
-
-        {% if data['partner']=="Yes" %}
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Partner full name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['partner-first-name'] }} {{ data['partner-last-name'] }}
+            Philip Mountbatten
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/partner-details">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> partner's full name</span>
             </a>
           </dd>
-        </div>
-
+        </div>     
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Partner date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['partner-date-of-birth-day'] }} {{ data['partner-date-of-birth-month'] }} {{ data['partner-date-of-birth-year'] }}
+            10 June 1921
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/partner-details">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> partner's date of birth</span>
             </a>
           </dd>
         </div>
-        {% endif %}
-
       </dl>
 
       <h2 class="govuk-heading-m">Children</h2>
@@ -333,10 +221,10 @@
             Child Benefit received by you or your partner
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['child-benefit'] }}{% if data['child-benefit']=="Yes" %}, {{ data['child-benefit-input'] }} living with you{% endif %}
+            Yes, 2 children living with you
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/children1">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you or your partner get Child Benefit</span>
             </a>
@@ -351,10 +239,10 @@
             Amount requested
           </dt>
           <dd class="govuk-summary-list__value">
-            &pound;{{ data['loan-amount'] }}
+            £250
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/loan-amount">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> how much Budgeting Loan you need</span>
             </a>
@@ -366,14 +254,13 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Savings of more than £1,000
+            Savings of more than £1,000 (£2,000 if either you or your partner are 63 or over)
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['savings'] }}{% if data['savings']=="Yes" %}, &pound;{{ data['total-savings'] }}{% endif%}</p>
-
+            No
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/savings">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you and your partner have combined savings of more than £1,000 (£2,000 if either of you are 63 or over)</span>
             </a>
@@ -384,16 +271,14 @@
             Credit or store card debt
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['credit-store-cards'] }}</p>
-            {% if data['credit-store-cards']=="Yes" %}
+            <p>Yes:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>&pound;{{ data['credit-pay-back'] }} paid back each month</li>
-              <li>&pound;{{ data['credit-left-to-pay'] }} left to pay</li>
-            </ul>
-            {% endif%}
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/debt-repayments-credit-store-cards">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you owe money on credit or store cards</span>
             </a>
@@ -404,16 +289,14 @@
             Outstanding loan debt
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['loans'] }}</p>
-            {% if data['loans']=="Yes" %}
+            <p>Yes:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>&pound;{{ data['loans-pay-back'] }} paid back each month</li>
-              <li>&pound;{{ data['loans-left-to-pay'] }} left to pay</li>
-            </ul>
-            {% endif%}
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/debt-repayments-loans">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you have any outstanding loans</span>
             </a>
@@ -424,16 +307,14 @@
             Instalments paid on furniture, a car or household goods
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['hire-purchase'] }}</p>
-            {% if data['hire-purchase']=="Yes" %}
+            <p>Yes:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>&pound;{{ data['hire-pay-back'] }} paid back each month</li>
-              <li>&pound;{{ data['hire-left-to-pay'] }} left to pay</li>
-            </ul>
-            {% endif%}
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/debt-repayments-rent-to-own">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you're paying instalments on furniture, a car or household goods</span>
             </a>
@@ -444,16 +325,14 @@
             Money owed to your landlord
           </dt>
           <dd class="govuk-summary-list__value">
-            <p>{{ data['landlord'] }}</p>
-            {% if data['landlord']=="Yes" %}
+            <p>Yes:</p>
             <ul class="govuk-list govuk-list--bullet">
-              <li>&pound;{{ data['landlord-pay-back'] }} paid back each month</li>
-              <li>&pound;{{ data['landlord-left-to-pay'] }} left to pay</li>
-            </ul>
-            {% endif%}
+              <li>£50 paid back each month</li>
+              <li>£120 left to pay</a>
+            </li>
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/debt-repayments-landlord">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> if you owe money to your landlord</span>
             </a>
@@ -469,24 +348,24 @@
             Full name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['first-name'] }} {{ data['last-name'] }}
+            Elizabeth Windsor
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/personal-details">
+            <a href="/v14/contact-details">
               Change
               <span class="govuk-visually-hidden"> full name</span>
             </a>
           </dd>
-        </div>
+        </div>     
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             National Insurance number
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['ni-number'] }}
+            QQ123456C
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/personal-details">
+            <a href="/v14/contact-details">
               Change
               <span class="govuk-visually-hidden"> National Insurance number</span>
             </a>
@@ -497,10 +376,10 @@
             Date of birth
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['date-of-birth-day'] }} {{ data['date-of-birth-month'] }} {{ data['date-of-birth-year'] }}
+            21 April 1926
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/personal-details">
+            <a href="/v14/contact-details">
               Change
               <span class="govuk-visually-hidden"> date of birth</span>
             </a>
@@ -511,83 +390,31 @@
             Address
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['address-line-1'] }}<br>
-            {{ data['address-line-2'] }}<br>
-            {{ data['address-town'] }}<br>
-            {{ data['address-postcode'] }}<br>
+            Buckingham Palace<br>
+            Consitution Hill<br>
+            London<br>
+            SW1A 1AA
           </dd>
           <dd class="govuk-summary-list__actions">
-            <a href="/master/enter-address">
+            <a href="#">
               Change
               <span class="govuk-visually-hidden"> address</span>
             </a>
           </dd>
         </div>
       </dl>
-
-      {% if data['appointee-yes'] %}
-      <h2 class="govuk-heading-m">Appointee details</h2>
-      
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            {{ data['appointee-first-name'] }} {{ data['appointee-last-name'] }}
-          </dt>
-          <dd class="govuk-summary-list__value">
-            Alexandrina Victoria
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/appointee-details">
-              Change
-              <span class="govuk-visually-hidden"> full name</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Date of birth
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['appointee-date-of-birth-day'] }} {{ data['appointee-date-of-birth-month'] }} {{ data['appointee-date-of-birth-year'] }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/appointee-details">
-              Change
-              <span class="govuk-visually-hidden"> date of birth</span>
-            </a>
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Address
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['appointee-address-line-1'] }}<br>
-            {{ data['appointee-address-line-2'] }}<br>
-            {{ data['appointee-address-town'] }}<br>
-            {{ data['appointee-address-postcode'] }}<br>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a href="/master/appointee-enter-address">
-              Change
-              <span class="govuk-visually-hidden"> address</span>
-            </a>
-          </dd>
-        </div>
-      </dl>
-      {% endif%}
 
       <h2 class="govuk-heading-m">Contact preferences</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              How you want to be contacted about your application
+              How you can be contacted about your application
             </dt>
             <dd class="govuk-summary-list__value">
               <p>{{ data['mobilenumberinput'] }}<br> {{ data['email-input'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a href="/master/contact-details">
+              <a href="/v14/contact-details">
                 Change
                 <span class="govuk-visually-hidden"> your contact preference</span>
               </a>
@@ -601,7 +428,7 @@
               <p>{{ data['phone'] }} {{ data['phone-input'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              <a href="/master/call-option">
+              <a href="/v14/call-option">
                 Change
                 <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
@@ -609,7 +436,7 @@
           </div>
         </dl>
 
-      <form action="/master/declaration" method="post" novalidate>
+      <form action="/v14a/declaration" method="post" novalidate>
 
         <input type="hidden" name="answers-checked" value="true">
 

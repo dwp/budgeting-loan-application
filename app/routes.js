@@ -242,6 +242,18 @@ router.post('/v14/call-option', function (req, res) {
   }
 })
 
+// Branching v14.1 - gather phone number for questions based on if they've already entered a mobile number
+
+router.post('/v14a/call-option', function (req, res) {
+
+  let contactPreference = req.session.data['contactpreference']
+  if (contactPreference.includes('text message')) {
+    res.redirect('/v14a/call-option-with-mobile')
+  } else {
+    res.redirect('/v14a/call-option')
+  }
+})
+
 // Branching v18a - gather phone number for questions based on if they've already entered a mobile number
 
 router.post('/v18a/mobile-contact-method', function (req, res) {
@@ -471,7 +483,8 @@ router.post('/as-is/children', function (req, res) {
   }
 })
 
-// Branching new master application journey
+
+// Branching appointees and those helping others to apply
 
 router.post('/master/if-appointee', function (req, res) {
 
@@ -494,6 +507,21 @@ router.post('/master/interruption-card', function (req, res) {
     res.redirect('/master/interruption-card')
   }
 })
+
+//Send appointees to the appointee details and appointee address pages before they select contact preference
+
+router.post('/master/contact-details', function (req, res) {
+
+  let appointeeDetails = req.session.data['appointee']
+
+  if (appointeeDetails === 'yes') {
+    res.redirect('/master/appointee-details')
+  } else {
+    res.redirect('/master/contact-details')
+  }
+})
+
+//Other master branching
 
 router.post('/master/eligibility-uc', function (req, res) {
 
@@ -697,43 +725,46 @@ router.post('/master/children', function (req, res) {
   }
 })
 
-router.post('/master/address-notfound', function (req, res) {
+//Hide logic as address lookup function has been removed from master
 
-  let letterAddress = req.session.data['letter-address']
+// router.post('/master/address-notfound', function (req, res) {
 
-  if (letterAddress === 'yes-extra-address') {
-    res.redirect('/master/address-notfound')
-  } else {
-    res.redirect('/master/contact-details')
-  }
-})
+//   let letterAddress = req.session.data['letter-address']
 
-router.post('/master/contact-details', function (req, res) {
+//   if (letterAddress === 'yes-extra-address') {
+//     res.redirect('/master/address-notfound')
+//   } else {
+//     res.redirect('/master/contact-details')
+//   }
+// })
 
-  let addressConfirmation = req.session.data['address-confirmation']
-  let appointeeDetails = req.session.data['appointee']
+//Hide logic as address lookup function has been removed
 
-  if (appointeeDetails === 'appointee-yes') {
-    res.redirect('/master/appointee-details')
-  }
-  if (addressConfirmation === 'address-not-listed') {
-    res.redirect('/master/enter-address')
-  }
-  res.redirect('/master/contact-details')
+// router.post('/master/contact-details', function (req, res) {
 
-})
+//   let addressConfirmation = req.session.data['address-confirmation']
+//   let appointeeDetails = req.session.data['appointee']
 
-router.post('/master/contact-details-appointee', function (req, res) {
+//   if (appointeeDetails === 'appointee-yes') {
+//     res.redirect('/master/appointee-details')
+//   }
+//   if (addressConfirmation === 'address-not-listed') {
+//     res.redirect('/master/enter-address')
+//   }
+//   res.redirect('/master/contact-details')
 
-  let addressConfirmation = req.session.data['appointee-address-confirmation']
+// })
 
-  if (addressConfirmation === 'appointee-address-not-listed') {
-    res.redirect('/master/appointee-enter-address')
-  }
-  res.redirect('/master/contact-details-appointee')
+// router.post('/master/contact-details-appointee', function (req, res) {
 
-})
+//   let addressConfirmation = req.session.data['appointee-address-confirmation']
 
+//   if (addressConfirmation === 'appointee-address-not-listed') {
+//     res.redirect('/master/appointee-enter-address')
+//   }
+//   res.redirect('/master/contact-details-appointee')
+
+// })
 
 router.post('/master/call-option', function (req, res) {
 
@@ -744,43 +775,6 @@ router.post('/master/call-option', function (req, res) {
     res.redirect('/master/call-option')
   }
 })
-
-
-// version routes
-
-router.post('/v7/declaration', function (req, res) {
-
-  let addressConfirmation = req.session.data['address-confirmation']
-
-  if (addressConfirmation === 'address-not-listed') {
-    res.redirect('/v7/enter-address')
-  } else {
-    res.redirect('/v7/declaration')
-  }
-})
-
-router.post('/master-v2/address-notfound', function (req, res) {
-
-  let letterAddress = req.session.data['letter-address']
-
-  if (letterAddress === 'yes-extra-address') {
-    res.redirect('/master-v2/address-notfound')
-  } else {
-    res.redirect('/master-v2/contact-details')
-  }
-})
-
-router.post('/master-v2/contact-details', function (req, res) {
-
-  let addressConfirmation = req.session.data['address-confirmation']
-
-  if (addressConfirmation === 'address-not-listed') {
-    res.redirect('/master-v2/enter-address')
-  } else {
-    res.redirect('/master-v2/contact-details')
-  }
-})
-
 
 // Branching master - gather phone number for questions based on if they've already entered a mobile number
 
@@ -807,8 +801,32 @@ router.post('/master/call-option-with-mobile', function (req, res) {
 })
 
 
+//Hidden as master v2 is not being used
 
-//BLAS ROUTING
+// router.post('/master-v2/address-notfound', function (req, res) {
+
+//   let letterAddress = req.session.data['letter-address']
+
+//   if (letterAddress === 'yes-extra-address') {
+//     res.redirect('/master-v2/address-notfound')
+//   } else {
+//     res.redirect('/master-v2/contact-details')
+//   }
+// })
+
+// router.post('/master-v2/contact-details', function (req, res) {
+
+//   let addressConfirmation = req.session.data['address-confirmation']
+
+//   if (addressConfirmation === 'address-not-listed') {
+//     res.redirect('/master-v2/enter-address')
+//   } else {
+//     res.redirect('/master-v2/contact-details')
+//   }
+// })
+
+
+//BLAS - decision service routing
 
 router.post('/BLAS/v3/declaration-success', function (req, res) {
 
@@ -865,6 +883,16 @@ router.post('/BLAS/v7/loan-accepted', function (req, res) {
   }
 })
 
+router.post('/BLAS/v8/loan-accepted', function (req, res) {
+
+  let offerAcceptance = req.session.data['loan-decision']
+
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/v8/loan-accepted')
+  } else {
+    res.redirect('/BLAS/v8/loan-declined')
+  }
+})
 
 // Notify routing
 
@@ -878,8 +906,6 @@ router.post('/BLAS/v7/loan-accepted', function (req, res) {
 //   res.redirect('/master/confirmation');
 //
 // });
-
-
 
 
 module.exports = router
