@@ -17,17 +17,17 @@
 
           <h1 class="govuk-heading-l">Your Budgeting Loan decision</h1>
 
-          <p>You applied for a Budgeting Loan of £250 on 18 February 2020.</p>
+          <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <strong><span class="date"></span></strong></p>
 
-          <p>We can offer you a loan of £250.</p>
+          <p>We can offer you a loan of <strong>&pound;{{ data['loan-amount'] }}</strong>.</p>
 
-          <p>You have until 3 March 2020 to decide whether to accept the loan.</p>
+          <p>You have until <strong><span class="new-date"></span></strong> to decide whether to accept the loan.</p>
 
           <h2 class="govuk-heading-m">If you accept the loan</h2>
 
           <p>You’ll get the money within 5 days. We will pay it into the same account as your benefit.</p>
 
-          <p>You’ll pay back £15.20 every 2 weeks. We will take this automatically from your Jobseeker’s Allowance.</p>
+          <p>You’ll pay back <strong>&pound;<span class="repayment-amount"></span></strong> every 2 weeks. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong></p>
 
           <details class="govuk-details" data-module="govuk-details">
             <summary class="govuk-details__summary">
@@ -54,7 +54,7 @@
 
           <h2 class="govuk-heading-m">If you need help</h2>
 
-          <p><a href="/BLAS/v8/review-rights">Contact the Social Fund</a> if you want to ask a question or think the decision is wrong. We cannot change the amount you’ve been asked to pay back.</p>
+          <p><a href="/BLAS/v7/review-rights">Contact the Social Fund</a> if you want to ask a question or think the decision is wrong. We cannot change the amount you’ve been asked to pay back.</p>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
@@ -90,8 +90,7 @@
 
           <button class="govuk-button" data-module="govuk-button">Send your decision</button>
 
-        </div>
-      </form>
+        </form>
 
     </div>
   </div>
