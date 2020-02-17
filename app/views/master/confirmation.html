@@ -20,9 +20,9 @@
 
       <h2 class="govuk-heading-m">What happens next</h2>
 
-      <p>We will send you a decision message in the next 5 days. This will tell you if we can offer you a loan and what to do next.</p>
+      <p>We will send a decision message {% if data['contactpreference']=="text message" %}to you at <strong>{{ data['mobilenumberinput'] }}</strong>{% endif %} {% if data['contactpreference']=="email" %}to you at <strong>{{ data['email-input'] }}</strong>{% endif %} in the next 5 days. This will tell you if we can offer you a loan and what to do next.</p>
 
-      <h3 class="govuk-heading-s">If you're offered a loan</h2>
+      <h3 class="govuk-heading-s">If you're offered a loan</h3>
 
       <p>You'll be told:</p>
 
@@ -33,7 +33,7 @@
 
       <p>You do not have to accept the loan offer if you do not want to.</p>
 
-      <h3 class="govuk-heading-s">If you're not offered a loan</h2>
+      <h3 class="govuk-heading-s">If you're not offered a loan</h3>
 
       <p>You'll be told why and how to get help if you need it.</p>
 

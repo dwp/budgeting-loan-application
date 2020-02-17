@@ -1,3 +1,6 @@
+// var NotifyClient = require('notifications-node-client').NotifyClient,
+//     notify = new NotifyClient(process.env.NOTIFYAPIKEY);
+
 const express = require('express')
 const router = express.Router()
 
@@ -861,6 +864,20 @@ router.post('/BLAS/v7/loan-accepted', function (req, res) {
     res.redirect('/BLAS/v7/loan-declined')
   }
 })
+
+
+// Notify routing
+
+// router.post('/master/declaration', function (req, res) {
+//
+//   notify.sendEmail(
+//     '83a8dd79-8e78-441a-b443-d10fb74f8e27',
+//     req.session.data['email']
+//   );
+//
+//   res.redirect('/master/confirmation');
+//
+// });
 
 
 
