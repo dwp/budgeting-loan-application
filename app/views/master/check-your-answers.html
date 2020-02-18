@@ -598,13 +598,22 @@
               If you can be called
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>{{ data['phone'] }} {{ data['phone-input'] }}</p>
+              <p>{{ data['phone'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
+              {% if data['mobilenumberinput'] %}
+              <a href="/master/call-option-with-mobile">
+                Change
+                <span class="govuk-visually-hidden"> if you can be called</span>
+              </a>
+              {% endif %}
+
+              {% if data['email-input'] %}
               <a href="/master/call-option">
                 Change
                 <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
+              {% endif %}
             </dd>
           </div>
         </dl>

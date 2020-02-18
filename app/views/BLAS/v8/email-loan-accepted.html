@@ -39,9 +39,9 @@
 
       <p>Dear [name],</p>
 
-      <p>You’ve accepted a Budgeting Loan of £250. You’ll get the money within 5 days.
+      <p>You’ve accepted a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong>. You’ll get the money within 5 days.
 
-      <p>You’ll pay back £15.20 every 2 weeks. We will take this automatically from your Jobseeker’s Allowance.</p>
+      <p>You’ll pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
 
       <p>We will write to you when your repayments are due to start. Your repayments may not start straight away if you have other debt.</p>
 
