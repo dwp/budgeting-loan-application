@@ -514,7 +514,7 @@ router.post('/master/contact-details', function (req, res) {
 
   let appointeeDetails = req.session.data['appointee']
 
-  if (appointeeDetails === 'yes') {
+  if (appointeeDetails === 'Yes') {
     res.redirect('/master/appointee-details')
   } else {
     res.redirect('/master/contact-details')
@@ -724,47 +724,6 @@ router.post('/master/children', function (req, res) {
     res.redirect('/master/children')
   }
 })
-
-//Hide logic as address lookup function has been removed from master
-
-// router.post('/master/address-notfound', function (req, res) {
-
-//   let letterAddress = req.session.data['letter-address']
-
-//   if (letterAddress === 'yes-extra-address') {
-//     res.redirect('/master/address-notfound')
-//   } else {
-//     res.redirect('/master/contact-details')
-//   }
-// })
-
-//Hide logic as address lookup function has been removed
-
-// router.post('/master/contact-details', function (req, res) {
-
-//   let addressConfirmation = req.session.data['address-confirmation']
-//   let appointeeDetails = req.session.data['appointee']
-
-//   if (appointeeDetails === 'appointee-yes') {
-//     res.redirect('/master/appointee-details')
-//   }
-//   if (addressConfirmation === 'address-not-listed') {
-//     res.redirect('/master/enter-address')
-//   }
-//   res.redirect('/master/contact-details')
-
-// })
-
-// router.post('/master/contact-details-appointee', function (req, res) {
-
-//   let addressConfirmation = req.session.data['appointee-address-confirmation']
-
-//   if (addressConfirmation === 'appointee-address-not-listed') {
-//     res.redirect('/master/appointee-enter-address')
-//   }
-//   res.redirect('/master/contact-details-appointee')
-
-// })
 
 router.post('/master/call-option', function (req, res) {
 
