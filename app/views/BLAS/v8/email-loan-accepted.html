@@ -37,7 +37,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <p>Dear [name],</p>
+      <p>Dear {{ data['first-name'] }} {{ data['last-name'] }},</p>
 
       <p>You’ve accepted a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong>. You’ll get the money within 5 days.
 
