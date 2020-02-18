@@ -3,7 +3,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  SMS service confirmation - loan accepted - fewer than 320 characters 
+  SMS service confirmation - loan accepted - fewer than 320 characters
 {% endblock %}
 
 {% block beforeContent %}
@@ -28,7 +28,7 @@
 
       <hr>
 
-      <p>You've accepted a Budgeting Loan of £250, [first name]. You'll get the money within 5 days. You'll pay back £15.20 every 2 weeks from your Jobseeker’s Allowance. We will write to you when your repayments are due to start. Contact us if you need help, Monday to Friday, 8am to 6pm. Telephone: 0800 169 0140. Welsh language: 0800 169 0240. NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140.</li>
+      <p>You've accepted a Budgeting Loan of &pound;<span class="loan-amount">{{ data['loan-amount'] }}</span>, {{ data['first-name'] }} {{ data['last-name'] }}. You'll get the money within 5 days. You'll pay back &pound;<span class="repayment-amount"></span> every week from your {{ data['benefit-received'] }}. We will write to you when your repayments are due to start. Contact us if you need help, Monday to Friday, 8am to 6pm. Telephone: 0800 169 0140. Welsh language: 0800 169 0240. NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140.</p>
 
     </div>
   </div>

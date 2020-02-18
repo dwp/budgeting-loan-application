@@ -525,16 +525,16 @@
         </div>
       </dl>
 
-      {% if data['appointee-yes'] %}
+      {% if data['appointee']=="Yes" %}
       <h2 class="govuk-heading-m">Appointee details</h2>
-      
+
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            {{ data['appointee-first-name'] }} {{ data['appointee-last-name'] }}
+            Full name
           </dt>
           <dd class="govuk-summary-list__value">
-            Alexandrina Victoria
+            {{ data['appointee-first-name'] }} {{ data['appointee-last-name'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/master/appointee-details">
@@ -570,12 +570,12 @@
           <dd class="govuk-summary-list__actions">
             <a href="/master/appointee-enter-address">
               Change
-              <span class="govuk-visually-hidden"> address</span>
+              <span class="govuk-visually-hidden"> date of birth</span>
             </a>
           </dd>
         </div>
       </dl>
-      {% endif%}
+      {% endif %}
 
       <h2 class="govuk-heading-m">Contact preferences</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -598,13 +598,22 @@
               If you can be called
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>{{ data['phone'] }} {{ data['phone-input'] }}</p>
+              <p>{{ data['phone'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
+              {% if data['mobilenumberinput'] %}
+              <a href="/master/call-option-with-mobile">
+                Change
+                <span class="govuk-visually-hidden"> if you can be called</span>
+              </a>
+              {% endif %}
+
+              {% if data['email-input'] %}
               <a href="/master/call-option">
                 Change
                 <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
+              {% endif %}
             </dd>
           </div>
         </dl>

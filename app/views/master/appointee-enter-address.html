@@ -24,7 +24,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master/contact-details" method="post">
+      <form class="form" action="/master/contact-details-appointee" method="post">
 
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -41,28 +41,28 @@
           </label>
           <input class="govuk-input" id="appointee-address-line-1" name="appointee-address-line-1" type="text" value="{{ data['appointee-address-line-1'] }}">
         </div>
-      
+
         <div class="govuk-form-group">
           <label class="govuk-label" for="appointee-address-line-2">
             <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
           </label>
           <input class="govuk-input" id="appointee-address-line-2" name="appointee-address-line-2" type="text" value="{{ data['appointee-address-line-2'] }}">
         </div>
-      
+
         <div class="govuk-form-group">
           <label class="govuk-label" for="appointee-address-town">
             Town or city
           </label>
           <input class="govuk-input govuk-!-width-two-thirds" id="appointee-address-town" name="appointee-address-town" type="text" value="{{ data['appointee-address-town'] }}">
         </div>
-      
+
         <div class="govuk-form-group">
           <label class="govuk-label" for="appointee-address-postcode">
             Postcode
           </label>
           <input class="govuk-input govuk-input--width-10" id="appointee-address-postcode" name="appointee-address-postcode" type="text" value="{{ data['appointee-address-postcode'] }}">
         </div>
-      
+
       </fieldset>
 
         <button class="govuk-button">Continue</button>
