@@ -45,7 +45,7 @@ if(document.querySelector(".new-date")) {
 // Show repayment amount
 if(document.querySelector(".repayment-amount")) {
   var loan = document.querySelector(".loan-amount").innerHTML;
-  var discount = (12 / 100 * loan).toFixed(2);
+  var discount = (3 / 100 * loan).toFixed(2);
 
   document.querySelector(".repayment-amount").innerHTML=discount;
 }
