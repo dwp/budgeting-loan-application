@@ -28,29 +28,31 @@
 
       <form class="form" action="/master/children" method="post">
 
-      <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Do you have a partner?
-            </h1>
-          </legend>
-          <p>A partner is someone over the age of 16 who you’re married to or live with as if you’re married to them.</p>
-          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="partner-yes" name="partner" type="radio" value="Yes" {{ checked("partner", "Yes") }}>
-              <label class="govuk-label govuk-radios__label" for="partner-yes">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="partner-no" name="partner" type="radio" value="No" {{ checked("partner", "No") }}>
-              <label class="govuk-label govuk-radios__label" for="partner-no">
-                No
-              </label>
-            </div>
-        </fieldset>
-      </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Do you have a partner?
+              </h1>
+            </legend>
+
+            <p>A partner is someone over the age of 16 who you’re married to or live with as if you’re married to them.</p>
+            
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="partner-yes" name="partner" type="radio" value="Yes" {{ checked("partner", "Yes") }}>
+                <label class="govuk-label govuk-radios__label" for="partner-yes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="partner-no" name="partner" type="radio" value="No" {{ checked("partner", "No") }}>
+                <label class="govuk-label govuk-radios__label" for="partner-no">
+                  No
+                </label>
+              </div>
+          </fieldset>
+        </div>
 
         <button class="govuk-button">Continue</button>
 

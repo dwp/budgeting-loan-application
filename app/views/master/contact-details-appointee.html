@@ -53,11 +53,10 @@
                       <label class="govuk-label" for="mobile-number-info">
                           Mobile number
                       </label>
-                      <input class="govuk-input govuk-input--width-10" id="mobile-number-input" name="mobilenumberinput" value="{{ data['mobilenumberinput'] }}"type="text">
+                      <input class="govuk-input govuk-input--width-20" id="mobile-number-input" name="mobilenumberinput" value="{{ data['mobilenumberinput'] }}" type="tel">
                     </div>
                   </div>
                 </div>
-
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="email" name="contactpreference" type="radio" value="email" {{ checked("contactpreference", "email") }} data-aria-controls="conditional-email">
                   <label class="govuk-label govuk-radios__label" for="email">
@@ -81,7 +80,7 @@
                   </label>
                 </div>
               </div>
-
+              
             </fieldset>                      
  
           </div>

@@ -61,14 +61,14 @@
                           </label>
                           <div class="input-wrapper">
                             <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-pay-back" type="text" value="{{ data['loans-pay-back'] }}">
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-pay-back" type="text" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['loans-pay-back'] }}">
                           </div>
                           <label class="govuk-label" for="loans-info">
                               How much is left to pay?
                           </label>
                           <div class="input-wrapper">
                             <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-left-to-pay" type="text" value="{{ data['loans-left-to-pay'] }}">
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-left-to-pay" type="text" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['loans-left-to-pay'] }}">
                           </div>
                         </div>
                       </div>
