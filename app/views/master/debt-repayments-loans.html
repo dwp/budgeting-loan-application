@@ -26,7 +26,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <form class="form" action="/master/debt-repayments-rent-to-own" method="post">
+      <form class="form" action="/master/debt-repayments-rent-to-own" method="post" novalidate="novalidate">
 
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
@@ -36,8 +36,7 @@
               </h1>
             </legend>
             <p>
-              Include any loans you have from a bank or financial institution.<br>
-              Don’t include your mortgage or money you owe to the government.
+              Include any loans you have from a bank or financial institution. Don’t include your mortgage or money you owe to the government.
             </p>
             <div class="govuk-radios--inline">
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
@@ -61,14 +60,14 @@
                           </label>
                           <div class="input-wrapper">
                             <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-pay-back" type="text" inputmode="numeric" spellcheck="false" value="{{ data['loans-pay-back'] }}">
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-pay-back" type="text" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['loans-pay-back'] }}">
                           </div>
                           <label class="govuk-label" for="loans-info">
                               How much is left to pay?
                           </label>
                           <div class="input-wrapper">
                             <span class="govuk-c-input govuk-c-input__prefix" aria-hidden="true">£</span>
-                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-left-to-pay" type="text" inputmode="numeric" spellcheck="false" value="{{ data['loans-left-to-pay'] }}">
+                            <input class="govuk-c-input govuk-!-width-one-quarter" id="ticket-price" name="loans-left-to-pay" type="text" pattern="[0-9]*" inputmode="numeric" spellcheck="false" value="{{ data['loans-left-to-pay'] }}">
                           </div>
                         </div>
                       </div>
