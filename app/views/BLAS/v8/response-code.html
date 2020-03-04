@@ -1,7 +1,7 @@
 {% extends "layout-response.html" %}
 
 {% block pageTitle %}
-  What is your response code? – Budgeting Loans – GOV.UK
+  What’s your response code? – Budgeting Loans – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -12,11 +12,11 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/BLAS/v8/full-loan-offer-radio-choice" method="post" novalidate="">
+      <form action="/BLAS/v8/full-loan-offer-radio-choice" method="post" novalidate="novalidate">
         <div class="govuk-form-group">
 
           <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--l" for="response-code">What is your response code?</label>
+            <label class="govuk-label govuk-label--l" for="response-code">What’s your response code?</label>
           </h1>
           <span id="response-code-hint" class="govuk-hint">
             It’s in the message you were sent.
