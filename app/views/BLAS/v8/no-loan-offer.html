@@ -1,7 +1,7 @@
 {% extends "layout-response.html" %}
 
 {% block pageTitle %}
-  Your Budgeting Loan decision – Budgeting Loans – GOV.UK
+  We cannot offer you a Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,11 +15,11 @@
       <form action="/BLAS/v8/loan-accepted" method="post" novalidate="">
         <div class="govuk-form-group">
 
-          <h1 class="govuk-heading-l">Your Budgeting Loan decision</h1>
+          <h1 class="govuk-heading-l">We cannot offer you a Budgeting Loan</h1>
 
           <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
 
-          <p>Based on the information we have, we cannot offer you a Budgeting Loan.</p>
+          <p>Based on the information we have, we cannot offer you a Budgeting Loan at this time.</p>
 
           <p>This is because:
           <ul class="govuk-list govuk-list--bullet">

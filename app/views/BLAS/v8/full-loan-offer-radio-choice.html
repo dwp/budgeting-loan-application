@@ -1,7 +1,7 @@
 {% extends "layout-response.html" %}
 
 {% block pageTitle %}
-  Your Budgeting Loan decision – Budgeting Loans – GOV.UK
+  You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,7 +15,7 @@
       <form action="/BLAS/v8/loan-accepted" method="post" novalidate="novalidate">
         <div class="govuk-form-group">
 
-          <h1 class="govuk-heading-l">Your Budgeting Loan decision</h1>
+          <h1 class="govuk-heading-l">You have been offered a Budgeting Loan</h1>
 
           <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
 
