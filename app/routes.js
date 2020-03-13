@@ -853,6 +853,30 @@ router.post('/BLAS/v8/loan-accepted', function (req, res) {
   }
 })
 
+router.post('/BLAS/master/loan-accepted', function (req, res) {
+
+  let offerAcceptance = req.session.data['loan-decision']
+
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/master/loan-accepted')
+  } else {
+    res.redirect('/BLAS/master/loan-declined')
+  }
+})
+
+router.post('/BLAS/master/full-loan-offer-radio-choice', function (req, res) {
+
+  let offerAcceptance = req.session.data['response-code']
+
+  if (offerAcceptance === '877582362') {
+    res.redirect('/BLAS/master/full-loan-offer-radio-choice')
+  } else if (offerAcceptance === '211345443') {
+    res.redirect('/BLAS/master/partial-loan-offer')
+  } else {
+    res.redirect('/BLAS/master/no-loan-offer')
+  }
+})
+
 // Notify routing
 
 // router.post('/master/declaration', function (req, res) {

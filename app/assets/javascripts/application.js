@@ -39,12 +39,44 @@ if(document.querySelector(".new-date")) {
   document.querySelector(".new-date").innerHTML = nd + " " + monthNames[nm] + " " + ny;
 }
 
-
-
-
 // Show repayment amount
 if(document.querySelector(".repayment-amount")) {
   var loan = document.querySelector(".loan-amount").innerHTML;
+  var discount = (3 / 100 * loan).toFixed(2);
+
+  document.querySelector(".repayment-amount").innerHTML=discount;
+}
+
+// Partial loan amount - single
+if(document.querySelector(".loan-amount-partial-single")) {
+
+  var loan = document.querySelector(".loan-amount").innerHTML;
+  var discount = (348 - 100).toFixed(2);
+
+  document.querySelector(".loan-amount-partial-single").innerHTML=discount;
+}
+
+// Partial loan amount - partner
+// if(document.querySelector(".loan-amount-partial-partner")) {
+//
+//   var loan = document.querySelector(".loan-amount").innerHTML;
+//   var discount = (464 - 100).toFixed(2);
+//
+//   document.querySelector(".loan-amount-partial-partner").innerHTML=discount;
+// }
+
+// Partial loan amount - child
+if(document.querySelector(".loan-amount-partial-child")) {
+
+  var loan = document.querySelector(".loan-amount").innerHTML;
+  var discount = (812 - 528).toFixed(2);
+
+  document.querySelector(".loan-amount-partial-child").innerHTML=discount;
+}
+
+// Partial loan repayment amount
+if(document.querySelector(".loan-amount-partial")) {
+  var loan = document.querySelector(".loan-amount-partial").innerHTML;
   var discount = (3 / 100 * loan).toFixed(2);
 
   document.querySelector(".repayment-amount").innerHTML=discount;
