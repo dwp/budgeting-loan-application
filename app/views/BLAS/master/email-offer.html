@@ -1,0 +1,74 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  (Email) Your Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+      <div>
+        <h1 class="govuk-heading-s">Budgeting Loans service - your loan application</h1>
+        <p class="govuk-body-s"><strong>To:</strong> yourname@gmail.com<br>
+        <strong>From:</strong> budgetingloans@dwp.gov.uk</p>
+      </div>
+
+      <hr>
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    containerClasses: "govuk-width-container"
+  }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>Dear {{ data['first-name'] }} {{ data['last-name'] }},</p>
+
+{#       <p>You applied for a Budgeting Loan on [date].</p>
+ #}
+      <p>We can offer you a Budgeting Loan.</p>
+
+      <p>You need to check the details of the loan and decide whether to accept it by <span class="new-date"></span>.</p>
+
+      <p>To do this online, you’ll need to fill in your:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>application reference, which is 7R XP 43 ZF</li>
+        <li>security code, which is 87 75 82 362</li>
+      </ul>
+
+      <p>Make a note of these codes and go to <a href="/BLAS/master/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a>
+      </p>
+
+      <p>Regards,</p>
+
+      <p>Budgeting Loans, Department for Work and Pensions</p>
+
+      <hr>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+        <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
