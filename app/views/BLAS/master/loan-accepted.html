@@ -1,0 +1,46 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  You’ve accepted this Budgeting Loan – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">You’ve accepted this Budgeting Loan</h1>
+      </div>
+
+      <p>We’ve sent you a confirmation message.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>You’ll get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> within 5 days.</p>
+
+      <p>You’ll pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+
+      <p>We will write to you when your repayments are due to start. Your repayments may not start straight away if you have other debt.</p>
+
+      <p>You must <a href="https://www.gov.uk/report-benefits-change-circumstances" target="_blank" rel="noopener noreferrer">report changes in your circumstances (opens in a new window)</a>. This can include changes to your income and people moving into or out of the place you live.</p>
+
+      <h2 class="govuk-heading-m">If you need to contact us about your loan</h2>
+
+      <ul class="govuk-list">
+        <li><strong>Social Fund</strong></li>
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+        <li><a href="https://www.gov.uk/call-charges" target="_blank" rel="noopener noreferrer">Find out about call charges (opens in a new window)</a></li>
+      </ul>
+
+{#       <p><a href="javascript:window.print()">Print this page</a></p> #}
+
+{#       <p><a href="#">What did you think of this service?</a> (takes 30 seconds)</p> #}
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  We cannot offer you a Budgeting Loan – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v8/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">We cannot offer you a Budgeting Loan</h1>
+
+          <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
+
+          <p>Based on the information we have, we cannot offer you a Budgeting Loan at this time.</p>
+
+          <p>This is because:
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you’ve already borrowed as much as you can in other Budgeting Loans or Crisis Loans</li>
+            <!-- <li>you do not receive a benefit that would make you eligible</li>
+            <li>you have not received benefits that would make you eligible for 6 months</li>
+            <li>you and your partner have savings of £[X] which we’ve decided are enough to pay for what you need</li>
+            <li>we cannot offer you more than the minimum amount of £100</li> -->
+          </ul>
+
+          <p>You can apply again in future if you become <a href="https://www.gov.uk/budgeting-help-benefits/eligibility" target="_blank" rel="noopener noreferrer"> eligible (opens in a new window)</a>.</p>
+
+          <p><a href="/BLAS/master/review-rights">Contact the Social Fund</a> if you want to ask a question or think the decision is wrong.</p>
+
+          <p>Find out about <a href="https://www.gov.uk/budgeting-help-benefits/other-help-you-can-get" target="_blank" rel="noopener noreferrer">other help you could get (opens in a new window)</a>.</p>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

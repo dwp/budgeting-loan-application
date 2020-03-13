@@ -1,0 +1,36 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  SMS decision notification - declined - less than 320 characters
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h1 class="govuk-heading-s">Budgeting Loans - DWP</h1>
+
+      <hr>
+
+      <p>You cannot get a Budgeting Loan at this time, {{ data['first-name'] }} {{ data['last-name'] }}. You can read an explanation of the decision online until <span class="new-date"></span>. Your application reference is 7RXP43ZF. Your security code is 877582362. Make a note of these codes and go to <a href="/BLAS/master/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
