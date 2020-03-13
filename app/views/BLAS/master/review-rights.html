@@ -1,0 +1,56 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  Contact the Social Fund – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/master/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">Contact the Social Fund</h1>
+
+          <p>You can talk to an adviser about the decision you’ve been given.</p>
+           <!-- <div class="govuk-inset-text"> -->
+            <ul class="govuk-list">
+              <li><strong>Social Fund</strong></li>
+              <li>Telephone: 0800 169 0140</li>
+              <li>Welsh language: 0800 169 0240</li>
+              <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+              <li>Monday to Friday, 8am to 6pm</li>
+              <li><a class="govuk-link" href="https://www.gov.uk/call-charges" target="_blank" rel="noopener noreferrer">Find out about call charges (opens in a new window)</a></li>
+            </ul>
+          <!-- </div> -->
+
+          <h2 class="govuk-heading-m">If you think the decision you’ve been given is wrong</h2>
+
+          <p>Write to the Social Fund by 2 April 2020 explaining why you think the decision is wrong. If you send your letter after this date, you’ll need to tell us why it’s late.</p>
+
+          <p>You or your appointee, if you have one, must sign the letter. Include your National Insurance number.</p>
+
+          <p>You should get a reply within 14 days.</p>
+
+           <!-- <div class="govuk-inset-text"> -->
+            <ul class="govuk-list">
+              <li><strong>Five Ways House Social Fund</strong></li>
+              <li>Islington Row Middleway</li>
+              <li>Birmingham</li>
+              <li>B15 1SL</li>
+            </ul>
+          <!-- </div> -->
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
