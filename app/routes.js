@@ -859,6 +859,8 @@ router.post('/BLAS/master/loan-accepted', function (req, res) {
 
   if (offerAcceptance === 'yes') {
     res.redirect('/BLAS/master/loan-accepted')
+  } else if (offerAcceptance === 'yes-b') {
+    res.redirect('/BLAS/master/loan-accepted')
   } else {
     res.redirect('/BLAS/master/loan-declined')
   }
