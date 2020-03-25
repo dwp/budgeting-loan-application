@@ -12,7 +12,7 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <form action="/BLAS/master/loan-accepted" method="post" novalidate="novalidate">
+      <form action="/BLAS/master/loan-accepted-multiple" method="post" novalidate="novalidate">
         <div class="govuk-form-group">
 
           <h1 class="govuk-heading-l">You&#146;ve been offered a Budgeting Loan</h1>
@@ -32,13 +32,13 @@
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="loan-decision-1" name="loan-decision" type="radio" value="yes" aria-describedby="loan-decision-1-item-hint">
               <label class="govuk-label govuk-radios__label" for="loan-decision-1">
-                A <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> loan, paying back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.
+                A <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> loan, paying back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong> from your {{ data['benefit-received'] }}.
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="loan-decision-1b" name="loan-decision" type="radio" value="yes-b" aria-describedby="loan-decision-1b-item-hint">
               <label class="govuk-label govuk-radios__label" for="loan-decision-1b">
-                A <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> loan, paying back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.
+                A <strong>&pound;<span class="loan-amount-lower"></span></strong> loan, paying back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.
               </label>
             </div>
             <div class="govuk-radios__item">

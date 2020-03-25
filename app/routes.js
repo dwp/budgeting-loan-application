@@ -866,6 +866,19 @@ router.post('/BLAS/master/loan-accepted', function (req, res) {
   }
 })
 
+router.post('/BLAS/master/loan-accepted-multiple', function (req, res) {
+
+  let offerAcceptance = req.session.data['loan-decision']
+
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/master/loan-accepted-multiple')
+  } else if (offerAcceptance === 'yes-b') {
+    res.redirect('/BLAS/master/loan-accepted-multiple')
+  } else {
+    res.redirect('/BLAS/master/loan-declined')
+  }
+})
+
 router.post('/BLAS/master/full-loan-offer-radio-choice', function (req, res) {
 
   let offerAcceptance = req.session.data['response-code']
@@ -874,6 +887,8 @@ router.post('/BLAS/master/full-loan-offer-radio-choice', function (req, res) {
     res.redirect('/BLAS/master/full-loan-offer-radio-choice')
   } else if (offerAcceptance === '211345443') {
     res.redirect('/BLAS/master/partial-loan-offer')
+  } else if (offerAcceptance === '564378888') {
+    res.redirect('/BLAS/master/multiple-loan-offers')
   } else {
     res.redirect('/BLAS/master/no-loan-offer')
   }
