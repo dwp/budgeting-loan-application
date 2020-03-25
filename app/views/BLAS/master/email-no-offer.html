@@ -8,15 +8,6 @@
 
 {% block beforeContent %}
 
-{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
-
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Testing only"
-    },
-    html: 'Messages will not be sent and no data is saved.'
-  }) }} #}
-
 {% endblock %}
 
 {% block content %}
@@ -39,8 +30,8 @@
 
       <p>Dear {{ data['first-name'] }} {{ data['last-name'] }},</p>
 
-{#       <p>You applied for a Budgeting Loan on [date].</p>
- #}
+      <!-- <p>You applied for a Budgeting Loan on [date].</p> -->
+
       <p>We can offer you a Budgeting Loan.</p>
 
       <p>You need to check the details of the loan and decide whether to accept it by <span class="new-date"></span>.</p>

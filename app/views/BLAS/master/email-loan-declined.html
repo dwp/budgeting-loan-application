@@ -8,15 +8,6 @@
 
 {% block beforeContent %}
 
-{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
-
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Testing only"
-    },
-    html: 'Messages will not be sent and no data is saved.'
-  }) }} #}
-
 {% endblock %}
 
 {% block content %}
@@ -41,7 +32,7 @@
 
       <p>You’ve declined the Budgeting Loan we offered you.</p>
 
-{#       <p>You were offered a loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong>. You were asked to pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.</p> #}
+      <!-- <p>You were offered a loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong>. You were asked to pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.</p> -->
 
       <p>Regards,</p>
 
