@@ -39,6 +39,18 @@ if(document.querySelector(".new-date")) {
   document.querySelector(".new-date").innerHTML = nd + " " + monthNames[nm] + " " + ny;
 }
 
+// Show payment date
+paymentDate = new Date();
+var numberOfDaysToAdd = 7;
+paymentDate.setDate(paymentDate.getDate() + numberOfDaysToAdd);
+ny = paymentDate.getFullYear();
+nm = paymentDate.getMonth();
+nd = paymentDate.getDate();
+
+if(document.querySelector(".payment-date")) {
+  document.querySelector(".payment-date").innerHTML = nd + " " + monthNames[nm] + " " + ny;
+}
+
 // Show review deadline date
 reviewDate = new Date();
 var numberOfDaysToAdd = 28;

@@ -17,15 +17,14 @@
 
       <h2 class="govuk-heading-m">What happens next</h2>
       {% if data['loan-decision'] == 'yes' %}
-        <p>You’ll get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> within 5 days.</p>
-
+        <p>You’ll get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> before <span class="new-date"></span>.</p>
 
         <p>You’ll pay back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       {% if data['loan-decision'] == 'yes-b' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
-        <p>You’ll get <strong>&pound;<span class="loan-amount-lower"></span></strong> within 5 days.</p>
+        <p>You’ll get <strong>&pound;<span class="loan-amount-lower"></span></strong> before <span class="new-date"></span>.</p>
 
         <p>You’ll pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
