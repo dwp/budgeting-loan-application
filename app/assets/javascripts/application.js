@@ -39,6 +39,18 @@ if(document.querySelector(".new-date")) {
   document.querySelector(".new-date").innerHTML = nd + " " + monthNames[nm] + " " + ny;
 }
 
+// Show review deadline date
+reviewDate = new Date();
+var numberOfDaysToAdd = 28;
+reviewDate.setDate(reviewDate.getDate() + numberOfDaysToAdd);
+ny = reviewDate.getFullYear();
+nm = reviewDate.getMonth();
+nd = reviewDate.getDate();
+
+if(document.querySelector(".review-date")) {
+  document.querySelector(".review-date").innerHTML = nd + " " + monthNames[nm] + " " + ny;
+}
+
 // Show repayment amount
 if(document.querySelector(".repayment-amount")) {
   var loan = document.querySelector(".loan-amount").innerHTML;
