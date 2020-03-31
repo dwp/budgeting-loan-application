@@ -725,6 +725,17 @@ router.post('/master/children', function (req, res) {
   }
 })
 
+router.post('/master/contact-details2', function (req, res) {
+
+  let digital = req.session.data['digital']
+
+  if (digital === 'Yes') {
+    res.redirect('/master/contact-details')
+  } else {
+    res.redirect('/master/call-option')
+  }
+})
+
 router.post('/master/call-option', function (req, res) {
 
   let contactPreference = req.session.data['contactpreference']
