@@ -110,7 +110,7 @@ if(document.querySelector(".loan-amount-partial")) {
 if(document.querySelector(".loan-amount-lower")) {
 
   var lowerloan = document.querySelector(".loan-amount").innerHTML;
-  var discount = (80 / 100 * lowerloan).toFixed(2);
+  var discount = (95 / 100 * lowerloan).toFixed(2);
 
   document.querySelector(".loan-amount-lower").innerHTML=discount;
 }
@@ -121,4 +121,21 @@ if(document.querySelector(".loan-amount")) {
   var discount = (2.8 / 100 * loan).toFixed(2);
 
   document.querySelector(".repayment-amount-higher").innerHTML=discount;
+}
+
+// Multiple loan lowest offer
+if(document.querySelector(".loan-amount-lowest")) {
+
+  var lowestloan = document.querySelector(".loan-amount").innerHTML;
+  var discount = (90 / 100 * lowestloan).toFixed(2);
+
+  document.querySelector(".loan-amount-lowest").innerHTML=discount;
+}
+
+// Multiple loan lowest repayment
+if(document.querySelector(".loan-amount")) {
+  var lowestloan = document.querySelector(".loan-amount-lowest").innerHTML;
+  var discount = (2 / 100 * lowestloan).toFixed(2);
+
+  document.querySelector(".repayment-amount-lowest").innerHTML=discount;
 }
