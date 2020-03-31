@@ -33,11 +33,11 @@
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
               <h1 class="govuk-fieldset__heading">
-                When we’ve made a decision about your application, how can we tell you?
+                How do you want to be contacted about your application?
               </h1>
             </legend>
 
-            <p>The message will tell you how to view your offer online.</p>
+            <p>We will send you confirmation of your application and contact you when we've made a decision.</p>
 
             <div class="govuk-radios">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
@@ -72,6 +72,12 @@
                       <input class="govuk-input" id="email-input" name="email-input" value="{{ data['email-input'] }}" type="email" spellcheck="false">
                     </div>
                   </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="letter" name="contactpreference" type="radio" value="letter" {{ checked("contactpreference", "letter") }} >
+                  <label class="govuk-label govuk-radios__label" for="letter">
+                    Letter (slowest method)
+                  </label>
                 </div>
               </div>
 

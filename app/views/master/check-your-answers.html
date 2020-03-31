@@ -581,10 +581,32 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              How you want to be contacted about your application
+              Can you receive text messages (SMS) or email?
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>{{ data['mobilenumberinput'] }}<br> {{ data['email-input'] }}</p>
+              <p>{{ data['digital'] }}{% if data['digital'] == 'Yes' %}, {{ data['contactpreference'] }}{% endif %} </p>
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a href="/master/can-you-receive">
+                Change
+                <span class="govuk-visually-hidden"> your contact preference</span>
+              </a>
+            </dd>
+          </div>
+        {% if data['digital'] == 'Yes' %}
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              When we’ve made a decision about your application, how can we tell you?
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <p>
+                {% if data['contactpreference'] == 'text message' %}
+                  {{ data['mobilenumberinput'] }}
+                {% endif %}
+                {% if data['contactpreference'] == 'email' %}
+                  {{ data['email-input'] }}
+                {% endif %}
+              </p>
             </dd>
             <dd class="govuk-summary-list__actions">
               <a href="/master/contact-details">
@@ -593,6 +615,7 @@
               </a>
             </dd>
           </div>
+        {% endif %}
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               If you can be called
@@ -601,14 +624,14 @@
               <p>{{ data['phone'] }}</p>
             </dd>
             <dd class="govuk-summary-list__actions">
-              {% if data['mobilenumberinput'] %}
+              {% if data['contactpreference'] == 'text message' %}
               <a href="/master/call-option-with-mobile">
                 Change
                 <span class="govuk-visually-hidden"> if you can be called</span>
               </a>
               {% endif %}
 
-              {% if data['email-input'] %}
+              {% if data['contactpreference'] == 'email' or data['digital'] == 'No' %}
               <a href="/master/call-option">
                 Change
                 <span class="govuk-visually-hidden"> if you can be called</span>
