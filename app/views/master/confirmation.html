@@ -16,7 +16,10 @@
         <h1 class="govuk-panel__title">Application received</h1>
       </div>
 
-      <p>We've sent you a confirmation message.</p>
+      <p>We've sent you a confirmation
+        {% if data['contactpreference']=="text message" %} text message.{% endif %}
+        {% if data['contactpreference']=="email" %} email.{% endif %}
+      </p>
 
       <h2 class="govuk-heading-m">What happens next</h2>
 
