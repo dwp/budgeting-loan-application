@@ -581,7 +581,7 @@
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Can you receive text messages (SMS) or email?
+              If you can receive text messages or email
             </dt>
             <dd class="govuk-summary-list__value">
               <p>{{ data['digital'] }}{% if data['digital'] == 'Yes' %}, {{ data['contactpreference'] }}{% endif %} </p>
@@ -596,7 +596,7 @@
         {% if data['digital'] == 'Yes' %}
         <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              When we’ve made a decision about your application, how can we tell you?
+              If you prefer text or email
             </dt>
             <dd class="govuk-summary-list__value">
               <p>
