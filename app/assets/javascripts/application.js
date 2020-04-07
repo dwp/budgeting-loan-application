@@ -125,7 +125,7 @@ if(document.querySelector(".loan-amount-lower")) {
 
 
 // Multiple loan lowest offer
-if(document.querySelector(".loan-amount")) {
+if(document.querySelector(".repayment-amount-lowest")) {
 
   var lowestloan = document.querySelector(".loan-amount").innerHTML;
   var discount = (90 / 100 * lowestloan).toFixed(2);
@@ -140,3 +140,74 @@ if(document.querySelector(".loan-amount-lowest")) {
 
   document.querySelector(".repayment-amount-lowest").innerHTML=discount;
 }
+
+
+// Accessible Modal
+$(document).ready(function() {
+  var findModal = function(elem) {
+
+    var tabbable = elem.find('select, input, textarea, button, a').filter(':visible');
+
+    var firstTabbable = tabbable.first();
+    var lastTabbable = tabbable.last();
+    // set focus on first tabbable element
+    firstTabbable.focus();
+
+    // send last tabbable back to first
+    lastTabbable.on('keydown', function (e) {
+       if ((e.which === 9 && !e.shiftKey)) {
+           e.preventDefault();
+           firstTabbable.focus();
+       }
+    });
+
+    // send last shift tabbable back to last
+    firstTabbable.on('keydown', function (e) {
+        if ((e.which === 9 && e.shiftKey)) {
+            e.preventDefault();
+            lastTabbable.focus();
+        }
+    });
+
+    // allow esc to close Modal
+    elem.on('keyup', function(e){
+      if (e.keyCode === 27 ) {
+        elem.hide();
+        $('.govuk-modal-overlay').hide();
+        $('html').removeClass("noscroll");
+      };
+    });
+  };
+
+  // show modal and overlay and lock scroll
+  // $('.show-modal').click(function(e){
+  //   e.preventDefault();
+  //
+  //   $('.govuk-modal').show();
+  //   $('.govuk-modal-overlay').show();
+  //   $('html').addClass("noscroll");
+  //   findModal($('.govuk-modal'));
+  // });
+
+  if(document.querySelector(".govuk-modal")){
+    setTimeout(function(){
+      $('.govuk-modal').show();
+      $('.govuk-modal-overlay').show();
+      $('html').addClass("noscroll");
+      findModal($('.govuk-modal'));
+    }, 2000);
+  }
+
+
+
+  //hide modal and overlay
+  $('.close-modal').click(function(e){
+    e.preventDefault();
+
+    $('.govuk-modal').hide();
+    $('.govuk-modal-overlay').hide();
+    $('html').removeClass("noscroll");
+  });
+
+
+});
