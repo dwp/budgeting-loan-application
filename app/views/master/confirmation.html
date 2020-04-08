@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Confirmation
+  Application received - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -16,7 +16,7 @@
         <h1 class="govuk-panel__title">Application received</h1>
       </div>
 
-      <p>We've sent you a confirmation
+      <p>We’ve sent you a confirmation
         {% if data['contactpreference']=="text message" %} text message.{% endif %}
         {% if data['contactpreference']=="email" %} email.{% endif %}
       </p>
@@ -25,9 +25,9 @@
 
       <p>We will send a decision message {% if data['contactpreference']=="text message" %}to you at <strong>{{ data['mobilenumberinput'] }}</strong>{% endif %} {% if data['contactpreference']=="email" %}to you at <strong>{{ data['email-input'] }}</strong>{% endif %} in the next week. This will tell you if we can offer you a loan and what to do next.</p>
 
-      <h3 class="govuk-heading-s">If you're offered a loan</h3>
+      <h3 class="govuk-heading-s">If you’re offered a loan</h3>
 
-      <p>You'll be told:</p>
+      <p>You’ll be told:</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>how much you can borrow</li>
@@ -36,11 +36,11 @@
 
       <p>You do not have to accept the loan offer if you do not want to.</p>
 
-      <h3 class="govuk-heading-s">If you're not offered a loan</h3>
+      <h3 class="govuk-heading-s">If you’re not offered a loan</h3>
 
-      <p>You'll be told why and how to get help if you need it.</p>
+      <p>You’ll be told why and how to get help if you need it.</p>
 
-      <p><a href="/master/start">Back to the prototype start page</a></p>
+      <p><a href="#">What did you think of this service?</a></p>
 
     </div>
   </div>
