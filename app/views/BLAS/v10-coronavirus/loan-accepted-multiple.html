@@ -20,19 +20,21 @@
       <span class="loan-amount-lower govuk-visually-hidden"></span>
         <p>You’ll get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> by <span class="payment-date"></span>.</p>
 
-        <p>We will write to you when your repayments are due to start. You’ll then pay back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <p>We will write to you when you need to start paying back the loan. You’ll then pay back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       {% if data['loan-decision'] == 'yes-b' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
         <p>You’ll get <strong>&pound;<span class="loan-amount-lower"></span></strong> by <span class="payment-date"></span>.</p>
 
-        <p>We will write to you when your repayments are due to start. You’ll then pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <p>We will write to you when you need to start paying back the loan. You’ll then pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       {% if data['loan-decision'] == 'yes-c' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
-        <p>You’ll get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>. You’ll then pay back <strong>&pound;<span class="repayment-amount-lowest"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <p>You’ll get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>. 
+
+        <p>We will write to you when you need to start paying back the loan. You’ll then pay back <strong>&pound;<span class="repayment-amount-lowest"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       <p>You must <a href="https://www.gov.uk/report-benefits-change-circumstances">report changes in your circumstances</a>. This can include changes to your income and people moving into or out of the place you live.</p>
