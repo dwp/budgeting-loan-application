@@ -1,0 +1,65 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  (Email) Budgeting Loan accepted
+{% endblock %}
+
+{% block beforeContent %}
+
+{# {% from 'govuk/components/phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }} #}
+
+{% endblock %}
+
+{% block content %}
+
+      <div>
+        <h1 class="govuk-heading-s">Budgeting Loans service - loan accepted</h1>
+        <p class="govuk-body-s"><strong>To:</strong> yourname@gmail.com<br>
+        <strong>From:</strong> budgetingloans@dwp.gov.uk</p>
+      </div>
+
+      <hr>
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    containerClasses: "govuk-width-container"
+  }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>Dear {{ data['first-name'] }} {{ data['last-name'] }},</p>
+
+      <p>You’ve accepted a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong>. You’ll get the money by <span class="payment-date"></span>.
+
+      <p>You’ll pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
+
+      <p>We will write to you when your repayments are due to start. Your repayments may not start straight away if you’re paying back other Budgeting Loans or Crisis Loans.</p>
+
+      <p>You must report changes in your circumstances. This can include changes to your income and people moving into or out of the place you live: <a href="https://www.gov.uk/report-benefits-change-circumstances">https://www.gov.uk/report-benefits-change-circumstances</a></p>
+
+      <p>Regards,</p>
+
+      <p>Budgeting Loans, Department for Work and Pensions</p>
+
+      <hr>
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
