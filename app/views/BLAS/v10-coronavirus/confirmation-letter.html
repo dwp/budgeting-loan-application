@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application received - Budgeting Loans - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application received</h1>
+      </div>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>You’ll get a decision by post within 20 working days (4 weeks).</p>
+
+      <h3 class="govuk-heading-s">If you’re offered a loan</h3>
+
+      <p>You’ll be told:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how much you can borrow</li>
+        <li>how much your repayments will be if you accept the loan</li>
+      </ul>
+
+      <div class="govuk-inset-text">
+        <a href="https://www.gov.uk/budgeting-help-benefits/repayments">Budgeting Loan repayments</a> have been temporarily stopped because of coronavirus (COVID-19).
+      </div>
+
+      <p>If choose to accept the loan you must sign page 4 (the offer letter) as well as page 5 (the reply slip).</p>
+
+      <p>You do not have to accept the loan offer if you do not want to.</p>
+
+      <h3 class="govuk-heading-s">If you’re not offered a loan</h3>
+
+      <p>You’ll be told why and how to get help if you need it.</p>
+
+      <p><a href="#">What did you think of this service?</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

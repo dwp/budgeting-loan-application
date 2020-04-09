@@ -864,6 +864,54 @@ router.post('/BLAS/v8/loan-accepted', function (req, res) {
   }
 })
 
+// BLAS v10 coronavirus version routing
+
+router.post('/BLAS/v10-coronavirus/loan-accepted', function (req, res) {
+
+  let offerAcceptance = req.session.data['loan-decision']
+
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/v10-coronavirus/loan-accepted')
+  } else if (offerAcceptance === 'yes-b') {
+    res.redirect('/BLAS/v10-coronavirus/loan-accepted')
+  } else {
+    res.redirect('/BLAS/v10-coronavirus/loan-declined')
+  }
+})
+
+router.post('/BLAS/v10-coronavirus/loan-accepted-multiple', function (req, res) {
+
+  let offerAcceptance = req.session.data['loan-decision']
+
+  if (offerAcceptance === 'yes') {
+    res.redirect('/BLAS/v10-coronavirus/loan-accepted-multiple')
+  } else if (offerAcceptance === 'yes-b') {
+    res.redirect('/BLAS/v10-coronavirus/loan-accepted-multiple')
+  } else if (offerAcceptance === 'yes-c') {
+    res.redirect('/BLAS/v10-coronavirus/loan-accepted-multiple')
+  }
+    else {
+    res.redirect('/BLAS/v10-coronavirus/loan-declined')
+  }
+})
+
+router.post('/BLAS/v10-coronavirus/full-loan-offer-radio-choice', function (req, res) {
+
+  let offerAcceptance = req.session.data['response-code']
+
+  if (offerAcceptance === '877582362') {
+    res.redirect('/BLAS/v10-coronavirus/full-loan-offer-radio-choice')
+  } else if (offerAcceptance === '211345443') {
+    res.redirect('/BLAS/v10-coronavirus/partial-loan-offer')
+  } else if (offerAcceptance === '564378888') {
+    res.redirect('/BLAS/v10-coronavirus/multiple-loan-offers')
+  } else {
+    res.redirect('/BLAS/v10-coronavirus/no-loan-offer')
+  }
+})
+
+// BLAS master routing
+
 router.post('/BLAS/master/loan-accepted', function (req, res) {
 
   let offerAcceptance = req.session.data['loan-decision']

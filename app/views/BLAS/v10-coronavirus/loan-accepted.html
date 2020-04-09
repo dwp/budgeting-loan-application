@@ -1,0 +1,46 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  You’ve accepted this Budgeting Loan – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">You’ve accepted this Budgeting Loan</h1>
+      </div>
+
+      <p>We’ve sent you a confirmation message.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>You’ll get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> by <span class="payment-date"></span>.</p>
+
+      <div class="govuk-inset-text">
+        We’ve temporarily stopped taking Budgeting Loan repayments because of coronavirus (COVID-19).
+      </div>
+
+      <p>We will write to you when you’re due to start repaying this loan. You’ll then pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
+
+      <p>You must <a href="https://www.gov.uk/report-benefits-change-circumstances">report changes in your circumstances</a>. This can include changes to your income and people moving into or out of the place you live.</p>
+
+      <h2 class="govuk-heading-m">If you need to contact us about your loan</h2>
+
+      <ul class="govuk-list">
+        <li><strong>Social Fund</strong></li>
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+        <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+      </ul>
+
+      <p><a href="#">What did you think of this service?</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
