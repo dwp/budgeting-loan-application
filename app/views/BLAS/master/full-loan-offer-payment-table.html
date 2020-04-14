@@ -1,7 +1,7 @@
 {% extends "layout-response.html" %}
 
 {% block pageTitle %}
-  You’ve been offered a Budgeting Loan – Budgeting Loans – GOV.UK
+  You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,7 +15,7 @@
       <form action="/BLAS/master/loan-accepted" method="post" novalidate="novalidate">
         <div class="govuk-form-group">
 
-          <h1 class="govuk-heading-l">You’ve been offered a Budgeting Loan</h1>
+          <h1 class="govuk-heading-l">You have been offered a Budgeting Loan</h1>
 
           <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
 
@@ -25,7 +25,7 @@
 
           <h2 class="govuk-heading-m">If you accept the loan</h2>
 
-          <p>You’ll get the money within a week. We will pay it into the same account as your benefit.</p>
+          <p>You will get the money within a week. We will pay it into the same account as your benefit.</p>
 
           <p>We will take repayments automatically from your {{ data['benefit-received'] }}. The amount is based on how often you are paid your benefit.</p>
 
@@ -62,7 +62,7 @@
             <div class="govuk-details__text">
               <p>The loan amount is based on:
               <ul class="govuk-list govuk-list--bullet">
-                <li>whether you’re single or live with a partner</li>
+                <li>whether you are single or live with a partner</li>
                 <li>whether you live with children</li>
                 <li>how much money we have in our budget</li>
                 <li>how much you owe for other Budgeting Loans or Crisis Loans</li>
@@ -78,7 +78,7 @@
 
           <h2 class="govuk-heading-m">If you need help</h2>
 
-          <p><a href="/BLAS/master/review-rights">Contact the Social Fund</a> if you want to ask a question or think the decision is wrong. We cannot change the amount you’ve been asked to pay back.</p>
+          <p><a href="/BLAS/master/review-rights">Contact the Social Fund</a> if you want to ask a question or think our decision is wrong. We cannot change the amount you have been asked to pay back.</p>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
@@ -108,7 +108,7 @@
           <p>If you accept this loan, you agree that:</p>
 
           <ul class="govuk-list govuk-list--bullet">
-            <li>you’ll pay back this money, even if you stop claiming benefits</li>
+            <li>you will pay back this money, even if you stop claiming benefits</li>
             <li>your benefits, or those of your partner, will be reduced to pay back the money</li>
           </ul>
 
