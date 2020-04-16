@@ -5,7 +5,17 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
   <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
 {% endblock %}
 
 {% block content %}
@@ -26,7 +36,7 @@
           <ul class="govuk-list">
             <li><strong>Social Fund</strong></li>
             <li>Telephone: 0800 169 0140</li>
-            <li>Welsh language: 0800 169 0240</li> 
+            <li>Welsh language: 0800 169 0240</li>
             <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
             <li>Monday to Friday, 8am to 6pm</li>
             <li><a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a></li>

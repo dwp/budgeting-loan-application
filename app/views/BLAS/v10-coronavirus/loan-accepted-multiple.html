@@ -4,6 +4,18 @@
   You’ve accepted this Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -40,7 +52,7 @@
 
       {% if data['loan-decision'] == 'yes-c' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
-        <p>You’ll get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>. 
+        <p>You’ll get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>.
 
         <div class="govuk-inset-text">
           We’ve temporarily stopped taking Budgeting Loan repayments because of coronavirus (COVID-19).

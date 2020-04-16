@@ -7,6 +7,18 @@
   Confirmation
 {% endblock %}
 
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -22,7 +34,7 @@
       <h2 class="govuk-heading-m">What happens next</h2>
 
       <p>You'll get a decision by post within 20 working days (4 weeks).</p>
-      
+
       <p>If you're offered a loan and you choose to accept it you must sign page 4 (the offer letter) as well as page 5 (the reply slip).</p>
 
       <p>You'll also be told:</p>
