@@ -4,7 +4,17 @@
   You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
 
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
 
 {% block content %}
 
