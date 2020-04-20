@@ -31,21 +31,33 @@
       <span class="loan-amount-lower govuk-visually-hidden"></span>
         <p>You will get <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> by <span class="payment-date"></span>.</p>
 
-        <p>You will pay back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <div class="govuk-inset-text">
+          We have temporarily stopped taking <a href="https://www.gov.uk/budgeting-help-benefits/repayments">Budgeting Loan repayments</a> because of coronavirus (COVID-19).
+        </div>
+
+        <p>We will write to you when you are due to start repaying this loan. You will then pay back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
       {% endif %}
 
       {% if data['loan-decision'] == 'yes-b' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
         <p>You will get <strong>&pound;<span class="loan-amount-lower"></span></strong> by <span class="payment-date"></span>.</p>
 
-        <p>You will pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <div class="govuk-inset-text">
+          We have temporarily stopped taking Budgeting Loan repayments because of coronavirus (COVID-19).
+        </div>
+
+        <p>We will write to you when you are due to start repaying this loan. You will then pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       {% if data['loan-decision'] == 'yes-c' %}
         <span class="loan-amount govuk-visually-hidden">{{ data['loan-amount'] }}</span>
-        <p>You will get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>.</p>
+        <p>You will get <strong>&pound;<span class="loan-amount-lowest"></span></strong> by <span class="payment-date"></span>.
 
-        <p>You will pay back <strong>&pound;<span class="repayment-amount-lowest"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
+        <div class="govuk-inset-text">
+          We have temporarily stopped taking Budgeting Loan repayments because of coronavirus (COVID-19).
+        </div>
+
+        <p>We will write to you when you are due to start repaying this loan. You will then pay back <strong>&pound;<span class="repayment-amount-lowest"></span> every week</strong>. We will take this automatically from your <strong>{{ data['benefit-received'] }}</strong>.</p>
       {% endif %}
 
       <p>We will write to you when your repayments are due to start. Your repayments may not start straight away if you are paying back other Budgeting Loans or Crisis Loans.</p>
