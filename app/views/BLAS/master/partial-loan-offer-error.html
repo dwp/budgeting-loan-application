@@ -1,7 +1,7 @@
 {% extends "layout-response.html" %}
 
 {% block pageTitle %}
-  You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
+  Error: You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,6 +22,19 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#no-choice-error">Select if you want to accept this loan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <form action="/BLAS/master/partial-loan-accepted" method="post" novalidate="novalidate">
         <div class="govuk-form-group">
 
@@ -69,23 +82,24 @@
 
           <p>You will get the money within a week. We will pay it into the same account as your benefit.</p>
 
-          <div class="govuk-inset-text">
-            We have temporarily stopped taking Budgeting Loan repayments because of coronavirus (COVID-19).
-          </div>
-
-          <p>Once you start repaying this loan, you’ll pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
+          <p>You will pay back <strong>&pound;<span class="repayment-amount"></span> every week</strong>. We will take this automatically from your {{ data['benefit-received'] }}.</p>
 
           <h2 class="govuk-heading-m">If you need help</h2>
 
           <p><a href="/BLAS/master/review-rights">Contact the Social Fund</a> if you want to ask a question or think our decision is wrong. We cannot change the amount you’ve been asked to pay back.</p>
 
-          <div class="govuk-form-group">
+          <div class="govuk-form-group govuk-form-group--error">
             <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                 <h2 class="govuk-fieldset__heading">
                   Do you want to accept the loan?
                 </h2>
               </legend>
+
+              <span id="no-choice-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Select if you want to accept this loan
+              </span>
+
               <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="loan-decision-1" name="partial-loan-decision" type="radio" value="Yes">

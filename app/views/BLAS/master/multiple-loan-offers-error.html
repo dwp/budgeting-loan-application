@@ -1,0 +1,129 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  Error: You have been offered a Budgeting Loan – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#no-choice-error">Select if you want to accept this loan</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form action="/BLAS/master/loan-accepted-multiple" method="post" novalidate="novalidate">
+
+
+          <h1 class="govuk-heading-l">You have been offered a Budgeting Loan</h1>
+
+          <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
+
+          <!-- <p>Because you’re paying back other Social Fund loans, we’ve offered you a choice of different loans.</p> -->
+
+          <p>You have until <strong><span class="new-date"></span></strong> to decide whether to accept one of the loans we can offer you.</p>
+        <div class="govuk-form-group govuk-form-group--error">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              Which loan do you want to accept?
+            </h2>
+          </legend>
+
+          <span id="no-choice-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select if you want to accept this loan
+          </span>
+
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="loan-decision-1" name="loan-decision" type="radio" value="yes" aria-describedby="loan-decision-1-item-hint">
+              <label class="govuk-label govuk-radios__label" for="loan-decision-1">
+                A <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> loan, paying back <strong>&pound;<span class="repayment-amount-higher"></span> every week</strong> from your {{ data['benefit-received'] }}.
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="loan-decision-1b" name="loan-decision" type="radio" value="yes-b" aria-describedby="loan-decision-1b-item-hint">
+              <label class="govuk-label govuk-radios__label" for="loan-decision-1b">
+                A <strong>&pound;<span class="loan-amount-lower"></span></strong> loan, paying back <strong>&pound;<span class="repayment-amount"></span> every week</strong> from your {{ data['benefit-received'] }}.
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="loan-decision-2" name="loan-decision" type="radio" value="no" aria-describedby="loan-decision-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="loan-decision-2">
+                I do not want to accept any of the loans offered.
+              </label>
+            </div>
+          </div>
+          </div>
+
+          <br>
+
+          <details class="govuk-details" data-module="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                How we work out your loan offer
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <p>The loan amount is based on:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>whether you are single or live with a partner</li>
+                <li>whether you live with children</li>
+                <li>how much money we have in our budget</li>
+                <li>how much you owe for other Budgeting Loans or Crisis Loans</li>
+                <li>whether we can offer more than £100, as we cannot offer a loan for less than this</li>
+              </ul>
+              <p>The repayment amount is based on:
+              <ul class="govuk-list govuk-list--bullet">
+                <li>how much money you owe other people</li>
+                <li>how much you could repay each week and for how long</li>
+              </ul>
+            </div>
+          </details>
+
+          <h2 class="govuk-heading-m">If you need help</h2>
+
+          <p><a href="/BLAS/master/review-rights">Contact the Social Fund</a> if you want to ask a question or think our decision is wrong. We cannot change the amount you have been asked to pay back.</p>
+
+          <h2 class="govuk-heading-m">Declaration</h2>
+
+          <p>If you accept this loan, you agree that:</p>
+
+          <ul class="govuk-list govuk-list--bullet">
+            <li>you will pay back this money, even if you stop claiming benefits</li>
+            <li>your benefits, or those of your partner, will be reduced to pay back the money</li>
+          </ul>
+
+          <p>You will get the money with a week. We will pay it into the same account as your benefit.</p>
+
+          <button class="govuk-button" data-module="govuk-button">Send your decision</button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

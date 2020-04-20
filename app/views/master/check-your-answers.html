@@ -621,7 +621,17 @@
               If you can be called
             </dt>
             <dd class="govuk-summary-list__value">
-              <p>{{ data['phone'] }}</p>
+              <p>
+                {% if data['phone'] === 'Yes, on' %}
+                  {{ data['phone'] }} {{ data['mobilenumberinput'] }}
+                {% endif %}
+                {% if data['phone'] === 'Yes, call me on a different number' %}
+                  Yes, on {{ data['phone-input'] }}
+                {% endif %}
+                {% if data['phone'] === 'No, write to me instead' %}
+                  {{ data['phone'] }}
+                {% endif %}
+              </p>
             </dd>
             <dd class="govuk-summary-list__actions">
               {% if data['contactpreference'] == 'text message' %}

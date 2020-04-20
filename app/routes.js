@@ -731,18 +731,47 @@ router.post('/master/contact-details2', function (req, res) {
 
   if (digital === 'Yes') {
     res.redirect('/master/contact-details')
-  } else {
+  } else if (digital === 'No') {
     res.redirect('/master/call-option')
+  } else {
+    res.redirect('/master/can-you-receive-error')
   }
 })
 
 router.post('/master/call-option', function (req, res) {
 
-  let contactPreference = req.session.data['contactpreference']
-  if (contactPreference.includes('text message')) {
+  let contactPref = req.session.data['contactpreference']
+  let mobilenumber = req.session.data['mobilenumberinput']
+  let email = req.session.data['email-input']
+
+  if (contactPref === 'text message' && mobilenumber.length == 0) {
+    res.redirect('/master/contact-details-error-phone')
+  } else if (contactPref === 'text message' && mobilenumber.length != 0) {
     res.redirect('/master/call-option-with-mobile')
-  } else {
+  } else if (contactPref === 'email' && email.length == 0) {
+    res.redirect('/master/contact-details-error-email')
+  } else if (contactPref === 'email' && email.length != 0) {
     res.redirect('/master/call-option')
+  } else {
+    res.redirect('/master/contact-details-error')
+  }
+})
+
+router.post('/master/check-your-answers', function (req, res) {
+
+  let phonetype = req.session.data['phone']
+  let newnumber = req.session.data['phone-input']
+
+  if (phonetype === 'Yes, call me on a different number' && newnumber.length == 0) {
+    res.redirect('/master/call-option-with-mobile-error-number')
+  } else if (phonetype === 'Yes, call me on a different number' && newnumber.length != 0) {
+    res.redirect('/master/check-your-answers')
+  } else if (phonetype === 'Yes, on') {
+    res.redirect('/master/check-your-answers')
+  } else if (phonetype === 'No, write to me instead') {
+    res.redirect('/master/check-your-answers')
+  } else {
+    res.redirect('/master/call-option-with-mobile-error')
   }
 })
 
@@ -914,14 +943,27 @@ router.post('/BLAS/v10-coronavirus/full-loan-offer-radio-choice', function (req,
 
 router.post('/BLAS/master/loan-accepted', function (req, res) {
 
-  let offerAcceptance = req.session.data['loan-decision']
+  let fullofferAcceptance = req.session.data['full-loan-decision']
 
-  if (offerAcceptance === 'yes') {
+  if (fullofferAcceptance === 'Yes') {
     res.redirect('/BLAS/master/loan-accepted')
-  } else if (offerAcceptance === 'yes-b') {
-    res.redirect('/BLAS/master/loan-accepted')
-  } else {
+  } else if (fullofferAcceptance === 'No') {
     res.redirect('/BLAS/master/loan-declined')
+  } else {
+    res.redirect('/BLAS/master/full-loan-offer-radio-choice-error')
+  }
+})
+
+router.post('/BLAS/master/partial-loan-accepted', function (req, res) {
+
+  let partialofferAcceptance = req.session.data['partial-loan-decision']
+
+  if (partialofferAcceptance === 'Yes') {
+    res.redirect('/BLAS/master/loan-accepted')
+  } else if (partialofferAcceptance === 'No') {
+    res.redirect('/BLAS/master/loan-declined')
+  } else {
+    res.redirect('/BLAS/master/partial-loan-offer-error')
   }
 })
 
@@ -935,9 +977,24 @@ router.post('/BLAS/master/loan-accepted-multiple', function (req, res) {
     res.redirect('/BLAS/master/loan-accepted-multiple')
   } else if (offerAcceptance === 'yes-c') {
     res.redirect('/BLAS/master/loan-accepted-multiple')
+  } else if (offerAcceptance === 'no') {
+    res.redirect('/BLAS/master/loan-declined')
   }
     else {
-    res.redirect('/BLAS/master/loan-declined')
+    res.redirect('/BLAS/master/multiple-loan-offers-error')
+  }
+})
+
+router.post('/BLAS/master/response-code', function (req, res) {
+
+  let reference = req.session.data['application-reference']
+
+  if (reference === '7RXP43ZF') {
+    res.redirect('/BLAS/master/response-code')
+  } else if (reference !== '7RXP43ZF') {
+    res.redirect('/BLAS/master/application-reference-code-error-invalid')
+  } else {
+    res.redirect('/BLAS/master/application-reference-code-error')
   }
 })
 
@@ -951,10 +1008,13 @@ router.post('/BLAS/master/full-loan-offer-radio-choice', function (req, res) {
     res.redirect('/BLAS/master/partial-loan-offer')
   } else if (offerAcceptance === '564378888') {
     res.redirect('/BLAS/master/multiple-loan-offers')
+  } else if (offerAcceptance.length == 0) {
+    res.redirect('/BLAS/master/response-code-error')
   } else {
-    res.redirect('/BLAS/master/no-loan-offer')
+    res.redirect('/BLAS/master/response-code-error-invalid')
   }
 })
+
 
 // Notify routing
 
