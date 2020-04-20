@@ -1,0 +1,46 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  You have replied to this Budgeting Loan offer – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">You have replied to this Budgeting Loan offer</h1>
+
+          <!--<h1 class="govuk-heading-l">You have sent your decision to us</h1>-->
+
+          <p>We sent a message to your preferred mobile number or email address to confirm the decision you made. This tells you what happens next.</p>
+
+          <p>Contact us if you need to change your decision.</p>
+
+          <ul class="govuk-list">
+            <li><strong>Social Fund</strong></li>
+            <li>Telephone: 0800 169 0140</li>
+            <li>Welsh language: 0800 169 0240</li>
+            <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+            <li>Monday to Friday, 8am to 6pm</li>
+            <li><a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+          </ul>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
