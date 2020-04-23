@@ -16,7 +16,7 @@
         <h1 class="govuk-panel__title">Application received</h1>
       </div>
 
-      <p>We’ve sent you a confirmation
+      <p>We have sent you a confirmation
         {% if data['contactpreference']=="text message" %} text message.{% endif %}
         {% if data['contactpreference']=="email" %} email.{% endif %}
       </p>
@@ -25,7 +25,7 @@
 
       <p>We will send a decision message {% if data['contactpreference']=="text message" %}to you at <strong>{{ data['mobilenumberinput'] }}</strong>{% endif %} {% if data['contactpreference']=="email" %}to you at <strong>{{ data['email-input'] }}</strong>{% endif %} in the next week. This will tell you if we can offer you a loan and what to do next.</p>
 
-      <h3 class="govuk-heading-s">If you’re offered a loan</h3>
+      <h3 class="govuk-heading-s">If you are offered a loan</h3>
 
       <p>We will tell you:</p>
 
