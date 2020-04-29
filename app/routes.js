@@ -766,6 +766,8 @@ router.post('/master/check-your-answers', function (req, res) {
     res.redirect('/master/call-option-with-mobile-error-number')
   } else if (phonetype === 'Yes, call me on a different number' && newnumber.length != 0) {
     res.redirect('/master/check-your-answers')
+  } else if (phonetype === 'Yes' && newnumber.length != 0) {
+    res.redirect('/master/check-your-answers')
   } else if (phonetype === 'Yes, on') {
     res.redirect('/master/check-your-answers')
   } else if (phonetype === 'No, write to me instead') {

@@ -631,6 +631,9 @@
                 {% if data['phone'] === 'No, write to me instead' %}
                   {{ data['phone'] }}
                 {% endif %}
+                {% if data['phone'] === 'Yes' %}
+                  Yes, on {{ data['phone-input'] }}
+                {% endif %}
               </p>
             </dd>
             <dd class="govuk-summary-list__actions">
