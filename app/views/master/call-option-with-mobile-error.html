@@ -64,22 +64,6 @@
                       </label>
                     </div>
                     <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="phone-2" name="phone" type="radio" value="Yes, call me on a different number" {{ checked("phone", "Yes, on {{ data['phone-input'] }}") }} data-aria-controls="conditional-phone-2">
-                      <label class="govuk-label govuk-radios__label" for="phone-2">
-                        Yes, call me on a different number
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-phone-2" style="clear:left;">
-                      <div class="govuk-form-group">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="phone-info">
-                              Your preferred phone number
-                          </label>
-                          <input class="govuk-input govuk-input--width-20" id="phone-input" name="phone-input" value="{{ data['phone-input'] }}" type="tel">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="phone-3" name="phone" type="radio" value="No, write to me instead" {{ checked("phone", "No, write to me instead") }}>
                       <label class="govuk-label govuk-radios__label" for="phone-3">
                         No, write to me instead
