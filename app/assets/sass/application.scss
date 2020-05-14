@@ -17,6 +17,8 @@ $govuk-global-styles: true;
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 @import "custom.scss";
+@import "components/key-details";
+@import "patterns/tags";
 
 .app-c-tag {
   background-color: #005ea5;

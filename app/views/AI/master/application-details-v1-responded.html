@@ -1,0 +1,123 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Find an application - Budgeting Loans
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="key-details-bar__nino">QQ 12 34 56 X</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>4 June 1972</dd>
+
+      <dt>Postcode:</dt>
+      <dd>HU4 4XJ</dd>
+
+      <dt>Phone:</dt>
+      <dd>07546 322 221</dd>
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Status</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <strong class="govuk-tag">Offer response received</strong><span class="govuk-!-padding-left-2 govuk-!-font-size-16">1 day ago</span>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Notification type
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">Text message</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Mobile number</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">07546 322 221</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <strong class="govuk-tag govuk-tag--green">Sent</strong>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Codes expire</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">Expired</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-!-font-size-20">Offer and repayment</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Offer type</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Requested</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Offered</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Repayment amount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Full</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£15 every week</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}

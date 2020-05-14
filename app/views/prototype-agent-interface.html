@@ -1,0 +1,45 @@
+
+{% extends "layout-agent.html" %}
+
+{% block pageTitle %}
+  Budgeting Loan Application
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Prototypes for the new Agent interface</h1>
+
+          <h2 class="govuk-heading-m">Live prototype</h2>
+
+          <p><strong class="app-c-tag app-c-tag--default">Work in progress</strong></p>
+
+          <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
+
+          <p><a href="/AI/master/search">Search page</a></p>
+          <p><a href="/AI/master/application-not-found">Application reference not found</a></p>
+
+          <h3 class="govuk-heading-s">Step 2 of flow - displaying application details</h3>
+
+          <p><strong>Version 1</strong></p>
+          <p><a href="/AI/master/application-details-v1-received">Application received</a> - GH23FR55</p>
+          <p><a href="/AI/master/application-details-v1-decision">Decision made by SFCS</a> - VB65DE21</p>
+          <p><a href="/AI/master/application-details-v1-waiting">Applicant to respond to offer</a> - XC99JU76</p>
+          <p><a href="/AI/master/application-details-v1-responded">Offer response received</a> - JU66SA91</p>
+          <p><a href="/AI/master/application-details-v1-entered">Offer response in SFCS</a> - YU77GT54</p>
+
+          <p><strong>Version 2</strong></p>
+          <p><a href="/AI/master/application-details-v2-received">Application received</a> - GT32DA67</p>
+          <p><a href="/AI/master/application-details-v2-decision">Decision made by SFCS</a> - IH77EQ12</p>
+          <p><a href="/AI/master/application-details-v2-waiting">Applicant to respond to offer</a> - KL87FC44</p>
+          <p><a href="/AI/master/application-details-v2-responded">Offer response received</a> - HY55HU78</p>
+          <p><a href="/AI/master/application-details-v2-entered">Offer response in SFCS</a> - MN91G6S</p>
+    </div>
+</div>
+
+{% endblock %}
