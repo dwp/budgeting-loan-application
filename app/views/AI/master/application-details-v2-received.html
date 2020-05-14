@@ -1,0 +1,74 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Find an application - Budgeting Loans
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="key-details-bar__nino">QQ 12 34 56 X</dd>
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Application details</caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Status</th>
+            <td class="govuk-table__cell"><strong class="govuk-tag ">Application received</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Application date</th>
+            <td class="govuk-table__cell">13 May 2020 at 10:02am</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Notification type</th>
+            <td class="govuk-table__cell">Email</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Email address</th>
+            <td class="govuk-table__cell">sam@samsmith.net</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Decision notification</th>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">Not sent</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Offer type</th>
+            <td class="govuk-table__cell">-</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Requested</th>
+            <td class="govuk-table__cell">&pound;348</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header" style="vertical-align: top;">Offer and repayment</th>
+            <td class="govuk-table__cell">-</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+{% endblock %}

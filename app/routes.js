@@ -1017,6 +1017,37 @@ router.post('/BLAS/master/full-loan-offer-radio-choice', function (req, res) {
   }
 })
 
+// Routing for agent interface
+
+router.post('/master/application-details', function (req, res) {
+
+  let applicationRef = req.session.data['find-application']
+
+  if (applicationRef === 'GH23FR55') {
+    res.redirect('/AI/master/application-details-v1-received')
+  } else if (applicationRef === 'VB65DE21') {
+    res.redirect('/AI/master/application-details-v1-decision')
+  } else if (applicationRef === 'XC99JU76') {
+    res.redirect('/AI/master/application-details-v1-waiting')
+  } else if (applicationRef === 'JU66SA91') {
+    res.redirect('/AI/master/application-details-v1-responded')
+  } else if (applicationRef === 'YU77GT54') {
+    res.redirect('/AI/master/application-details-v1-entered')
+  } else if (applicationRef === 'GT32DA67') {
+    res.redirect('/AI/master/application-details-v2-received')
+  } else if (applicationRef === 'IH77EQ12') {
+    res.redirect('/AI/master/application-details-v2-decision')
+  } else if (applicationRef === 'KL87FC44') {
+    res.redirect('/AI/master/application-details-v2-waiting')
+  } else if (applicationRef === 'HY55HU78') {
+    res.redirect('/AI/master/application-details-v2-responded')
+  } else if (applicationRef === 'MN91G6S') {
+    res.redirect('/AI/master/application-details-v2-entered')
+  } else {
+    res.redirect('/AI/master/application-not-found')
+  }
+})
+
 
 // Notify routing
 
