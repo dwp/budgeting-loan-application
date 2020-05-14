@@ -1029,6 +1029,8 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v1-decision')
   } else if (applicationRef === 'XC99JU76') {
     res.redirect('/AI/master/application-details-v1-waiting')
+  } else if (applicationRef === 'TR54ED32') {
+    res.redirect('/AI/master/application-details-v1-waiting-full')
   } else if (applicationRef === 'JU66SA91') {
     res.redirect('/AI/master/application-details-v1-responded')
   } else if (applicationRef === 'YU77GT54') {
@@ -1039,6 +1041,8 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v2-decision')
   } else if (applicationRef === 'KL87FC44') {
     res.redirect('/AI/master/application-details-v2-waiting')
+  } else if (applicationRef === 'LM76TY11') {
+    res.redirect('/AI/master/application-details-v2-waiting-full')
   } else if (applicationRef === 'HY55HU78') {
     res.redirect('/AI/master/application-details-v2-responded')
   } else if (applicationRef === 'MN91G6S') {
