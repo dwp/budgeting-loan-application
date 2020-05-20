@@ -10,38 +10,83 @@
 {% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Prototypes for the new Agent interface</h1>
 
-          <h1 class="govuk-heading-l">Prototypes for the new Agent interface</h1>
+    <h2 class="govuk-heading-m">Live prototype</h2>
 
-          <h2 class="govuk-heading-m">Live prototype</h2>
+    <p><strong>Changes made</strong></p>
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>Amend copy on search page to try to improve understanding</li>
+      <li>Proceed with V1 layout and header (remove Nino)</li>
+      <li>Removed Notification status</li>
+      <li>Add examples of codes and offer pages</li>
+      <li>Remove code expiry from final two stages</li>
+      <li>Add application date field to all pages</li>
+      <li>Display citizen response and date and time</li>
+      <li>Display amount accepted</li>
+      <li>Add name 'Check a digital Budgeting Loan application'</li>
+    </ul>
 
-          <p><strong class="app-c-tag app-c-tag--default">Work in progress</strong></p>
+    <p><strong class="app-c-tag app-c-tag--default">Work in progress</strong></p>
 
-          <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
+    <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
 
-          <p><a href="/AI/master/search">Search page</a></p>
-          <p><a href="/AI/master/application-not-found">Application reference not found</a></p>
+    <p><a href="/AI/master/search">Search page</a></p>
+    <p><a href="/AI/master/application-not-found">Application reference not found</a></p>
 
-          <h3 class="govuk-heading-s">Step 2 of flow - displaying application details</h3>
+    <h3 class="govuk-heading-s">Step 2 of flow - displaying application details</h3>
 
-          <p><strong>Version 1</strong></p>
-          <p><a href="/AI/master/application-details-v1-received">Application received</a> - GH23FR55</p>
-          <p><a href="/AI/master/application-details-v1-decision">Decision made by SFCS</a> - VB65DE21</p>
-          <p><a href="/AI/master/application-details-v1-waiting">Applicant to respond to offer</a> - Multiple - XC99JU76</p>
-          <p><a href="/AI/master/application-details-v1-waiting-full">Applicant to respond to offer</a> - Full - TR54ED32</p>
-          <p><a href="/AI/master/application-details-v1-responded">Offer response received</a> - JU66SA91</p>
-          <p><a href="/AI/master/application-details-v1-entered">Offer response in SFCS</a> - YU77GT54</p>
-
-          <p><strong>Version 2</strong></p>
-          <p><a href="/AI/master/application-details-v2-received">Application received</a> - GT32DA67</p>
-          <p><a href="/AI/master/application-details-v2-decision">Decision made by SFCS</a> - IH77EQ12</p>
-          <p><a href="/AI/master/application-details-v2-waiting">Applicant to respond to offer</a> - Multiple - KL87FC44</p>
-          <p><a href="/AI/master/application-details-v2-waiting-full">Applicant to respond to offer</a> - Full - LM76TY11</p>
-          <p><a href="/AI/master/application-details-v2-responded">Offer response received</a> - HY55HU78</p>
-          <p><a href="/AI/master/application-details-v2-entered">Offer response in SFCS</a> - MN91G6S</p>
-    </div>
+    <p><a href="/AI/master/application-details-v1-received">Application received</a> - GH23FR55</p>
+    <p><a href="/AI/master/application-details-v1-decision">Decision made by SFCS</a> - VB65DE21</p>
+    <p><a href="/AI/master/application-details-v1-waiting">Applicant to respond to offer</a> - Multiple - XC99JU76</p>
+    <p><a href="/AI/master/application-details-v1-waiting-full">Applicant to respond to offer</a> - Full - TR54ED32</p>
+    <p><a href="/AI/master/application-details-v1-responded">Offer response received</a> - Multiple - JU66SA91</p>
+    <p><a href="/AI/master/application-details-v1-entered">Offer response in SFCS</a> - Full - YU77GT54</p>
+  </div>
 </div>
+
+<details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Round 1 - Tested 14th and 15th May 2020
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m"></h2>
+
+        <p><strong class="app-c-tag app-c-tag--default">Tested</strong></p>
+
+        <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
+
+        <p><a href="/AI/v1/search">Search page</a></p>
+        <p><a href="/AI/v1/application-not-found">Application reference not found</a></p>
+
+        <h3 class="govuk-heading-s">Step 2 of flow - displaying application details</h3>
+
+        <p><strong>Version 1</strong></p>
+        <p><a href="/AI/v1/application-details-v1-received">Application received</a> - GH23FR55</p>
+        <p><a href="/AI/v1/application-details-v1-decision">Decision made by SFCS</a> - VB65DE21</p>
+        <p><a href="/AI/v1/application-details-v1-waiting">Applicant to respond to offer</a> - Multiple - XC99JU76</p>
+        <p><a href="/AI/v1/application-details-v1-waiting-full">Applicant to respond to offer</a> - Full - TR54ED32</p>
+        <p><a href="/AI/v1/application-details-v1-responded">Offer response received</a> - JU66SA91</p>
+        <p><a href="/AI/v1/application-details-v1-entered">Offer response in SFCS</a> - YU77GT54</p>
+
+        <p><strong>Version 2</strong></p>
+        <p><a href="/AI/v1/application-details-v2-received">Application received</a> - GT32DA67</p>
+        <p><a href="/AI/v1/application-details-v2-decision">Decision made by SFCS</a> - IH77EQ12</p>
+        <p><a href="/AI/v1/application-details-v2-waiting">Applicant to respond to offer</a> - Multiple - KL87FC44</p>
+        <p><a href="/AI/v1/application-details-v2-waiting-full">Applicant to respond to offer</a> - Full - LM76TY11</p>
+        <p><a href="/AI/v1/application-details-v2-responded">Offer response received</a> - HY55HU78</p>
+        <p><a href="/AI/v1/application-details-v2-entered">Offer response in SFCS</a> - MN91G6S</p>
+      </div>
+    </div>
+  </div>
+</details>
+
+
 
 {% endblock %}
