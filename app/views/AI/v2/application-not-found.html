@@ -1,0 +1,48 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Find an application - Budgeting Loans
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+          No results for '<span style="text-transform: uppercase">{{ data['find-application'] }}</span>'. Please try again.
+      </h1>
+
+      <form class="form" action="/master/application-details" method="post" novalidate="novalidate">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                  Enter a claim reference number or application reference
+              </h2>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="find-application">
+                The claim reference can be found on the SF500e PDF in DRS
+              </label>
+              <input class="govuk-input govuk-input--width-10 input-uppercase" id="find-application" name="find-application" type="text">
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button>
+      </form>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Information in this system is what has been entered by applicants and hasn't been checked
+        </strong>
+      </div>
+    </div>
+  </div
+
+{% endblock %}
