@@ -1,0 +1,77 @@
+{% extends "layout-agent.html" %}
+
+{% block pageTitle %}
+  Example notifications – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Example notifications for text message and email</h1>
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        This information is for example only.
+      </strong>
+    </div>
+
+
+    <h3 class="govuk-heading-m">Text message example</h3>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half sms-border govuk-!-padding-3">
+        <h1 class="govuk-heading-s">Budgeting Loans</h1>
+        <hr>
+        <p>We can offer you a Budgeting Loan, [first name]. Check the details of the loan online and decide whether to accept it by [date]. Your application reference is 12AB34CD. Your security code is 123456789. Please make a note of these codes and go to <a href="/BLAS/master/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</p></a>
+      </div>
+    </div>
+
+    <h3 class="govuk-heading-m govuk-!-margin-top-6">Email example</h3>
+    <div class="govuk-grid-row sms-border">
+
+    {{ govukHeader({
+      homepageUrl: "#",
+      containerClasses: "govuk-width-container"
+    }) }}
+
+      <div class="govuk-grid-column-full">
+
+        <p>Dear [first name] [last name],</p>
+
+        <!-- <p>You applied for a Budgeting Loan on [date].</p> -->
+
+        <p>We can offer you a Budgeting Loan.</p>
+
+        <p>You need to check the details of the loan and decide whether to accept it by [date].</p>
+
+        <p>To do this online, you will need to fill in your:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>application reference, which is 12AB34CD</li>
+          <li>security code, which is 123456789</li>
+        </ul>
+
+        <p>Please make a note of these codes and go to <a href="/BLAS/master/application-reference-code">https://www.apply-budgeting-loan.service.gov.uk/decision</a>
+        </p>
+
+        <p>Regards,</p>
+
+        <p>Budgeting Loans, Department for Work and Pensions</p>
+
+        <hr>
+        <ul class="govuk-list">
+          <li>Telephone: 0800 169 0140</li>
+          <li>Welsh language: 0800 169 0240</li>
+          <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+          <li>Monday to Friday, 8am to 6pm</li>
+          <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
