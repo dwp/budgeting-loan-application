@@ -1047,6 +1047,8 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v2-responded')
   } else if (applicationRef === 'MN91G6S') {
     res.redirect('/AI/master/application-details-v2-entered')
+  } else if (applicationRef === 'HY55FR33') {
+    res.redirect('/AI/master/application-details-v1-declines')
   } else if (applicationRef === 'YU76GG54') {
     res.redirect('/AI/master/application-details-v1-ineligible')
   } else {
