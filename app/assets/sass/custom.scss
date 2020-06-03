@@ -93,5 +93,9 @@ html, body, button, input, table, td, th {
 }
 
 .sms-border {
-  border: 4px solid $govuk-input-border-colour;
+  border: 4px solid #0b0c0c;
+}
+
+.status-timestamp {
+  white-space: nowrap;
 }
