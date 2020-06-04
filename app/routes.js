@@ -1051,6 +1051,8 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v1-declines')
   } else if (applicationRef === 'YU76GG54') {
     res.redirect('/AI/master/application-details-v1-ineligible')
+  } else if (applicationRef.length == 0) {
+    res.redirect('/AI/master/search-error')
   } else {
     res.redirect('/AI/master/application-not-found')
   }
