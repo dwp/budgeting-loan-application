@@ -1,0 +1,222 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application details – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <dt>Date of birth:</dt>
+      <dd>4 June 1972</dd>
+
+      <dt>Postcode:</dt>
+      <dd>HU4 4XJ</dd>
+
+      <dt>Appointee:</dt>
+      <dd>Alex Smith</dd>
+
+      <dt>Phone:</dt>
+      <dd>07546322221</dd>
+    </div>
+  </dl>
+</section>
+<!-- <section class="key-details-bar key-details-bar--appointee" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Appointee details</dt>
+      <dd><strong class="govuk-tag govuk-tag--grey">Appointee</strong></dd>
+
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd>Alex Smith</dd>
+
+      <dt>Date of birth:</dt>
+      <dd>1 May 1973</dd>
+
+      <dt>Postcode:</dt>
+      <dd>HU4 4RT</dd>
+    </div>
+  </dl>
+</section> -->
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <p class="govuk-!-font-size-20"><strong>Status</strong>
+            <strong class="govuk-tag govuk-!-margin-left-4 govuk-!-margin-right-2">Applicant to respond to offer</strong><span class="govuk-!-font-size-16  status-timestamp">10 days ago</span>
+            </p>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-full">
+            <h2 class="govuk-heading-m">Appointee details</h2>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Full name</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">Alex Smith</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Date of birth</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">1 May 1973</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Address</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">
+            12 The Street<br />
+            Town<br />
+            County<br />
+          </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Postcode</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">HU4 4RT</p>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Application date
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">9 May 2020, 9:12am</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Notification type
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <a class="govuk-link--no-visited-state" href="/AI/master/example-notifications" target="_blank" style="float: right;">View example notification</a>
+          <p class="govuk-!-font-size-20">Text message</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Mobile number</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">07546322221</p>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p><a class="govuk-link--no-visited-state" href="https://status.notifications.service.gov.uk/" target="_blank">Check Notify status</a></p>
+        </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-0">
+            We send decision notifications via Notify. If a claimant has not received their notification you can check to see if the Notify service is available. We are unable to check if there are problems with the claimants email or phone provider.
+          </div>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">3 June 2020, 11:03am - <strong>Expired</strong></p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row govuk-!-margin-top-4">
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-!-font-size-20">Offer and repayment</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Offer type</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Requested</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Offered</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Repayment amount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Multiple</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£21 every week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"></th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£289</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£13 every week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"></th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£240</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£6 every week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
+                  <a class="govuk-link--no-visited-state" href="example-offer-page-multiple" target="_blank">View example decision page</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
