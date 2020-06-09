@@ -1,0 +1,55 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  We cannot offer you a Budgeting Loan – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+  <a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/v8/loan-accepted" method="post" novalidate="">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">We cannot offer you a Budgeting Loan</h1>
+
+          <p>You applied for a Budgeting Loan of <strong>&pound;<span class="loan-amount">{{ data['loan-amount'] }}</span></strong> on <span class="date"></span>.</p>
+
+          <p>Based on the information we have, we cannot offer you a Budgeting Loan at this time.</p>
+
+          <p>This is because you have already borrowed as much as you can in other Budgeting Loans or Crisis Loans.</p>
+
+          <h2 class="govuk-heading-m">Other help</h1>
+
+          <p>Find out about <a href="https://www.gov.uk/budgeting-help-benefits/other-help-you-can-get">other help you could get</a>.</p>
+
+          <p>You can apply again in future if you become <a href="https://www.gov.uk/budgeting-help-benefits/eligibility">eligible</a>.</p>
+
+          <h2 class="govuk-heading-m">If you need to contact us about the decision</h1>
+
+          <p>This decision was made using an automated system, taking into account the information you provided when you applied.</p>
+
+          <p><a href="/BLAS/master/review-rights-automated-decisions">Contact the Social Fund</a> if you want to ask a question or want someone to look at the decision again.</p>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
