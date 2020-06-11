@@ -1,11 +1,13 @@
 $white-transparent: rgba(255, 255, 255, .3);
 
+dd, dt, dl {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .key-details-bar {
   background-color: govuk-colour("blue");
-
-  &.key-details-bar--appointee {
-    background-color: govuk-colour("light-blue");
-  }
 
   .key-details-bar__key-details {
     margin: 0 auto;
@@ -14,6 +16,10 @@ $white-transparent: rgba(255, 255, 255, .3);
     position: relative;
     @media(max-width: 670px) {
       padding: 20px 15px;
+    }
+
+    * {
+      color: govuk-colour("white");
     }
 
     .key-details-bar__top-block,
@@ -40,8 +46,6 @@ $white-transparent: rgba(255, 255, 255, .3);
       float: left;
       font-size: 19px;
       margin-right: 5px;
-      margin-inline-start: 0;
-      color: govuk-colour("white");
       @media(max-width: 670px) {
         float: none;
         font-size: 16px;
