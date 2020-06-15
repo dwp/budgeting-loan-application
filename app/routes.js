@@ -510,14 +510,14 @@ router.post('/master/interruption-card', function (req, res) {
 
 //Send appointees to the appointee details and appointee address pages before they select contact preference
 
-router.post('/master/contact-details', function (req, res) {
+router.post('/master/contact-type', function (req, res) {
 
   let appointeeDetails = req.session.data['appointee']
 
   if (appointeeDetails === 'Yes') {
     res.redirect('/master/appointee-details')
   } else {
-    res.redirect('/master/contact-details')
+    res.redirect('/master/can-you-receive')
   }
 })
 
