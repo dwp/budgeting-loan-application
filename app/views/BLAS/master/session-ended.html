@@ -1,0 +1,41 @@
+{% extends "layout-response.html" %}
+
+{% block pageTitle %}
+  You have been signed out – Budgeting Loans – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Testing only"
+    },
+    html: 'Messages will not be sent and no data is saved.'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form action="/BLAS/master/application-reference-code" method="post" novalidate="novalidate">
+        <div class="govuk-form-group">
+
+          <h1 class="govuk-heading-l">You have been signed out</h1>
+
+          <p>We signed you out of this service. This is to protect your information.</p>
+
+          <button class="govuk-button" data-module="govuk-button">Start again</button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}
