@@ -1,0 +1,27 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  SMS decision notification - approval - less than 320 characters
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+
+      <h1 class="govuk-heading-s">GOV.UK</h1>
+
+      <hr>
+
+      <p>Budgeting Loans: We have received your Budgeting Loan application, {{ data['first-name'] }}. We will send you a decision message in the next week. This will tell you if we can offer you a loan and what to do next.<br>Contact us if you need help, Monday to Friday, 8am to 6pm. Telephone: 0800 169 0140. Welsh language: 0800 169 0240. NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

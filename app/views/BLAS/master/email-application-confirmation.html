@@ -1,0 +1,67 @@
+{% set section = "create-account" %}
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  (Email) Your Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+
+      <div>
+        <h1 class="govuk-heading-s">Budgeting Loans service - application received</h1>
+        <p class="govuk-body-s"><strong>To:</strong> yourname@gmail.com<br>
+        <strong>From:</strong> budgetingloans@dwp.gov.uk</p>
+      </div>
+
+      <hr>
+
+  {{ govukHeader({
+    homepageUrl: "#",
+    containerClasses: "govuk-width-container"
+  }) }}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>Dear {{ data['first-name'] }} {{ data['last-name'] }},</p>
+
+      <p>We have received your Budgeting Loan application.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>We will send you a decision message in the next week. This will tell you if we can offer you a loan and what to do next.</p>
+
+      <h2 class="govuk-heading-m">If you are offered a loan</h2>
+
+      <p>We will tell you:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>how much you can borrow</li>
+        <li>how much your repayments will be</li>
+      </ul>
+
+      <p>You do not have to accept the loan offer if you do not want to.</p>
+
+      <h2 class="govuk-heading-m">If you are not offered a loan</h2>
+
+      <p>We will tell you why and how to get help if you need it.</p>
+
+      <h2 class="govuk-heading-m">If you need help</h2>
+
+      <ul class="govuk-list">
+        <li>Telephone: 0800 169 0140</li>
+        <li>Welsh language: 0800 169 0240</li>
+        <li>NGT text relay (if you cannot hear or speak on the phone): 18001 then 0800 169 0140</li>
+        <li>Monday to Friday, 8am to 6pm</li>
+        <li><a href="https://www.gov.uk/call-charges">Find out about call charges</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+{% endblock %}
