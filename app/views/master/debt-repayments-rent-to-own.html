@@ -38,18 +38,12 @@
             <p>
               These arrangements are sometimes known as ‘hire purchases’ or ‘rent to own’. Include anything you’re making repayments on.
             </p>
-            <div class="govuk-radios--inline">
+            <div class="govuk-radios">
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="hire-purchase-1" name="hire-purchase" type="radio" value="Yes" data-aria-controls="conditional-hire-purchase-1" {{ checked("hire-purchase", "Yes") }}>
                       <label class="govuk-label govuk-radios__label" for="hire-purchase-1">
                         Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="hire-purchase-2" name="hire-purchase" type="radio" value="No" {{ checked("hire-purchase", "No") }}>
-                      <label class="govuk-label govuk-radios__label" for="hire-purchase-2">
-                        No
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-hire-purchase-1" style="clear:left;">
@@ -72,6 +66,13 @@
                         </div>
                       </div>
                     </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="hire-purchase-2" name="hire-purchase" type="radio" value="No" {{ checked("hire-purchase", "No") }}>
+                      <label class="govuk-label govuk-radios__label" for="hire-purchase-2">
+                        No
+                      </label>
+                    </div>
+
                   </div>
               </div>
           </fieldset>

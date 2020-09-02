@@ -40,7 +40,7 @@
 
             <p>The message will tell you how to view your offer online.</p>
 
-            <div class="govuk-radios">
+            <div class="govuk-radios gov-ukradios--inline govuk-radios--conditional">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="mobile-number" name="contactpreference" type="radio" value="text message" {{ checked("contactpreference", "text message") }} data-aria-controls="conditional-mobile-number">
@@ -74,6 +74,7 @@
                     </div>
                   </div>
                 </div>
+              </div>
               </div>
 
             </fieldset>

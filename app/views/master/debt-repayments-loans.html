@@ -38,18 +38,12 @@
             <p>
               Include any loans you have from a bank or financial institution. Don’t include your mortgage or money you owe to the government.
             </p>
-            <div class="govuk-radios--inline">
+            <div class="govuk-radios">
                 <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="loans-1" name="loans" type="radio" value="Yes" data-aria-controls="conditional-loans-1" {{ checked("loans", "Yes") }}>
                       <label class="govuk-label govuk-radios__label" for="loans-1">
                         Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="loans-2" name="loans" type="radio" value="No" {{ checked("loans", "No") }}>
-                      <label class="govuk-label govuk-radios__label" for="loans-2">
-                        No
                       </label>
                     </div>
                     <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-loans-1" style="clear:left;">
@@ -72,6 +66,13 @@
                         </div>
                       </div>
                     </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="loans-2" name="loans" type="radio" value="No" {{ checked("loans", "No") }}>
+                      <label class="govuk-label govuk-radios__label" for="loans-2">
+                        No
+                      </label>
+                    </div>
+
                   </div>
               </div>
           </fieldset>

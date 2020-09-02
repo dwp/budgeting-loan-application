@@ -35,18 +35,12 @@
                 Do you owe any money to your landlord?
               </h1>
             </legend>
-            <div class="govuk-radios--inline">
+            <div class="govuk-radios">
               <div class="govuk-radios govuk-radios--conditional" data-module="radios">
                   <div class="govuk-radios__item">
                     <input class="govuk-radios__input" id="landlord-1" name="landlord" type="radio" value="Yes" data-aria-controls="conditional-landlord-1" {{ checked("landlord", "Yes") }}>
                     <label class="govuk-label govuk-radios__label" for="landlord-1">
                       Yes
-                    </label>
-                  </div>
-                  <div class="govuk-radios__item">
-                    <input class="govuk-radios__input" id="landlord-2" name="landlord" type="radio" value="No" {{ checked("landlord", "No") }}>
-                    <label class="govuk-label govuk-radios__label" for="landlord-2">
-                      No
                     </label>
                   </div>
                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-landlord-1" style="clear:left;">
@@ -69,6 +63,13 @@
                       </div>
                     </div>
                   </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="landlord-2" name="landlord" type="radio" value="No" {{ checked("landlord", "No") }}>
+                    <label class="govuk-label govuk-radios__label" for="landlord-2">
+                      No
+                    </label>
+                  </div>
+
                 </div>
             </div>
 
