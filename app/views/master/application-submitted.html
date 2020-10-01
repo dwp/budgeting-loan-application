@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your application has been submitted
+{% endblock %}
+
+{% block beforeContent %}
+
+{% from 'phase-banner/macro.njk' import govukPhaseBanner %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Testing only"
+  },
+  html: 'Messages will not be sent and no data is saved.'
+}) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l govuk-!-margin-top-6">
+        Your application has been submitted
+      </h1>
+      <p class="govuk-!-margin-bottom-9">If you need to change the information in your application, phone 0800 169 0140 between 8am and 6pm, Monday to Friday (<a href="https://www.gov.uk/call-charges">charges apply</a>).</p>
+
+    </div>
+  </div>
+
+
+{% endblock %}
