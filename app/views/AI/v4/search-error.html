@@ -1,0 +1,60 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Enter a claim reference number or application reference – Check a digital Budgeting Loan application
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              <a href="#claim-ref-error">Enter a claim reference number or application reference</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <form class="form" action="/master/application-details" method="post" novalidate="novalidate">
+        <div class="govuk-form-group govuk-form-group--error">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                  Enter a claim reference number or application reference
+              </h1>
+            </legend>
+            <span id="claim-ref-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter a claim reference number or application reference
+            </span>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="find-application">
+                The claim reference can be found on the SF500e PDF in DRS
+              </label>
+              <input class="govuk-input govuk-input--width-10 input-uppercase govuk-input--error" id="find-application" name="find-application" type="text">
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button>
+      </form>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Information in this system is what has been entered by applicants and has not been checked.
+        </strong>
+      </div>
+    </div>
+  </div
+
+{% endblock %}

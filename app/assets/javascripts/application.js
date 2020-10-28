@@ -17,6 +17,13 @@ var monthNames = [
   "November", "December"
 ];
 
+var monthNamesShort = [
+  "Jan", "Feb", "Mar",
+  "Apr", "May", "Jun", "Jul",
+  "Aug", "Sep", "Oct",
+  "Nov", "Dec"
+];
+
 // Show current date
 date = new Date();
 y = date.getFullYear();
@@ -25,6 +32,10 @@ d = date.getDate();
 
 if(document.querySelector(".date")) {
   document.querySelector(".date").innerHTML = d + " " + monthNames[m] + " " + y;
+}
+
+if(document.querySelector(".short-date")) {
+  document.querySelector(".short-date").innerHTML = d + " " + monthNamesShort[m] + " " + y;
 }
 
 // Show future date
