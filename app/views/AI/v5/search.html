@@ -1,0 +1,44 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Enter a claim reference number or application reference – Check a digital Budgeting Loan application
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" action="/master/application-details" method="post" novalidate="novalidate">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                  Enter a claim reference number or application reference
+              </h1>
+            </legend>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="find-application">
+                The claim reference can be found on the SF500e PDF in DRS
+              </label>
+              <input class="govuk-input govuk-input--width-10 input-uppercase" id="find-application" name="find-application" type="text">
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button">Continue</button>
+      </form>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Information in this system is what has been entered by applicants and has not been checked.
+        </strong>
+      </div>
+    </div>
+  </div
+
+{% endblock %}

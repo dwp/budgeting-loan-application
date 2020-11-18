@@ -1053,6 +1053,8 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v1-appointee')
   } else if (applicationRef === 'YU76GG54') {
     res.redirect('/AI/master/application-details-v1-ineligible')
+  } else if (applicationRef === 'T6Y7GR55') {
+    res.redirect('/AI/master/not-on-qb-v2b')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
