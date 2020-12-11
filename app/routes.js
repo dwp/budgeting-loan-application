@@ -1055,10 +1055,55 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/application-details-v1-ineligible')
   } else if (applicationRef === 'T6Y7GR55') {
     res.redirect('/AI/master/not-on-qb-v2b')
+  } else if (applicationRef === 'HY77TR65') {
+    res.redirect('/AI/master/exception-handling-v1a')
+  } else if (applicationRef === 'JK9844WS') {
+    res.redirect('/AI/master/exception-handling-v2a')
+  } else if (applicationRef === 'FD22FT54') {
+    res.redirect('/AI/master/exception-handling-v3a')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
     res.redirect('/AI/master/application-not-found')
+  }
+})
+
+router.post('/master/exception-handling-v1c', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v1c')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v1b-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v1b-error')
+  }
+})
+
+router.post('/master/exception-handling-v2d', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v2d')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v2c-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v2c-error')
+  }
+})
+
+router.post('/master/exception-handling-v3c', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v3c')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v3b-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v3b-error')
   }
 })
 

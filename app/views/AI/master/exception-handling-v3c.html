@@ -1,0 +1,182 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application details – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+      <dt class="govuk-visually-hidden">National Insurance number:</dt>
+      <dd class="key-details-bar__nino">JP 45 55 67 D</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+      <span class="key-details-bar__wrapper">
+        <dt>Postcode:</dt>
+        <dd>HU4 4XJ</dd>
+      </span>
+
+      <span class="key-details-bar__wrapper">
+        <dt>Phone:</dt>
+        <dd>07546322221</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<form action="/AI/master/exception-handling-v1b" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          A request for an update has been made.
+        </p>
+      </div>
+    </div>
+
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-!-font-size-20"><strong>Status</strong>
+            <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-left-1 govuk-!-margin-right-1">Update requested</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >Today</span>
+            </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row ">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Exception occured
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">28 November 2020, 11:00am</p>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Application date
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">28 November 2020, 9:02am</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Notification type
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-!-font-size-20">Email</p>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+            <a class="govuk-link--no-visited-state" href="/AI/master/example-notifications" target="_blank" style="float: right;">View example notification</a>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Email address
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">sam@samsmith.net</p>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p><a class="govuk-link--no-visited-state" href="https://status.notifications.service.gov.uk/" target="_blank">Check Notify status</a></p>
+        </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-0">
+            We send decision notifications via Notify. If a claimant has not received their notification you can check to see if the Notify service is available. We are unable to check if there are problems with the claimants email or phone provider.
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">2 June 2020 - <strong>14 days left</strong></p>
+        </div>
+      </div> -->
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-!-font-size-20">Offer and repayment</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Offer type</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Requested</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Offered</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Repayment amount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">-</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
+                  <a class="govuk-link--no-visited-state" href="example-offer-page" target="_blank">View example decision page</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}
