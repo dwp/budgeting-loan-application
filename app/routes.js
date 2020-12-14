@@ -1057,10 +1057,16 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/not-on-qb-v2b')
   } else if (applicationRef === 'HY77TR65') {
     res.redirect('/AI/master/exception-handling-v1a')
+  } else if (applicationRef === 'GR43DS77') {
+    res.redirect('/AI/master/exception-handling-v1d')
   } else if (applicationRef === 'JK9844WS') {
     res.redirect('/AI/master/exception-handling-v2a')
+  } else if (applicationRef === 'VG55DR23') {
+    res.redirect('/AI/master/exception-handling-v2e')
   } else if (applicationRef === 'FD22FT54') {
     res.redirect('/AI/master/exception-handling-v3a')
+  } else if (applicationRef === 'LK67FD33') {
+    res.redirect('/AI/master/exception-handling-v3d')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
