@@ -12,20 +12,18 @@
   <dl class="key-details-bar__key-details">
     <div class="key-details-bar__top-block">
       <dt class="govuk-visually-hidden">Name:</dt>
-      <dd class="key-details-bar__name">Sam Smith</dd>
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="key-details-bar__nino">JP 45 55 67 D</dd>
+      <dd class="key-details-bar__name">Alex Barry</dd>
     </div>
 
     <div class="key-details-bar__bottom-block">
       <span class="key-details-bar__wrapper">
         <dt>Date of birth:</dt>
-        <dd>4 June 1972</dd>
+        <dd>4 November 1971</dd>
       </span>
 
       <span class="key-details-bar__wrapper">
         <dt>Postcode:</dt>
-        <dd>HU4 4XJ</dd>
+        <dd>DN20 0ED</dd>
       </span>
 
       <span class="key-details-bar__wrapper">
@@ -42,40 +40,27 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v2b" method="post" novalidate="novalidate">
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">YT56FR578</span></h1>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <p class="govuk-!-font-size-20"><strong>Status</strong>
-            <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-2 govuk-!-margin-right-2">Processing error</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >10 days ago</span>
+            <strong class="govuk-tag govuk-!-margin-left-4 govuk-!-margin-right-2 govuk-tag--green">Complete, now in legacy systems</strong><span class="govuk-!-font-size-16 govuk-!-padding-left-1 status-timestamp">Today</span>
             </p>
         </div>
       </div>
 
-      <div class="govuk-grid-row ">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Exception occured
-            </strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 November, 11:00pm</p>
-        </div>
-      </div>
-
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-      <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-row govuk-!-margin-top-4">
         <div class="govuk-grid-column-one-third">
             <p class="govuk-!-font-size-20"><strong>Application date
             </strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 November 2020, 9:02am</p>
+          <p class="govuk-!-font-size-20"><span class="date"></span>, 11:00pm</p>
         </div>
       </div>
 
@@ -86,7 +71,7 @@
         </div>
 
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-!-font-size-20">Email</p>
+          <p class="govuk-!-font-size-20">Text message</p>
         </div>
 
         <div class="govuk-grid-column-one-third">
@@ -96,44 +81,26 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Email address
+            <p class="govuk-!-font-size-20"><strong>Mobile number
             </strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">sam@samsmith.net</p>
+          <p class="govuk-!-font-size-20">07546322221</p>
         </div>
       </div>
 
-      <!-- <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p><a class="govuk-link--no-visited-state" href="https://status.notifications.service.gov.uk/" target="_blank">Check Notify status</a></p>
-        </div>
-
-        <div class="govuk-grid-column-full">
-          <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-0">
-            We send decision notifications via Notify. If a claimant has not received their notification you can check to see if the Notify service is available. We are unable to check if there are problems with the claimants email or phone provider.
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
             <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">2 June 2020 - <strong>14 days left</strong></p>
+          <p class="govuk-!-font-size-20"><span class="new-date"></span> - <strong>14 days left</strong></p>
         </div>
-      </div> -->
+      </div>
 
-      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-      <div class="govuk-grid-row govuk-!-margin-top-6">
+      <div class="govuk-grid-row govuk-!-margin-top-4 govuk-!-margin-bottom-4">
         <div class="govuk-grid-column-full">
           <table class="govuk-table">
             <caption class="govuk-table__caption govuk-!-font-size-20">Offer and repayment</caption>
@@ -147,14 +114,19 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">-</th>
+                <th scope="row" class="govuk-table__header">No offer</th>
                 <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£0</td>
               </tr>
+              <!-- <tr class="govuk-table__row">
+                <td class="govuk-table__cell" colspan="4">
+                  Already borrowed as much as you can in other Budgeting Loans or Crisis Loans
+                </td>
+              </tr> -->
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
-                  <a class="govuk-link--no-visited-state" href="example-offer-page" target="_blank">View example decision page</a>
+                  <a class="govuk-link--no-visited-state" href="example-offer-page-no-offer" target="_blank">View example decision page</a>
                 </td>
               </tr>
             </tbody>
@@ -162,19 +134,29 @@
         </div>
       </div>
 
-  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Ineligiblilty reason</strong></p>
+        </div>
 
-  <div class="govuk-grid-column-one-third">
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        Application actions
-      </h2>
-      <button class="govuk-button" data-module="govuk-button">
-        Get update from SFCS
-      </button>
-    </aside>
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">Not on qualifying benefit</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Business exception - check qualifying benefit in legacy systems
+          </strong>
+        </div>
+        </div>
+      </div>
+
   </div>
 </div>
-</form>
 
 {% endblock %}

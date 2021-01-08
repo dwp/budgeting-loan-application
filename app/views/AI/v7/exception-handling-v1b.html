@@ -42,7 +42,7 @@
 {% block content %}
 
 
-<form action="/master/exception-handling-v3c" method="post" novalidate="novalidate">
+<form action="exception-handling-v1c" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Check application details</h1>
@@ -73,6 +73,14 @@
           The 3 digit code following the National Insurance number in SFCS
         </div>
         <input class="govuk-input govuk-input--width-3" id="application-number" name="application-number" type="text">
+      </div>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Suppress the letter from SFCS before continuing.
+        </strong>
       </div>
 
       <button class="govuk-button" data-module="govuk-button">

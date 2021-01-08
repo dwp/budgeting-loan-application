@@ -18,7 +18,13 @@
 
     <p><strong>Changes made</strong></p>
     <ul class="govuk-list govuk-!-font-size-16">
-      <li>Added versions for 'Not on Qaulifying Benefit' or 'Not on Qualifying Benefit for 26 weeks'.</li>
+      <li>used V3 as a basis for the new versions</li>
+      <li>explore better content for notification banners - explain what has and what will happen in more detail</li>
+      <li>remove 'review' from first status and improve the 'update' status</li>
+      <li>remove NINo and postcode from key details bar - users indicated they might use this content and there is a chance it could be incorrect</li>
+      <li>one page for the 'check details' screen</li>
+      <li>change 'SFCS application number' to 'Budgeting Loan application number'</li>
+      <li>remove 'suppress letter' warning as it is too late in the process - will be handled in existing journey</li>
     </ul>
 
     <p><strong class="app-c-tag app-c-tag--default">Work in progress</strong></p>
@@ -43,12 +49,10 @@
 
     <h3 class="govuk-heading-s">Step 3 of flow - exception handling</h3>
 
-    <p><a href="/AI/master/exception-handling-v1a">Exception handling - v1 - start screen</a> - HY77TR65</p>
-    <p><a href="/AI/master/exception-handling-v1d">Exception handling - v1 - end screen</a> - GR43DS77</p>
-    <p><a href="/AI/master/exception-handling-v2a">Exception handling - v2 - start screen</a> - JK9844WS</p>
-    <p><a href="/AI/master/exception-handling-v2e">Exception handling - v2 - end screen</a> - VG55DR23</p>
-    <p><a href="/AI/master/exception-handling-v3a">Exception handling - v3 - start screen</a> - FD22FT54</p>
-    <p><a href="/AI/master/exception-handling-v3d">Exception handling - v3 - end screen</a> - LK67FD33</p>
+    <p><a href="/AI/master/exception-handling-v4a">Exception handling - v4 - start screen</a> - GT7654ED</p>
+    <p><a href="/AI/master/exception-handling-v4d">Exception handling - v4 - end screen</a> - JK77MNHV</p>
+    <p><a href="/AI/master/exception-handling-v5a">Exception handling - v5 - start screen</a> - SA44TR99</p>
+    <p><a href="/AI/master/exception-handling-v5d">Exception handling - v5 - end screen</a> - JN32BV75</p>
 
     <h3 class="govuk-heading-s">Other screens</h3>
     <p><a href="/AI/master/access-denied">Access denied</a></p>
@@ -59,20 +63,67 @@
 <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Version 6
+      Version 7 - tested December 2020
     </span>
   </summary>
   <div class="govuk-details__text">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">Live prototype</h2>
+        <p><strong class="app-c-tag app-c-tag--default">Tested</strong></p>
 
         <p><strong>Changes made</strong></p>
         <ul class="govuk-list govuk-!-font-size-16">
-          <li>Added versions for 'Not on Qaulifying Benefit' or 'Not on Qualifying Benefit for 26 weeks'.</li>
+          <li>Added versions for 'Exception Handling.</li>
         </ul>
 
-        <p><strong class="app-c-tag app-c-tag--default">Work in progress</strong></p>
+        <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
+
+        <p><a href="/AI/v7/search">Search page</a></p>
+        <p><a href="/AI/v7/application-not-found">Application reference not found</a></p>
+
+        <h3 class="govuk-heading-s">Step 2 of flow - displaying application details</h3>
+
+        <p><a href="/AI/v7/application-details-v1-received">Application received</a> - GH23FR55</p>
+        <p><a href="/AI/v7/application-details-v1-decision">Decision made by SFCS</a> - VB65DE21</p>
+        <p><a href="/AI/v7/application-details-v1-waiting">Applicant to respond to offer</a> - Multiple - XC99JU76</p>
+        <p><a href="/AI/v7/application-details-v1-waiting-full">Applicant to respond to offer</a> - Full - TR54ED32</p>
+        <p><a href="/AI/v7/application-details-v1-responded">Response received, awaiting processing</a> - Multiple - JU66SA91</p>
+        <p><a href="/AI/v7/application-details-v1-entered">Complete, now in legacy systems</a> - Full - YU77GT54</p>
+        <p><a href="/AI/v7/application-details-v1-ineligible">Claimant ineligible</a> - YU76GG54</p>
+        <p><a href="/AI/v7/application-details-v1-declines">Claimant declines offer</a> - HY55FR33</p>
+        <p><a href="/AI/v7/application-details-v1-appointee">Showing appointee information</a> - DS66RE21</p>
+        <p><a href="/AI/v7/not-on-qb-v2b">Not on Qualifying Benefit</a> - T6Y7GR55</p>
+
+        <h3 class="govuk-heading-s">Step 3 of flow - exception handling</h3>
+
+        <p><a href="/AI/v7/exception-handling-v1a">Exception handling - v1 - start screen</a> - HY77TR65</p>
+        <p><a href="/AI/v7/exception-handling-v1d">Exception handling - v1 - end screen</a> - GR43DS77</p>
+        <p><a href="/AI/v7/exception-handling-v2a">Exception handling - v2 - start screen</a> - JK9844WS</p>
+        <p><a href="/AI/v7/exception-handling-v2e">Exception handling - v2 - end screen</a> - VG55DR23</p>
+        <p><a href="/AI/v7/exception-handling-v3a">Exception handling - v3 - start screen</a> - FD22FT54</p>
+        <p><a href="/AI/v7/exception-handling-v3d">Exception handling - v3 - end screen</a> - LK67FD33</p>
+
+        <h3 class="govuk-heading-s">Other screens</h3>
+        <p><a href="/AI/v7/access-denied">Access denied</a></p>
+
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Version 6 - not tested
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p><strong>Changes made</strong></p>
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>Updated and tidied pages</li>
+        </ul>
 
         <h3 class="govuk-heading-s">Step 1 of flow - agent searches for application</h3>
 
@@ -149,7 +200,7 @@
 <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Version 4 - Not tested
+      Version 4 - not tested
     </span>
   </summary>
   <div class="govuk-details__text">
@@ -190,7 +241,7 @@
 <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Version 3 - Tested 28th and 29th May 2020
+      Version 3 - tested 28th and 29th May 2020
     </span>
   </summary>
   <div class="govuk-details__text">
@@ -226,7 +277,7 @@
 <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Version 2 - Tested 21st and 22nd May 2020
+      Version 2 - tested 21st and 22nd May 2020
     </span>
   </summary>
   <div class="govuk-details__text">
@@ -268,7 +319,7 @@
 <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Version 1 - Tested 14th and 15th May 2020
+      Version 1 - tested 14th and 15th May 2020
     </span>
   </summary>
   <div class="govuk-details__text">
