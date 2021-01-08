@@ -13,8 +13,6 @@
     <div class="key-details-bar__top-block">
       <dt class="govuk-visually-hidden">Name:</dt>
       <dd class="key-details-bar__name">Sam Smith</dd>
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="key-details-bar__nino">JP 45 55 67 D</dd>
     </div>
 
     <div class="key-details-bar__bottom-block">
@@ -42,35 +40,44 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v1b" method="post" novalidate="novalidate">
+<form action="/AI/master/exception-handling-v5b" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
+
+
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
-
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-            <p class="govuk-!-font-size-20"><strong>Status</strong>
-            <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-left-1 govuk-!-margin-right-1">Update requested</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >Today</span>
-            </p>
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Processing agent
+          </h2>
         </div>
-
-        <div class="govuk-grid-column-one-half">
-          <button class="govuk-button" data-module="govuk-button" style="float: right;" disabled="disabled">
-            Get update from SFCS
-          </button>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            Fix the exception. You can then check for an update from SFCS.
+          </p>
         </div>
       </div>
 
-      <!-- <div class="govuk-grid-row ">
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <p class="govuk-!-font-size-20"><strong>Status</strong>
+            <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-2 govuk-!-margin-right-2">Staff update required</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >10 days ago</span>
+            </p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row ">
         <div class="govuk-grid-column-one-third">
             <p class="govuk-!-font-size-20"><strong>Exception occured
             </strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">19 May 2020, 11:00pm</p>
+          <p class="govuk-!-font-size-20">28 December 2020, 11:00am</p>
         </div>
-      </div> -->
+      </div>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -81,7 +88,7 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 November 2020, 9:02am</p>
+          <p class="govuk-!-font-size-20">28 December 2020, 9:02am</p>
         </div>
       </div>
 
@@ -92,7 +99,7 @@
         </div>
 
         <div class="govuk-grid-column-one-third">
-          <p class="govuk-!-font-size-20">Email</p>
+          <p class="govuk-!-font-size-20">Text message</p>
         </div>
 
         <div class="govuk-grid-column-one-third">
@@ -102,12 +109,12 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Email address
+            <p class="govuk-!-font-size-20"><strong>Mobile number
             </strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">sam@samsmith.net</p>
+          <p class="govuk-!-font-size-20">07546322221</p>
         </div>
       </div>
 
@@ -168,6 +175,17 @@
         </div>
       </div>
 
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Application actions
+      </h2>
+      <button class="govuk-button" data-module="govuk-button">
+        Check for update
+      </button>
+    </aside>
   </div>
 </div>
 </form>

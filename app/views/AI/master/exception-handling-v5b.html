@@ -13,8 +13,6 @@
     <div class="key-details-bar__top-block">
       <dt class="govuk-visually-hidden">Name:</dt>
       <dd class="key-details-bar__name">Sam Smith</dd>
-      <dt class="govuk-visually-hidden">National Insurance number:</dt>
-      <dd class="key-details-bar__nino">JP 45 55 67 D</dd>
     </div>
 
     <div class="key-details-bar__bottom-block">
@@ -42,39 +40,41 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v2c" method="post" novalidate="novalidate">
+<form action="/master/exception-handling-v5c" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Check personal details</h1>
+      <h1 class="govuk-heading-l">Check application details</h1>
 
       <div class="govuk-inset-text">
-        Enter the National Insurance number and postcode from the customer details in SFCS.
+        These details are used to check for an update. Confirm the National Insurance number and postcode match the customer details in SFCS.
       </div>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="national-insurance-number">
           National Insurance number
         </label>
-        <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" >
+        <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" value="JP455567D">
       </div>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="postcode">
           Postcode
         </label>
-        <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="text">
+        <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="text" value="HU4 4XJ">
       </div>
 
-      <div class="govuk-warning-text">
-        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-        <strong class="govuk-warning-text__text">
-          <span class="govuk-warning-text__assistive">Warning</span>
-          Suppress the letter from SFCS before continuing.
-        </strong>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="application-number">
+          Budgeting Loan application number
+        </label>
+        <div id="application-number-hint" class="govuk-hint">
+          The 3 digit code following the National Insurance number in SFCS
+        </div>
+        <input class="govuk-input govuk-input--width-3" id="application-number" name="application-number" type="text">
       </div>
 
       <button class="govuk-button" data-module="govuk-button">
-        Save and continue
+        Confirm and send
       </button>
 
   </div>

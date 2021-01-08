@@ -1056,17 +1056,25 @@ router.post('/master/application-details', function (req, res) {
   } else if (applicationRef === 'T6Y7GR55') {
     res.redirect('/AI/master/not-on-qb-v2b')
   } else if (applicationRef === 'HY77TR65') {
-    res.redirect('/AI/master/exception-handling-v1a')
+    res.redirect('/AI/v7/exception-handling-v1a')
   } else if (applicationRef === 'GR43DS77') {
-    res.redirect('/AI/master/exception-handling-v1d')
+    res.redirect('/AI/v7/exception-handling-v1d')
   } else if (applicationRef === 'JK9844WS') {
-    res.redirect('/AI/master/exception-handling-v2a')
+    res.redirect('/AI/v7/exception-handling-v2a')
   } else if (applicationRef === 'VG55DR23') {
-    res.redirect('/AI/master/exception-handling-v2e')
+    res.redirect('/AI/v7/exception-handling-v2e')
   } else if (applicationRef === 'FD22FT54') {
-    res.redirect('/AI/master/exception-handling-v3a')
+    res.redirect('/AI/v7/exception-handling-v3a')
   } else if (applicationRef === 'LK67FD33') {
-    res.redirect('/AI/master/exception-handling-v3d')
+    res.redirect('/AI/v7/exception-handling-v3d')
+  } else if (applicationRef === 'GT7654ED') {
+    res.redirect('/AI/master/exception-handling-v4a')
+  } else if (applicationRef === 'JK77MNHV') {
+    res.redirect('/AI/master/exception-handling-v4d')
+  } else if (applicationRef === 'SA44TR99') {
+    res.redirect('/AI/master/exception-handling-v5a')
+  } else if (applicationRef === 'JN32BV75') {
+    res.redirect('/AI/master/exception-handling-v5d')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
@@ -1074,42 +1082,68 @@ router.post('/master/application-details', function (req, res) {
   }
 })
 
-router.post('/master/exception-handling-v1c', function (req, res) {
+router.post('exception-handling-v1c', function (req, res) {
 
   let applicationNumber = req.session.data['application-number']
 
   if (applicationNumber === '002') {
-    res.redirect('/AI/master/exception-handling-v1c')
+    res.redirect('exception-handling-v1c')
   } else if (applicationNumber !== '002') {
-    res.redirect('/AI/master/exception-handling-v1b-error')
+    res.redirect('exception-handling-v1b-error')
   } else {
-    res.redirect('/AI/master/exception-handling-v1b-error')
+    res.redirect('exception-handling-v1b-error')
   }
 })
 
-router.post('/master/exception-handling-v2d', function (req, res) {
+router.post('exception-handling-v2d', function (req, res) {
 
   let applicationNumber = req.session.data['application-number']
 
   if (applicationNumber === '002') {
-    res.redirect('/AI/master/exception-handling-v2d')
+    res.redirect('exception-handling-v2d')
   } else if (applicationNumber !== '002') {
-    res.redirect('/AI/master/exception-handling-v2c-error')
+    res.redirect('exception-handling-v2c-error')
   } else {
-    res.redirect('/AI/master/exception-handling-v2c-error')
+    res.redirect('exception-handling-v2c-error')
   }
 })
 
-router.post('/master/exception-handling-v3c', function (req, res) {
+router.post('exception-handling-v3c', function (req, res) {
 
   let applicationNumber = req.session.data['application-number']
 
   if (applicationNumber === '002') {
-    res.redirect('/AI/master/exception-handling-v3c')
+    res.redirect('exception-handling-v3c')
   } else if (applicationNumber !== '002') {
-    res.redirect('/AI/master/exception-handling-v3b-error')
+    res.redirect('exception-handling-v3b-error')
   } else {
-    res.redirect('/AI/master/exception-handling-v3b-error')
+    res.redirect('exception-handling-v3b-error')
+  }
+})
+
+router.post('/master/exception-handling-v4c', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v4c')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v4b-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v4b-error')
+  }
+})
+
+router.post('/master/exception-handling-v5c', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v5c')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v5b-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v5b-error')
   }
 })
 

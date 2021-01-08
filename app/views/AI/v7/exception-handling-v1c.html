@@ -42,42 +42,35 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v1b" method="post" novalidate="novalidate">
+<form action="exception-handling-v1b" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Important
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          A request for an update has been made.
-        </p>
-      </div>
-    </div>
-
       <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-grid-column-one-half">
             <p class="govuk-!-font-size-20"><strong>Status</strong>
             <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-left-1 govuk-!-margin-right-1">Update requested</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >Today</span>
             </p>
         </div>
+
+        <div class="govuk-grid-column-one-half">
+          <button class="govuk-button" data-module="govuk-button" style="float: right;" disabled="disabled">
+            Get update from SFCS
+          </button>
+        </div>
       </div>
 
-      <div class="govuk-grid-row ">
+      <!-- <div class="govuk-grid-row ">
         <div class="govuk-grid-column-one-third">
             <p class="govuk-!-font-size-20"><strong>Exception occured
             </strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 November 2020, 11:00am</p>
+          <p class="govuk-!-font-size-20">19 May 2020, 11:00pm</p>
         </div>
-      </div>
+      </div> -->
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
