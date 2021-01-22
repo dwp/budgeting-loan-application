@@ -1068,19 +1068,24 @@ router.post('/master/application-details', function (req, res) {
   } else if (applicationRef === 'LK67FD33') {
     res.redirect('/AI/v7/exception-handling-v3d')
   } else if (applicationRef === 'GT7654ED') {
-    res.redirect('/AI/master/exception-handling-v4a')
+    res.redirect('/AI/v8/exception-handling-v4a')
   } else if (applicationRef === 'JK77MNHV') {
-    res.redirect('/AI/master/exception-handling-v4d')
+    res.redirect('/AI/v8/exception-handling-v4d')
   } else if (applicationRef === 'SA44TR99') {
-    res.redirect('/AI/master/exception-handling-v5a')
+    res.redirect('/AI/v8/exception-handling-v5a')
   } else if (applicationRef === 'JN32BV75') {
-    res.redirect('/AI/master/exception-handling-v5d')
+    res.redirect('/AI/v8/exception-handling-v5d')
+  } else if (applicationRef === '55RDHB98') {
+    res.redirect('/AI/master/exception-handling-v6a')
+  } else if (applicationRef === 'YH32DS34') {
+    res.redirect('/AI/master/exception-handling-v6d')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
     res.redirect('/AI/master/application-not-found')
   }
 })
+
 
 router.post('exception-handling-v1c', function (req, res) {
 
