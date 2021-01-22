@@ -40,42 +40,16 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v5b" method="post" novalidate="novalidate">
+
 <div class="govuk-grid-row">
-
-
   <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Processing agent
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            Fix the exception. You can then check for an update from SFCS.
-          </p>
-        </div>
-      </div>
-
       <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <p class="govuk-!-font-size-20"><strong>Status</strong>
-            <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-2 govuk-!-margin-right-2">Staff update required</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >10 days ago</span>
+            <strong class="govuk-tag govuk-!-margin-left-4 govuk-!-margin-right-2">Response received, awaiting processing</strong><span class="govuk-!-font-size-16 govuk-!-padding-left-1  status-timestamp">10 days ago</span>
             </p>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row ">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Exception occured
-            </strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 December 2020, 11:00am</p>
         </div>
       </div>
 
@@ -88,7 +62,7 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 December 2020, 9:02am</p>
+          <p class="govuk-!-font-size-20">9 May 2020, 9:12am</p>
         </div>
       </div>
 
@@ -109,40 +83,13 @@
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Mobile number
-            </strong></p>
+            <p class="govuk-!-font-size-20"><strong>Mobile number</strong></p>
         </div>
 
         <div class="govuk-grid-column-two-thirds">
           <p class="govuk-!-font-size-20">07546322221</p>
         </div>
       </div>
-
-      <!-- <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p><a class="govuk-link--no-visited-state" href="https://status.notifications.service.gov.uk/" target="_blank">Check Notify status</a></p>
-        </div>
-
-        <div class="govuk-grid-column-full">
-          <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-0">
-            We send decision notifications via Notify. If a claimant has not received their notification you can check to see if the Notify service is available. We are unable to check if there are problems with the claimants email or phone provider.
-          </div>
-        </div>
-      </div> -->
-
-      <!-- <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">2 June 2020 - <strong>14 days left</strong></p>
-        </div>
-      </div> -->
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -160,14 +107,26 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">-</th>
+                <th scope="row" class="govuk-table__header">Multiple</th>
                 <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£21 every week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"></th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><strong>£289</strong></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><strong>£13 every week</strong></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"></th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£240</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£6 every week</td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
-                  <a class="govuk-link--no-visited-state" href="example-offer-page" target="_blank">View example decision page</a>
+                  <a class="govuk-link--no-visited-state" href="example-offer-page-multiple" target="_blank">View example decision page</a>
                 </td>
               </tr>
             </tbody>
@@ -175,19 +134,29 @@
         </div>
       </div>
 
-  </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Claimant response
+            </strong></p>
+        </div>
 
-  <div class="govuk-grid-column-one-third">
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        Application actions
-      </h2>
-      <button class="govuk-button" data-module="govuk-button">
-        Check for update
-      </button>
-    </aside>
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">Accepted - &pound289</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Response date
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">19 May 2020, 11:34am</p>
+        </div>
+      </div>
+
   </div>
 </div>
-</form>
 
 {% endblock %}

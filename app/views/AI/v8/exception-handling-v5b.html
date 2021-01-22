@@ -1,0 +1,84 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application details – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+      <span class="key-details-bar__wrapper">
+        <dt>Postcode:</dt>
+        <dd>HU4 4XJ</dd>
+      </span>
+
+      <span class="key-details-bar__wrapper">
+        <dt>Phone:</dt>
+        <dd>07546322221</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<form action="/v8/exception-handling-v5c" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Check application details</h1>
+
+      <div class="govuk-inset-text">
+        These details are used to check for an update. Confirm the National Insurance number and postcode match the customer details in SFCS.
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="national-insurance-number">
+          National Insurance number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" value="JP455567D">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="postcode">
+          Postcode
+        </label>
+        <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="text" value="HU4 4XJ">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="application-number">
+          Budgeting Loan application number
+        </label>
+        <div id="application-number-hint" class="govuk-hint">
+          The 3 digit code following the National Insurance number in SFCS
+        </div>
+        <input class="govuk-input govuk-input--width-3" id="application-number" name="application-number" type="text">
+      </div>
+
+      <button class="govuk-button" data-module="govuk-button">
+        Confirm and send
+      </button>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}
