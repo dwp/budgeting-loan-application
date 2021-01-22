@@ -20,6 +20,7 @@
         <dt>Date of birth:</dt>
         <dd>4 June 1972</dd>
       </span>
+
     </div>
   </dl>
 </section>
@@ -30,30 +31,28 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v4b" method="post" novalidate="novalidate">
+<form action="/AI/v8/exception-handling-v1b" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
-
-
   <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            This application cannot be processed until the exception is resolved in SFCS.
-          </p>
-        </div>
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Update requested
+        </h2>
       </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          If the update is successful, a decision notification will be sent to the email address on the application.
+        </p>
+      </div>
+    </div>
 
       <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <p class="govuk-!-font-size-20"><strong>Status</strong>
-            <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-2 govuk-!-margin-right-2">Exception</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >10 days ago</span>
+            <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-left-1 govuk-!-margin-right-1">Waiting for update from SFCS</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >Today</span>
             </p>
         </div>
       </div>
@@ -165,17 +164,6 @@
         </div>
       </div>
 
-  </div>
-
-  <div class="govuk-grid-column-one-third">
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        Application actions
-      </h2>
-      <button class="govuk-button" data-module="govuk-button">
-        Check for update from SFCS
-      </button>
-    </aside>
   </div>
 </div>
 </form>

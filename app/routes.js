@@ -1121,29 +1121,42 @@ router.post('exception-handling-v3c', function (req, res) {
   }
 })
 
-router.post('/master/exception-handling-v4c', function (req, res) {
+router.post('/v8/exception-handling-v4c', function (req, res) {
 
   let applicationNumber = req.session.data['application-number']
 
   if (applicationNumber === '002') {
-    res.redirect('/AI/master/exception-handling-v4c')
+    res.redirect('/AI/v8/exception-handling-v4c')
   } else if (applicationNumber !== '002') {
-    res.redirect('/AI/master/exception-handling-v4b-error')
+    res.redirect('/AI/v8/exception-handling-v4b-error')
   } else {
-    res.redirect('/AI/master/exception-handling-v4b-error')
+    res.redirect('/AI/v8/exception-handling-v4b-error')
   }
 })
 
-router.post('/master/exception-handling-v5c', function (req, res) {
+router.post('/v8/exception-handling-v5c', function (req, res) {
 
   let applicationNumber = req.session.data['application-number']
 
   if (applicationNumber === '002') {
-    res.redirect('/AI/master/exception-handling-v5c')
+    res.redirect('/AI/v8/exception-handling-v5c')
   } else if (applicationNumber !== '002') {
-    res.redirect('/AI/master/exception-handling-v5b-error')
+    res.redirect('/AI/v8/exception-handling-v5b-error')
   } else {
-    res.redirect('/AI/master/exception-handling-v5b-error')
+    res.redirect('/AI/v8/exception-handling-v5b-error')
+  }
+})
+
+router.post('/master/exception-handling-v6c', function (req, res) {
+
+  let applicationNumber = req.session.data['application-number']
+
+  if (applicationNumber === '002') {
+    res.redirect('/AI/master/exception-handling-v6c')
+  } else if (applicationNumber !== '002') {
+    res.redirect('/AI/master/exception-handling-v6b-error')
+  } else {
+    res.redirect('/AI/master/exception-handling-v6b-error')
   }
 })
 

@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Application details – Check a digital Budgeting Loan application
+  Error: Check application details – Check a digital Budgeting Loan application
 {% endblock %}
 
 {% block beforeContent %}
@@ -20,16 +20,6 @@
         <dt>Date of birth:</dt>
         <dd>4 June 1972</dd>
       </span>
-
-      <span class="key-details-bar__wrapper">
-        <dt>Postcode:</dt>
-        <dd>HU4 4XJ</dd>
-      </span>
-
-      <span class="key-details-bar__wrapper">
-        <dt>Phone:</dt>
-        <dd>07546322221</dd>
-      </span>
     </div>
   </dl>
 </section>
@@ -40,9 +30,22 @@
 {% block content %}
 
 
-<form action="/master/exception-handling-v5c" method="post" novalidate="novalidate">
+<form action="/v8/exception-handling-v4c" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            <a href="#application-nnumber-error">Enter a valid application number</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
       <h1 class="govuk-heading-l">Check application details</h1>
 
       <div class="govuk-inset-text">
@@ -63,15 +66,26 @@
         <input class="govuk-input govuk-input--width-5" id="postcode" name="postcode" type="text" value="HU4 4XJ">
       </div>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group govuk-form-group--error">
         <label class="govuk-label" for="application-number">
           Budgeting Loan application number
         </label>
         <div id="application-number-hint" class="govuk-hint">
           The 3 digit code following the National Insurance number in SFCS
         </div>
-        <input class="govuk-input govuk-input--width-3" id="application-number" name="application-number" type="text">
+        <span id="application-number-error" class="govuk-error-message">
+          <span class="govuk-visually-hidden">Error:</span> Enter a valid application number
+        </span>
+        <input class="govuk-input govuk-input--width-3 govuk-input--error" id="application-number" name="application-number" type="text">
       </div>
+
+      <!-- <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Suppress the letter from SFCS before continuing.
+        </strong>
+      </div> -->
 
       <button class="govuk-button" data-module="govuk-button">
         Confirm and send
