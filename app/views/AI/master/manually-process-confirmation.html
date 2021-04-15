@@ -1,0 +1,60 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application updated – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+    </div>
+  </dl>
+</section>
+
+<!-- <a class="govuk-back-link" href="javascript:history.back()">Back</a> -->
+{% endblock %}
+
+{% block content %}
+
+
+<form action="" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">
+          Application updated
+        </h1>
+        <!-- <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div> -->
+      </div>
+
+      <p>The date the decision was processed has been successfully added to the digital application.</p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">
+        The applicant has been sent an email to notify them that the payment will arrive in their account within 5 days.  
+      </p>
+
+      <a class="govuk-link--no-visited-state govuk-!-font-size-19" href="search">Search for another application</a>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

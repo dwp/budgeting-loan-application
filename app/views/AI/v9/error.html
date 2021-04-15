@@ -1,0 +1,32 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Access denied – Check a digital Budgeting Loan application
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
+
+        <p>Try again later.</p>
+
+        <p>If you continue to experience this problem:</p>
+
+        <ul class="govuk-list govuk-list--number">
+          <li>Raise an incident in TechNow.</li>
+          <li>Select ‘Check a digital budgeting loan’ as the service.</li>
+          <li>Provide a brief description of what you were trying to do when the error occured.</li>
+        </ul>
+
+
+
+</div>
+
+{% endblock %}

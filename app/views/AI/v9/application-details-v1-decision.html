@@ -30,42 +30,16 @@
 {% block content %}
 
 
-<form action="/AI/master/exception-handling-v6b" method="post" novalidate="novalidate">
+
 <div class="govuk-grid-row">
-
-
   <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            This application cannot be processed until the exception is resolved in SFCS.
-          </p>
-        </div>
-      </div>
-
       <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
             <p class="govuk-!-font-size-20"><strong>Status</strong>
-            <strong class="govuk-tag govuk-tag--red govuk-!-margin-left-2 govuk-!-margin-right-2">Staff update required</strong><span class="govuk-!-padding-left-0 govuk-!-font-size-16 status-timestamp" >10 days ago</span>
+            <strong class="govuk-tag govuk-!-margin-left-4 govuk-!-margin-right-2">Decision made by SFCS</strong><span class="govuk-!-padding-left-1 govuk-!-font-size-16 status-timestamp" >Today</span>
             </p>
-        </div>
-      </div>
-
-      <div class="govuk-grid-row ">
-        <div class="govuk-grid-column-one-third">
-            <p class="govuk-!-font-size-20"><strong>Exception occured
-            </strong></p>
-        </div>
-
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 December 2020, 11:00am</p>
         </div>
       </div>
 
@@ -78,7 +52,7 @@
         </div>
 
         <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-!-font-size-20">28 December 2020, 9:02am</p>
+          <p class="govuk-!-font-size-20">19 May 2020, 11:00pm</p>
         </div>
       </div>
 
@@ -124,7 +98,7 @@
         </div>
       </div> -->
 
-      <!-- <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-third">
             <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
         </div>
@@ -132,7 +106,7 @@
         <div class="govuk-grid-column-two-thirds">
           <p class="govuk-!-font-size-20">2 June 2020 - <strong>14 days left</strong></p>
         </div>
-      </div> -->
+      </div>
 
       <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
 
@@ -150,10 +124,10 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">-</th>
+                <th scope="row" class="govuk-table__header">Full</th>
                 <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">-</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£15 every week</td>
               </tr>
               <tr class="govuk-table__row">
                 <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
@@ -166,18 +140,6 @@
       </div>
 
   </div>
-
-  <div class="govuk-grid-column-one-third">
-    <aside class="app-related-items" role="complementary">
-      <h2 class="govuk-heading-m" id="subsection-title">
-        Application actions
-      </h2>
-      <button class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">
-        Request update from SFCS
-      </button>
-    </aside>
-  </div>
 </div>
-</form>
 
 {% endblock %}
