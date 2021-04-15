@@ -1,0 +1,93 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Mark as manually processed – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<form action="manually-process-confirmation" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Mark as manually processed</h1>
+
+      <div class="govuk-inset-text">
+        Only do this if you've manually processed the applicant's acceptance of their loan offer.
+      </div>
+
+      <p class="">The applicant will receive an email to notify them that the payment will arrive in their account within 5 days.</p>
+
+      <p class="govuk-!-margin-bottom-6">The digital application will then be read only and any changes must then be made clerically.</p>
+
+      <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="manually-processed-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            When was the application manually processed?
+          </h1>
+        </legend>
+        <div id="manually-processed-hint" class="govuk-hint">
+          For example, 12 11 2007
+        </div>
+        <div class="govuk-date-input" id="manually-processed">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="manually-processed-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-day" name="manually-processed-day" type="text" pattern="[0-9]*" inputmode="numeric" value="16"></div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="manually-processed-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-month" name="manually-processed-month" type="text" pattern="[0-9]*" inputmode="numeric" value="04"></div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="manually-processed-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="manually-processed-year" name="manually-processed-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2021"></div>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Confirm and send notification
+      </button>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Change to clerical application – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<form action="change-clerical-confirmation" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Change to clerical application</h1>
+
+      <div class="govuk-inset-text">
+        Only change this application if it can't be processed digitally.
+      </div>
+
+      <p class="govuk-!-margin-bottom-9">The applicant will receive a text or email to notify them that they will receive their decision by letter within 7 days.</p>
+
+
+      <button class="govuk-button" data-module="govuk-button">
+        Change and send notification
+      </button>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

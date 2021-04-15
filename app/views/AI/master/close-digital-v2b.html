@@ -1,0 +1,79 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Close digital application – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<form action="/master/change-clerical-confirmation" method="post" novalidate="novalidate">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Close digital application</h1>
+
+      <div class="govuk-inset-text">
+        Only close this application if it can't be processed digitally.
+      </div>
+
+      <p class="govuk-!-margin-bottom-6">The applicant will receive an email to notify them that they will receive their decision by letter within 7 days.</p>
+
+      <div class="govuk-form-group ">
+      <fieldset class="govuk-fieldset" aria-describedby="duplicate-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Is this a duplicate application?
+          </h3>
+        </legend>
+        <div id="duplicate-hint" class="govuk-hint">
+          If yes, the applicant <strong>will not</strong> be sent a notification.
+        </div>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="duplicate" name="duplicate" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="duplicate">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item govuk-!-margin-bottom-6">
+            <input class="govuk-radios__input" id="duplicate-2" name="duplicate" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="duplicate-2">
+              No
+            </label>
+          </div>
+        </div>
+
+
+      <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+        Close application
+      </button>
+
+  </div>
+</div>
+</form>
+
+{% endblock %}

@@ -1079,6 +1079,18 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/exception-handling-v6a')
   } else if (applicationRef === 'YH32DS34') {
     res.redirect('/AI/master/exception-handling-v6d')
+  } else if (applicationRef === '76GTFR33') {
+    res.redirect('/AI/master/close-digital-v1a')
+  } else if (applicationRef === '99GT66RE') {
+    res.redirect('/AI/master/close-digital-v2a')
+  } else if (applicationRef === 'KL89HY66') {
+    res.redirect('/AI/master/manually-process')
+  } else if (applicationRef === 'VC45DR33') {
+    res.redirect('/AI/master/changed-to-clerical')
+  } else if (applicationRef === 'JH77GT66') {
+    res.redirect('/AI/master/duplicate-closed')
+  } else if (applicationRef === 'FD55RT33') {
+    res.redirect('/AI/master/application-details-complete-manually-processed')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
@@ -1162,6 +1174,17 @@ router.post('/master/exception-handling-v6c', function (req, res) {
     res.redirect('/AI/master/exception-handling-v6b-error')
   } else {
     res.redirect('/AI/master/exception-handling-v6b-error')
+  }
+})
+
+router.post('/master/change-clerical-confirmation', function (req, res) {
+
+  let duplicateapplication = req.session.data['duplicate']
+
+  if (duplicateapplication === 'yes') {
+    res.redirect('/AI/master/remove-duplicate-confirmation')
+  } else {
+    res.redirect('/AI/master/close-clerical-confirmation')
   }
 })
 

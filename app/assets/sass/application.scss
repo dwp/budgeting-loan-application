@@ -84,3 +84,7 @@ $govuk-global-styles: true;
   box-sizing: border-box;
   overflow: scroll;
 }
+
+.govuk-panel--confirmation {
+  background-color: govuk-colour("green");
+}
