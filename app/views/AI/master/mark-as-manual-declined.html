@@ -31,7 +31,7 @@
 {% block content %}
 
 
-<form action="manually-process-confirmation" method="post" novalidate="novalidate">
+<form action="manually-process-confirmation-declined" method="post" novalidate="novalidate">
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Decision manually processed</h1>
@@ -39,22 +39,20 @@
       <h3 class="govuk-heading-m">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
 
       <div class="govuk-inset-text">
-        Only do this if you've manually processed the applicant's acceptance of their loan offer.
+        Only do this if the application can't be processed on the digital journey and the applicant has already declined their offer.
       </div>
 
-      <p class="">The applicant will receive an email to notify them that the payment will arrive in their account within 5 days.</p>
+      <p class="">The applicant will have already received a notification when they declined the offer. No other notification will be sent.</p>
 
-      <p class="govuk-!-margin-bottom-6">The digital application will then be read only and any changes must then be made clerically.</p>
-
-      <div class="govuk-form-group">
+      <!-- <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" role="group" aria-describedby="manually-processed-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h1 class="govuk-fieldset__heading">
-            When is the credit date?
+            When was the application manually processed?
           </h1>
         </legend>
         <div id="manually-processed-hint" class="govuk-hint">
-          For example, 12 11 2020
+          For example, 12 11 2007
         </div>
         <div class="govuk-date-input" id="manually-processed">
           <div class="govuk-date-input__item">
@@ -62,30 +60,30 @@
               <label class="govuk-label govuk-date-input__label" for="manually-processed-day">
                 Day
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-day" name="manually-processed-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-day" name="manually-processed-day" type="text" pattern="[0-9]*" inputmode="numeric" value="16"></div>
           </div>
           <div class="govuk-date-input__item">
             <div class="govuk-form-group">
               <label class="govuk-label govuk-date-input__label" for="manually-processed-month">
                 Month
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-month" name="manually-processed-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="manually-processed-month" name="manually-processed-month" type="text" pattern="[0-9]*" inputmode="numeric" value="04"></div>
           </div>
           <div class="govuk-date-input__item">
             <div class="govuk-form-group">
               <label class="govuk-label govuk-date-input__label" for="manually-processed-year">
                 Year
               </label>
-              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="manually-processed-year" name="manually-processed-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="manually-processed-year" name="manually-processed-year" type="text" pattern="[0-9]*" inputmode="numeric" value="2021"></div>
           </div>
         </div>
 
       </fieldset>
-    </div>
+    </div>-->
 
 
       <button class="govuk-button" data-module="govuk-button">
-        Confirm and send notification
+        Confirm
       </button>
 
   </div>

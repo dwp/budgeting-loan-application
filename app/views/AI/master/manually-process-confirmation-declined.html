@@ -4,7 +4,7 @@
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block pageTitle %}
-  Application changed – Check a digital Budgeting Loan application
+  Application updated – Check a digital Budgeting Loan application
 {% endblock %}
 
 {% block beforeContent %}
@@ -36,17 +36,19 @@
   <div class="govuk-grid-column-two-thirds">
       <div class="govuk-panel govuk-panel--confirmation">
         <h1 class="govuk-panel__title">
-          Application <span style="text-transform: uppercase">{{ data['find-application'] }}</span> changed
+          Application <span style="text-transform: uppercase">{{ data['find-application'] }}</span> updated
         </h1>
         <!-- <div class="govuk-panel__body">
           Your reference number<br><strong>HDJ2123F</strong>
         </div> -->
       </div>
 
+      <p>The digital application has been successfully updated.</p>
+
       <h2 class="govuk-heading-m">What happens next</h2>
 
       <p class="govuk-body">
-        The email has been sent to the applicant to notify them that they will receive their decision by letter within 7 days.
+        No additional notifications have been sent to the applicant.
       </p>
 
       <a class="govuk-link--no-visited-state govuk-!-font-size-19" href="search">Search for another application</a>
