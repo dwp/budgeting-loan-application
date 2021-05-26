@@ -88,3 +88,29 @@ $govuk-global-styles: true;
 .govuk-panel--confirmation {
   background-color: govuk-colour("green");
 }
+
+.govuk-button-group {
+  display: flex;
+  margin-bottom: 15px;
+  margin-right: -15px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  align-items: baseline;
+}
+
+.button-link {
+  background-color: white;
+  border: none;
+  padding: 0 0 0 0;
+  color: govuk-colour("blue");
+  text-decoration: underline;
+  font-size: 19px;
+  cursor: pointer;
+
+  &:hover {
+    color: govuk-colour("light-blue");
+  }
+}

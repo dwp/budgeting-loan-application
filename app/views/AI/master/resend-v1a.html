@@ -1,0 +1,209 @@
+{% extends "layout-agent.html" %}
+
+<!-- Adds a class to increase vertical spacing for pages without a back button -->
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block pageTitle %}
+  Application details – Check a digital Budgeting Loan application
+{% endblock %}
+
+{% block beforeContent %}
+<section class="key-details-bar" role="contentinfo" aria-label="Key details">
+  <dl class="key-details-bar__key-details">
+    <div class="key-details-bar__top-block">
+      <dt class="govuk-visually-hidden">Name:</dt>
+      <dd class="key-details-bar__name">Sam Smith</dd>
+    </div>
+
+    <div class="key-details-bar__bottom-block">
+      <span class="key-details-bar__wrapper">
+        <dt>Date of birth:</dt>
+        <dd>4 June 1972</dd>
+      </span>
+
+      <span class="key-details-bar__wrapper">
+        <dt>Phone:</dt>
+        <dd>07546322221</dd>
+      </span>
+    </div>
+  </dl>
+</section>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Application reference: <span style="text-transform: uppercase">{{ data['find-application'] }}</span></h1>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <p class="govuk-!-font-size-20"><strong>Status</strong>
+            <strong class="govuk-tag govuk-!-margin-left-4 govuk-!-margin-right-2">Applicant to respond to offer</strong><span class="govuk-!-font-size-16  status-timestamp">10 days ago</span>
+            </p>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Application date
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">17 May 2021, 9:12am</p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Notification type
+            </strong></p>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-!-font-size-20">Text message</p>
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+            <a class="govuk-link--no-visited-state" href="/AI/master/example-notifications" target="_blank" style="float: right;">View example notification</a>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Mobile number</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">07546322221</p>
+        </div>
+      </div>
+
+      <!-- <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Decision notification</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p><a class="govuk-link--no-visited-state" href="https://status.notifications.service.gov.uk/" target="_blank">Check Notify status</a></p>
+        </div>
+
+        <div class="govuk-grid-column-full">
+          <div class="govuk-inset-text govuk-!-font-size-16 govuk-!-margin-top-0">
+            We send decision notifications via Notify. If a claimant has not received their notification you can check to see if the Notify service is available. We are unable to check if there are problems with the claimants email or phone provider.
+          </div>
+        </div>
+      </div> -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <p class="govuk-!-font-size-20"><strong>Code expires</strong></p>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-!-font-size-20">31 May 2021 - <strong>4 days left</strong></p>
+        </div>
+      </div>
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+      <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-!-font-size-20">Offer and repayment</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Offer type</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Requested</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Offered</th>
+                <th scope="col" class="govuk-table__header govuk-table__header--numeric">Repayment amount</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Full</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£348</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">£15 every week</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell govuk-table__cell--numeric" colspan="4">
+                  <a class="govuk-link--no-visited-state" href="example-offer-page" target="_blank">View example decision page</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Application actions
+      </h2>
+      <div class="govuk-button-group">
+        <!-- <button class="govuk-button" data-module="govuk-button" data-prevent-double-click="true">
+          Request update from SFCS
+        </button> -->
+        <form class="form" action="resend-v1c" method="post" novalidate="novalidate">
+          <div class="govuk-form-group hidden">
+            <!-- form hidden to pass values through to the next screen -->
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                Notification type
+              </legend>
+              <div class="govuk-radios gov-ukradios--inline govuk-radios--conditional">
+                <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="mobile-number" name="contactpreference" type="radio" value="text message"  data-aria-controls="conditional-mobile-number" checked>
+                    <label class="govuk-label govuk-radios__label" for="mobile-number">
+                      Text message
+                    </label>
+                  </div>
+                  <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-mobile-number">
+                    <div class="govuk-form-group">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="mobile-number-info">
+                            Mobile number
+                        </label>
+                        <input class="govuk-input govuk-input--width-20" id="mobile-number-input" name="contactmobile" value="07546322221" type="tel">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+              </fieldset>
+
+            </div>
+            <ul class="govuk-list">
+              <li>
+                <a class="govuk-link--no-visited-state" href="close-digital-v1b">Change to clerical application</a>
+              </li>
+              <li>
+                <a class="govuk-link--no-visited-state" href="resend-v1b">Resend decision text message</a>
+              </li>
+              <li>
+                <button class="button-link" data-module="govuk-button">
+                  Update contact preferences
+                </button>
+              </li>
+
+            </ul>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+</div>
+
+{% endblock %}

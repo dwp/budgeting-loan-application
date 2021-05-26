@@ -1091,6 +1091,10 @@ router.post('/master/application-details', function (req, res) {
     res.redirect('/AI/master/duplicate-closed')
   } else if (applicationRef === 'FD55RT33') {
     res.redirect('/AI/master/application-details-complete-manually-processed')
+  } else if (applicationRef === '77GHTR22') {
+    res.redirect('/AI/master/resend-v1a')
+  } else if (applicationRef === '89GT55ED') {
+    res.redirect('/AI/master/resend-v2a')
   } else if (applicationRef.length == 0) {
     res.redirect('/AI/master/search-error')
   } else {
